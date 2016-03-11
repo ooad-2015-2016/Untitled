@@ -36,7 +36,6 @@ Kako je omogućena prijava u sistem sa različitim privilegijama, šef objekta i
 
 
 #### Funkcionalnosti
-
 *	mogućnost prijave u sistem sa različitim privilegijama,
 *	mogućnost online rezervacije sobe (uz navođenje zahtjeva kakvu sobu korisnik želi)
 *	mogućnost izbora sobe putem interfejsa
@@ -52,7 +51,6 @@ Kako je omogućena prijava u sistem sa različitim privilegijama, šef objekta i
 
 
 #### Akteri
-
 1.	**Korisnik usluga (gost)** - Korisnik usluga je osoba koja ima mogućnost iznajmljivanja i rezervacije sobe.
 2.	**Recepcionar** – Recepcionar je osoba koja radi na recepciji objekta i vrši naplaćivanje smještaja, izdaje odgovarajaći račun i izdaje sobu gostu (daje gostu ključ od sobe). 
 3. **Šef** – Šef objekta predstavlja supervizora koji nadgleda izdavanje soba, provjera podatke gostiju i vrši mjesečnu nabavku posteljine, sredstava za čišćenje i sl. 
