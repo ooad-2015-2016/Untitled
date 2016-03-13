@@ -37,17 +37,17 @@ Kako je omogućena prijava u sistem sa različitim privilegijama, šef objekta i
 
 #### Funkcionalnosti
 *	mogućnost prijave u sistem sa različitim privilegijama,
-*	mogućnost online rezervacije sobe (uz navođenje zahtjeva kakvu sobu korisnik želi)
-*	mogućnost izbora sobe putem interfejsa
-*	mogućnost izbora dodatnih zahtjeva korisnika: da li korisnik želi parking mjesto, da li ima kucnog ljubimca, da li želi dodatni krevet.
+*	mogućnost online rezervacije sobe (uz navođenje zahtjeva kakvu sobu korisnik želi),
+*	mogućnost izbora sobe putem interfejsa,
+*	mogućnost izbora dodatnih zahtjeva korisnika: da li korisnik želi parking mjesto, da li ima kucnog ljubimca, da li želi dodatni krevet,
 *	mogućnost online plaćanja, pri čemu se izdaje račun sa ID brojem kao dokaz da je izvršena uplata,
-*	mogućnost plaćanja na recepciji (kreditnom karticom ili gotovinsko plaćanje – 1. Eksterni uređaj)
+*	mogućnost plaćanja na recepciji (kreditnom karticom ili gotovinsko plaćanje)
 *	mogućnost komunikacije korisnika (gosta) sa osobljem prilikom boravka u objektu, u smislu postavljanja osnovnih zahtjeva kao što su: promjena posteljine, čišćenje sobe, poziv servisera i sl.
-*	mogućnost osoblja (čistačica, servisera) da vidi zahtjeve gostiju (korisnika) i poslova koje trebaju obaviti
--	mogućnost aktivacije alarma za požar (2. eksterni uređaj),
--	mogućnost bodovanja usluga ili sobe od strane gostiju koji su boravili u objektu
--	osoblje sa administrativnim pristupom ima mogućnost pristupa podacima gostiju u rezervisanim/zauzetim sobama
--	mogućnost uvida u statistike objekta
+*	mogućnost osoblja (čistačica, servisera) da vidi zahtjeve gostiju (korisnika) i poslova koje trebaju obaviti,
+*	mogućnost bodovanja usluga ili sobe od strane gostiju koji su boravili u objektu,
+*	mogućnost određivanja trenutne udaljenosti gosta od objekta pomoću gps-a,
+*	osoblje sa administrativnim pristupom ima mogućnost pristupa podacima gostiju u rezervisanim/zauzetim sobama,
+*	mogućnost uvida u statistike objekta,
 
 
 #### Akteri
