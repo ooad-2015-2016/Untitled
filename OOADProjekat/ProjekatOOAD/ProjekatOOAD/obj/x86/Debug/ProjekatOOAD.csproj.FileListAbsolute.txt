@@ -360,7 +360,6 @@ C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\Syst
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\System.Xml.XDocument.dll
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\System.Xml.XmlSerializer.dll
-C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\ProjekatOOAD.csprojResolveAssemblyReference.cache
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\App.g.i.cs
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\App.g.cs
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\MainPage.g.i.cs

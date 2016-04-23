@@ -11,7 +11,7 @@ namespace ProjekatOOAD.RRentingBaza.Models
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int BrojSobe { get; set; } //primary key
+        public int SobaId { get; set; } //primary key
         public string fourSquareId { get; set; } //za sinhronizaciju
         //status sobe
         public float CijenaSobe { get; set; } //cijena sobe
