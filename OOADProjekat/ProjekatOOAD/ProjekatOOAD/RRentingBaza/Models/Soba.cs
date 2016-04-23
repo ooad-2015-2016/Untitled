@@ -9,10 +9,14 @@ namespace ProjekatOOAD.RRentingBaza.Models
 {
     class Soba
     {
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int brojSobe { get; set; } //primary key
+        public int BrojSobe { get; set; } //primary key
         public string fourSquareId { get; set; } //za sinhronizaciju
         //status sobe
-        public float cijenaSobe { get; set; }
+        public float CijenaSobe { get; set; } //cijena sobe
+        public byte[] SlikaSobe { get; set; } //pocetna slika sobe
+        public int BrojKreveta { get; set; } //broj kreveta u sobi
+        public List<DateTime> RezervisaniDatumi { get; set; } //datumi kad je soba rezervisana
     }
 }
