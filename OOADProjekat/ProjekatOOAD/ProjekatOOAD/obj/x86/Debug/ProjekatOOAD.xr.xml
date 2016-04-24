@@ -12,5 +12,6 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="ProjekatOOAD.MainPage" />
+    <RootType FullName="ProjekatOOAD.SobaListView" />
   </Roots.RootTypes>
 </Roots>

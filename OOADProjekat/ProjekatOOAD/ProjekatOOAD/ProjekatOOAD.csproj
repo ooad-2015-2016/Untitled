@@ -111,6 +111,8 @@
     <Compile Include="RRentingBaza\Models\RezervacijaDbContext.cs" />
     <Compile Include="RRentingBaza\Models\SobaDbContext.cs" />
     <Compile Include="RRentingBaza\Models\Soba.cs" />
+    <Compile Include="RRentingBaza\Models\SobaDefaultPodaci.cs" />
+    <Compile Include="RRentingBaza\Views\PictureConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -138,9 +140,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RRentingBaza\Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

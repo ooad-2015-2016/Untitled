@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.Entity;
+using ProjekatOOAD.RRentingBaza.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,6 +30,12 @@ namespace ProjekatOOAD
         /// </summary>
         public App()
         {
+            using (var db = new SobaDbContext())
+            {
+                db.Database.ApplyMigrations();
+                SobaDefaultPodaci.Initialize(db);
+            }
+
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
