@@ -670,4 +670,5 @@ C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\RRen
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\RRentingBaza\Views\SobaListView.g.cs
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\RRentingBaza\Views\SobaListView.xaml
 C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\RRentingBaza\Views\SobaListView.xbf
-C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\obj\x86\Debug\ProjekatOOAD.csprojResolveAssemblyReference.cache
+C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\ProjekatOOAD.exe.CodeAnalysisLog.xml
+C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\ProjekatOOAD.exe.lastcodeanalysissucceeded

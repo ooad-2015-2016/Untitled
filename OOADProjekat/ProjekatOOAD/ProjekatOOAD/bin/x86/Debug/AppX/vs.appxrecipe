@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-04-24T12:54:44.527</Modified>
+      <Modified>2016-04-24T14:21:51.102</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\ProjekatOOAD.exe">
       <PackagePath>entrypoint\ProjekatOOAD.exe</PackagePath>
-      <Modified>2016-04-24T12:54:38.062</Modified>
+      <Modified>2016-04-24T14:21:16.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\XMAN\.nuget\packages\EntityFramework.Core\7.0.0-beta6\lib\dotnet\EntityFramework.Core.dll">
       <PackagePath>EntityFramework.Core.dll</PackagePath>
@@ -582,7 +582,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\ProjekatOOAD.xr.xml">
       <PackagePath>ProjekatOOAD.xr.xml</PackagePath>
-      <Modified>2016-04-24T12:54:36.562</Modified>
+      <Modified>2016-04-24T14:19:47.519</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -590,11 +590,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-04-24T12:54:43.042</Modified>
+      <Modified>2016-04-24T14:21:50.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\XMAN\Untitled\OOADProjekat\ProjekatOOAD\ProjekatOOAD\bin\x86\Debug\Core\ProjekatOOAD.exe">
       <PackagePath>ProjekatOOAD.exe</PackagePath>
-      <Modified>2016-04-24T12:54:44.511</Modified>
+      <Modified>2016-04-24T14:21:51.096</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

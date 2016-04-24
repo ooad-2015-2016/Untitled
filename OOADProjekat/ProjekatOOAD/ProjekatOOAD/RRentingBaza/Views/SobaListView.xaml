@@ -9,6 +9,7 @@
     Loaded="Page_Loaded">
   
     <Page.Resources>
+        <local:PictureConverter x:Key="thePictureConverter"/>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
@@ -51,7 +52,8 @@ Click="buttonUpload_Click"/>
                         <!--Polja od restorana povezana preko binding, direktno se uzimaju vrijednosti iz objekata u listi-->
                         <TextBlock Text="{Binding CijenaSobe}" Margin="5,0,0,0"/>
                         <TextBlock Text="{Binding BrojKreveta}" Margin="5,0,0,0" />
-                        
+                        <Image x:Name="image" HorizontalAlignment="Left" Height="500"
+Margin="5,0,0,0" VerticalAlignment="Top" Source="{Binding SlikaSobe, Converter={StaticResource thePictureConverter}}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

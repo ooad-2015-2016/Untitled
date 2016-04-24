@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="SlikaSobe" />
     <RootPropertyPathName Name="BrojKreveta" />
     <RootPropertyPathName Name="CijenaSobe" />
   </Roots.PropertyPathNames>
@@ -13,6 +17,7 @@
       <RootProperty Name="Content" />
       <RootEvent Name="Loaded" />
     </RootType>
+    <RootType FullName="ProjekatOOAD.RRentingBaza.Views.PictureConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="ColumnDefinitions" />
@@ -63,7 +68,17 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Source" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="ProjekatOOAD.RRentingBaza.Views.SobaListView" />
   </Roots.RootTypes>
 </Roots>
