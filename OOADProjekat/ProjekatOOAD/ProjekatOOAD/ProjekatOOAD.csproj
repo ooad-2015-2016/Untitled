@@ -107,6 +107,8 @@
     </Compile>
     <Compile Include="Migrations\SobaDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RRentingBaza\Models\Osoba.cs" />
+    <Compile Include="RRentingBaza\Models\OsobaDbContext.cs" />
     <Compile Include="RRentingBaza\Models\Rezervacija.cs" />
     <Compile Include="RRentingBaza\Models\RezervacijaDbContext.cs" />
     <Compile Include="RRentingBaza\Models\SobaDbContext.cs" />

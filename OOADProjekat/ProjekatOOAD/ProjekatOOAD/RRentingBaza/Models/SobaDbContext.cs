@@ -6,7 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Storage;
+using Windows.Storage;
+
 
 namespace ProjekatOOAD.RRentingBaza.Models
 {
@@ -18,7 +19,8 @@ namespace ProjekatOOAD.RRentingBaza.Models
             string databaseFilePath = "Ooadbaza.db";
             try
             {
-                databaseFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path, databaseFilePath);
+                databaseFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path, databaseFilePath);
+
             }
             catch (InvalidOperationException) { }
 
