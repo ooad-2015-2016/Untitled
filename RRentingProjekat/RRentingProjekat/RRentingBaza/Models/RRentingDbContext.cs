@@ -14,7 +14,7 @@ namespace RRentingProjekat.RRentingBaza.Models
     class RRentingDbContext : DbContext
     {
         public DbSet<Soba> Sobe { get; set; } //sve sobe
-
+        public DbSet<Rezervacija> Rezervacije { get; set; } //sve rezervacije
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
