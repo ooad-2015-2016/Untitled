@@ -133,13 +133,13 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
         private void InitTypeTables()
         {
             _typeNameTable = new string[4];
-            _typeNameTable[0] = "ProjekatOOAD.MainPage1";
+            _typeNameTable[0] = "RRentingProjekat.Pocetna";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "RRentingProjekat.MainPage";
 
             _typeTable = new global::System.Type[4];
-            _typeTable[0] = typeof(global::ProjekatOOAD.MainPage1);
+            _typeTable[0] = typeof(global::RRentingProjekat.Pocetna);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::RRentingProjekat.MainPage);
@@ -177,7 +177,7 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage1() { return new global::ProjekatOOAD.MainPage1(); }
+        private object Activate_0_Pocetna() { return new global::RRentingProjekat.Pocetna(); }
         private object Activate_3_MainPage() { return new global::RRentingProjekat.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
@@ -190,9 +190,9 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  ProjekatOOAD.MainPage1
+            case 0:   //  RRentingProjekat.Pocetna
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage1;
+                userType.Activator = Activate_0_Pocetna;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

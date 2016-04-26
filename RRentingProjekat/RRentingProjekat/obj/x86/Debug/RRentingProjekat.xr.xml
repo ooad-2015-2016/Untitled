@@ -53,7 +53,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
     </RootType>
-    <RootType FullName="ProjekatOOAD.MainPage1" />
+    <RootType FullName="RRentingProjekat.Pocetna" />
     <RootType FullName="RRentingProjekat.MainPage" />
   </Roots.RootTypes>
 </Roots>
