@@ -106,6 +106,7 @@
     <Compile Include="RRentingBaza\Models\Rezervacija.cs" />
     <Compile Include="RRentingBaza\Models\RRentingDbContext.cs" />
     <Compile Include="RRentingBaza\Models\Soba.cs" />
+    <Compile Include="RRentingBaza\Models\Zahtjev.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
