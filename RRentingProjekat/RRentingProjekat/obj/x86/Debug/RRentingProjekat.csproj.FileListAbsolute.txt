@@ -360,7 +360,6 @@ C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\S
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\System.Xml.XDocument.dll
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\System.Xml.XmlSerializer.dll
-C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingProjekat.csprojResolveAssemblyReference.cache
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\App.g.i.cs
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\App.g.cs
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\Forme\Pocetna.g.i.cs

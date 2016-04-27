@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace RRentingProjekat.RRentingBaza.Models
 {
    
-           class Osoba
+        abstract class Osoba
         {
             [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
             public int OsobaId { get; set; }

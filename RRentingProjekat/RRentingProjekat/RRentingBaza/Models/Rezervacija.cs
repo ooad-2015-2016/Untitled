@@ -16,7 +16,7 @@ namespace RRentingProjekat.RRentingBaza.Models
     class Rezervacija
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdRezervacije { get; set; } //Primarni kljuc
+        public int RezervacijaId { get; set; } //Primarni kljuc
         public string fourSquareId { get; set; } //za sinhronizaciju
         public NacinPlacanja nacinPlacanja {get;set;}
         public Boolean placeno { get; set; }
