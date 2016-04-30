@@ -53,8 +53,13 @@ Margin="10,10,0,0" TextWrapping="Wrap" Text="Dodatne opcije" VerticalAlignment="
 Margin="0,10,10,0" Grid.Row="9" VerticalAlignment="Top" Click="buttonDodaj_Click" Height="32"/>
         <TextBlock x:Name="NacinPlacanjaBlock" Grid.Row="8" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Nacin placanja" VerticalAlignment="Top" Height="20" Width="107"/>
-        <ComboBox x:Name="comboBox" Grid.Column="1"  HorizontalAlignment="Stretch"
-Margin="3,3,3,3" Grid.Row="8" VerticalAlignment="Top" />
+        <ListBox x:Name="NacinPlacanjaListBox" Grid.Row="8" Grid.Column="1"
+HorizontalAlignment="Stretch" Margin="3,3,3,3" >
+            <ListBox.Items>
+                <ListBoxItem Content="Gotovinsko"/>
+                <ListBoxItem Content="Karticom"/>
+            </ListBox.Items>
+        </ListBox>
         <CalendarDatePicker x:Name="Dolazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="2" VerticalAlignment="Top" Height="38" />
         <CalendarDatePicker x:Name="Odlazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
         <!--Lista za prikaz svih restorana-->
