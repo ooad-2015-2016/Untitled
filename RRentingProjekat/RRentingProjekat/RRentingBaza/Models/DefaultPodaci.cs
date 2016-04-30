@@ -25,6 +25,25 @@ namespace RRentingProjekat.RRentingBaza.Models
                 context.SaveChanges();
 
             }
+            if (!context.Rezervacije.Any())
+            {
+                // DateTime nulti = new DateTime(0000, 00, 00);
+                context.Rezervacije.AddRange(
+                    new Rezervacija()
+                    {
+                        brojOdraslih = 0,
+                        brojDjece =0,
+                        datumDolaska = DateTime.Now,
+                        datumOdlaska = DateTime.Now,
+                        parking = false,
+                        ljubimac = false,
+                        dodatniKrevet = false,
+                        cijena = 500,
+                        nacinPlacanja = NacinPlacanja.Gotovinsko,
+                    });
+                context.SaveChanges();
+
+            }
         }
     }
 }
