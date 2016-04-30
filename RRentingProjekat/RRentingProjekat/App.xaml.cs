@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using RRentingProjekat.RRentingBaza.Models;
+using Microsoft.Data.Entity;
+using RRentingProjekat.RRentingBaza.Views;
 
 namespace RRentingProjekat
 {
@@ -28,6 +31,16 @@ namespace RRentingProjekat
         /// </summary>
         public App()
         {
+
+            //KADA SVI POPUNIMO DEFAULT PODATKE MOZEMO BUILD URADITI SA OVIM DIJELOM KODA ?
+            /*
+            using (var db = new RRentingDbContext())
+            {
+                db.Database.ApplyMigrations();
+                DefaultPodaci.Initialize(db);
+            }
+            */ 
+
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
@@ -75,7 +88,7 @@ namespace RRentingProjekat
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(SobaListView), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
