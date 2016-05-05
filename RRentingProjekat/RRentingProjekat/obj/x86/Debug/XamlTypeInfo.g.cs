@@ -132,19 +132,21 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
+            _typeNameTable = new string[6];
             _typeNameTable[0] = "RRentingProjekat.Pocetna";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "RRentingProjekat.RRentingBaza.Views.RezervacijaListView";
-            _typeNameTable[4] = "RRentingProjekat.RRentingBaza.Views.SobaListView";
+            _typeNameTable[3] = "RRentingProjekat.RRentingBaza.Views.OsobeListView";
+            _typeNameTable[4] = "RRentingProjekat.RRentingBaza.Views.RezervacijaListView";
+            _typeNameTable[5] = "RRentingProjekat.RRentingBaza.Views.SobaListView";
 
-            _typeTable = new global::System.Type[5];
+            _typeTable = new global::System.Type[6];
             _typeTable[0] = typeof(global::RRentingProjekat.Pocetna);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView);
-            _typeTable[4] = typeof(global::RRentingProjekat.RRentingBaza.Views.SobaListView);
+            _typeTable[3] = typeof(global::RRentingProjekat.RRentingBaza.Views.OsobeListView);
+            _typeTable[4] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView);
+            _typeTable[5] = typeof(global::RRentingProjekat.RRentingBaza.Views.SobaListView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -180,8 +182,9 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
         }
 
         private object Activate_0_Pocetna() { return new global::RRentingProjekat.Pocetna(); }
-        private object Activate_3_RezervacijaListView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView(); }
-        private object Activate_4_SobaListView() { return new global::RRentingProjekat.RRentingBaza.Views.SobaListView(); }
+        private object Activate_3_OsobeListView() { return new global::RRentingProjekat.RRentingBaza.Views.OsobeListView(); }
+        private object Activate_4_RezervacijaListView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView(); }
+        private object Activate_5_SobaListView() { return new global::RRentingProjekat.RRentingBaza.Views.SobaListView(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -208,16 +211,23 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaListView
+            case 3:   //  RRentingProjekat.RRentingBaza.Views.OsobeListView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_RezervacijaListView;
+                userType.Activator = Activate_3_OsobeListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  RRentingProjekat.RRentingBaza.Views.SobaListView
+            case 4:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaListView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_SobaListView;
+                userType.Activator = Activate_4_RezervacijaListView;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  RRentingProjekat.RRentingBaza.Views.SobaListView
+                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_SobaListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

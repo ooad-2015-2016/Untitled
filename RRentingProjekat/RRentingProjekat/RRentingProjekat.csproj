@@ -105,11 +105,19 @@
     <Compile Include="Migrations\RRentingDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RRentingBaza\Models\DefaultPodaci.cs" />
+    <Compile Include="RRentingBaza\Models\Gost.cs" />
     <Compile Include="RRentingBaza\Models\Osoba.cs" />
+    <Compile Include="RRentingBaza\Models\Osoblje.cs" />
+    <Compile Include="RRentingBaza\Models\Recepcioner.cs" />
     <Compile Include="RRentingBaza\Models\Rezervacija.cs" />
+    <Compile Include="RRentingBaza\Models\RRenting.cs" />
     <Compile Include="RRentingBaza\Models\RRentingDbContext.cs" />
+    <Compile Include="RRentingBaza\Models\Sef.cs" />
     <Compile Include="RRentingBaza\Models\Soba.cs" />
     <Compile Include="RRentingBaza\Models\Zahtjev.cs" />
+    <Compile Include="RRentingBaza\Views\OsobaListView.xaml.cs">
+      <DependentUpon>OsobaListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RRentingBaza\Views\PictureConverter.cs" />
     <Compile Include="RRentingBaza\Views\RezervacijaListView.xaml.cs">
       <DependentUpon>RezervacijaListView.xaml</DependentUpon>
@@ -143,6 +151,10 @@
     <Page Include="RRentingBaza\Forms\Pocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Views\OsobaListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="RRentingBaza\Views\RezervacijaListView.xaml">
       <Generator>MSBuild:Compile</Generator>

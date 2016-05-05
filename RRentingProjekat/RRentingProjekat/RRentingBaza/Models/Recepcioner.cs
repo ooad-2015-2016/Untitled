@@ -11,10 +11,11 @@ namespace RRentingProjekat.RRentingBaza.Models
     {
         public int SigurnosniID { get; set; }
 
-        public float ObracunCijene (int tiket)
+        /*public float ObracunCijene (int tiket)
         {
             return tiket*20;
         }
         public bool StatusSobe { get; set; }
+        */
     }
 }

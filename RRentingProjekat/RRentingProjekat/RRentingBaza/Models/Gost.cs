@@ -14,14 +14,15 @@ namespace RRentingProjekat.RRentingBaza.Models
         DateTime datumDolaska, datumOdlaska;
         List<Zahtjev> listaZahtjeva;
         public Gost() { }
-        public void DodajZahtjev (Zahtjev zahtjev)
+        /*public void DodajZahtjev (Zahtjev zahtjev)
         {
             foreach(Zahtjev zah in listaZahtjeva)
             {
                 listaZahtjeva.Add(zah);
             }
         }
-        public Ocjena OcjeniUsluge { get; set; }
+        */
+        //public Ocjena OcijeniUsluge { get; set; }
 
     }
 }

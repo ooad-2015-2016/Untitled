@@ -1,3 +1,5 @@
 App.xbf
-Forme\Pocetna.xbf
-MainPage.xbf
+RRentingBaza\Forms\Pocetna.xbf
+RRentingBaza\Views\OsobaListView.xbf
+RRentingBaza\Views\RezervacijaListView.xbf
+RRentingBaza\Views\SobaListView.xbf
