@@ -9,9 +9,9 @@ namespace RRentingProjekat.RRentingBaza.Models
     class Sef:Osoba
     {
         public int SigurnosniID { get; set; }
-        public Sef() { }
+        //public Sef() { }
         public int BrojDanaDoNabavke { get; set; }
-        List<Osoblje> uposlenici;
+        public List<Osoblje> uposlenici { get; set; }
 
     }
 }

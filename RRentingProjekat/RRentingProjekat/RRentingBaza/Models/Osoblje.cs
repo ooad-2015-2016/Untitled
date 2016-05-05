@@ -9,6 +9,6 @@ namespace RRentingProjekat.RRentingBaza.Models
     class Osoblje:Osoba
     {
         public int SigurnosniID { get; set; }
-        List<Zahtjev> listaZahtjeva;
+        public List<Zahtjev> listaZahtjeva { get; set; }
     }
 }
