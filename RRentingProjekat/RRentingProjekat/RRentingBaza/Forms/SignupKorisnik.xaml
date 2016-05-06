@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="RRentingProjekat.RRentingBaza.Forms.SignupKorisnik"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RRentingProjekat.RRentingBaza.Forms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="200" Height="400">
+        <StackPanel>
+            <TextBlock FontSize="18.667" FontWeight="Bold">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
+                </TextBlock.Foreground>Prijava na sistem</TextBlock>
+            <TextBox Name="txtImeS" PlaceholderText="Ime" Margin="10,10,10,0" Width="150" />
+            <TextBox Name="txtPrezimeS" PlaceholderText="Prezime" Margin="10,10,10,0" Width="150" />
+            <TextBox Name="txtEmailS" PlaceholderText="Email" Margin="10,10,10,0" Width="150" />
+            <TextBox Name="txtTelefonS" PlaceholderText="Telefon" Margin="10,10,10,0" Width="150" />
+            <TextBox Name="txtAdresaS" PlaceholderText="Adresa" Margin="10,10,10,0" Width="150" />
+            <PasswordBox Name="txtPasswordS" PlaceholderText="Šifra" Margin="10,10,10,0" Width="150" />
+            <Button Name="btnSignup" Margin="30,10,0,0" Click="buttonSignup_Click"  >Prijava</Button>
+        </StackPanel>
+    </Grid>
+</Page>

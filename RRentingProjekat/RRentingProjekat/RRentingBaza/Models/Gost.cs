@@ -10,7 +10,7 @@ namespace RRentingProjekat.RRentingBaza.Models
     class Gost : Osoba
     {
         public static int brojTiketa { get; set; }
-        public int brojSobe { get; set; }
+        public Soba soba { get; set; }
         public DateTime datumDolaska { get; set; }
         public DateTime datumOdlaska { get; set; }
         public List<Zahtjev> listaZahtjeva { get; set; }

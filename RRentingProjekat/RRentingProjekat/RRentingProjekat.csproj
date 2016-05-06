@@ -104,6 +104,13 @@
     </Compile>
     <Compile Include="Migrations\RRentingDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RRentingBaza\DataSource\DataSourceRRenting.cs" />
+    <Compile Include="RRentingBaza\Forms\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RRentingBaza\Forms\SignupKorisnik.xaml.cs">
+      <DependentUpon>SignupKorisnik.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RRentingBaza\Models\DefaultPodaci.cs" />
     <Compile Include="RRentingBaza\Models\Gost.cs" />
     <Compile Include="RRentingBaza\Models\Osoba.cs" />
@@ -115,10 +122,16 @@
     <Compile Include="RRentingBaza\Models\Sef.cs" />
     <Compile Include="RRentingBaza\Models\Soba.cs" />
     <Compile Include="RRentingBaza\Models\Zahtjev.cs" />
+    <Compile Include="RRentingBaza\Pocetna.xaml.cs">
+      <DependentUpon>Pocetna.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RRentingBaza\Views\OsobaListView.xaml.cs">
       <DependentUpon>OsobaListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\PictureConverter.cs" />
+    <Compile Include="RRentingBaza\Forms\Pocetna.xaml.cs">
+      <DependentUpon>Pocetna.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RRentingBaza\Views\RezervacijaListView.xaml.cs">
       <DependentUpon>RezervacijaListView.xaml</DependentUpon>
     </Compile>
@@ -148,13 +161,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="RRentingBaza\Forms\Pocetna.xaml">
+    <Page Include="RRentingBaza\Forms\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Forms\SignupKorisnik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Pocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RRentingBaza\Views\OsobaListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RRentingBaza\Forms\Pocetna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RRentingBaza\Views\RezervacijaListView.xaml">
       <Generator>MSBuild:Compile</Generator>
