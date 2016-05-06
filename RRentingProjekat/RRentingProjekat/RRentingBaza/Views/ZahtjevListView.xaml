@@ -9,7 +9,6 @@
     Loaded="Page_Loaded">
     <!--
  Dodan Page_Loaded Event u Page Tag
- Dodan resurs PictureConverter koji pokazuje Na PictureConverter klasu
  -->
     <Page.Resources>
     </Page.Resources>

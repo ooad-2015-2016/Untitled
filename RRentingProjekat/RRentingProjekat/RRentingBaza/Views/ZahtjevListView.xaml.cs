@@ -15,6 +15,7 @@ namespace RRentingProjekat.RRentingBaza.Views
         public ZahtjevListView()
         {
             this.InitializeComponent();
+            /*KOmentar*/
         }
         //pri load event povuci sve restorane i povezati ih sa list view
         private void Page_Loaded(object sender, RoutedEventArgs e)
