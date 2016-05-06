@@ -111,6 +111,11 @@
     <Compile Include="RRentingBaza\Forms\SignupKorisnik.xaml.cs">
       <DependentUpon>SignupKorisnik.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RRentingBaza\Helper\DateConverter.cs" />
+    <Compile Include="RRentingBaza\Helper\INavigacija.cs" />
+    <Compile Include="RRentingBaza\Helper\LaterThanTodayPropertyAttribute.cs" />
+    <Compile Include="RRentingBaza\Helper\NavigationService.cs" />
+    <Compile Include="RRentingBaza\Helper\RelayCommand.cs" />
     <Compile Include="RRentingBaza\Models\DefaultPodaci.cs" />
     <Compile Include="RRentingBaza\Models\Gost.cs" />
     <Compile Include="RRentingBaza\Models\Osoba.cs" />
@@ -122,9 +127,7 @@
     <Compile Include="RRentingBaza\Models\Sef.cs" />
     <Compile Include="RRentingBaza\Models\Soba.cs" />
     <Compile Include="RRentingBaza\Models\Zahtjev.cs" />
-    <Compile Include="RRentingBaza\Pocetna.xaml.cs">
-      <DependentUpon>Pocetna.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="RRentingBaza\ViewModels\RRentingViewModel.cs" />
     <Compile Include="RRentingBaza\Views\OsobaListView.xaml.cs">
       <DependentUpon>OsobaListView.xaml</DependentUpon>
     </Compile>
@@ -169,10 +172,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RRentingBaza\Pocetna.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="RRentingBaza\Views\OsobaListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -190,9 +189,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RRentingBaza\ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

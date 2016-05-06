@@ -99,7 +99,6 @@
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Forms.Login" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Forms.SignupKorisnik" />
-    <RootType FullName="RRentingProjekat.RRentingBaza.Pocetna" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
