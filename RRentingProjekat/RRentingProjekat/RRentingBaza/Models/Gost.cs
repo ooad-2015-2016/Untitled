@@ -24,6 +24,18 @@ namespace RRentingProjekat.RRentingBaza.Models
         }
         */
         //public Ocjena OcijeniUsluge { get; set; }
+        public Gost(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email) : base(ID, Ime, Prezime, Telefon, Adresa, Sifra, Email)
+        {
+            brojTiketa = 0;
+            soba = null;
+            datumOdlaska = DateTime.Now;
+            datumOdlaska = DateTime.Now;
+            listaZahtjeva = new List<Zahtjev>();
 
+        }
+
+        public Gost()
+        {
+        }
     }
 }

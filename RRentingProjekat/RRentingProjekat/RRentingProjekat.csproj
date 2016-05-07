@@ -127,6 +127,8 @@
     <Compile Include="RRentingBaza\Models\Sef.cs" />
     <Compile Include="RRentingBaza\Models\Soba.cs" />
     <Compile Include="RRentingBaza\Models\Zahtjev.cs" />
+    <Compile Include="RRentingBaza\ViewModels\RegistracijaViewModel.cs" />
+    <Compile Include="RRentingBaza\ViewModels\RezervacijaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\RRentingViewModel.cs" />
     <Compile Include="RRentingBaza\Views\KorisnikListView.xaml.cs">
       <DependentUpon>KorisnikListView.xaml</DependentUpon>
