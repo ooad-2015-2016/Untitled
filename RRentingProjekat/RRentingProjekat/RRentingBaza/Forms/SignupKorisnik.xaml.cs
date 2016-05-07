@@ -45,6 +45,7 @@ namespace RRentingProjekat.RRentingBaza.Forms
             var korisnickaAdresa = txtAdresaS.Text;
             var sifra = txtPasswordS.Password;
 
+
             //var korisnik = DataSourceRRenting.ProvjeraKorisnika(korisnickoIme, sifra);
             /* if (korisnik != null && korisnik.KorisnikId > 0)
              {

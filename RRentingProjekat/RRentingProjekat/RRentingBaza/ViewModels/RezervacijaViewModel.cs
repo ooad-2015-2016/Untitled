@@ -15,6 +15,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
     class RezervacijaViewModel
     {
         public Gost RegistrovaniGost {get; set; }
+        public INavigacija NavigationServis { get; set; }
+        public ICommand DodajRezervaciju { get; set; }
         public RezervacijaViewModel(RegistracijaViewModel rvm)
         {
             RegistrovaniGost = rvm.RegistrovaniKorisnik;

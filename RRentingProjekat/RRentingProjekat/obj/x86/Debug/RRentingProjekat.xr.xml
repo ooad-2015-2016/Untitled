@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="SignupKorisnika" />
     <RootPropertyPathName Name="Sifra" />
     <RootPropertyPathName Name="Telefon" />
     <RootPropertyPathName Name="Adresa" />
@@ -14,6 +15,7 @@
     <RootPropertyPathName Name="datumDolaska" />
     <RootPropertyPathName Name="brojDjece" />
     <RootPropertyPathName Name="brojOdraslih" />
+    <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="RezervisaniDatumi" />
     <RootPropertyPathName Name="Status" />
     <RootPropertyPathName Name="BrojKreveta" />
@@ -29,6 +31,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
+      <RootProperty Name="Transitions" />
       <RootProperty Name="Height" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Width" />
@@ -87,6 +90,7 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Command" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
@@ -101,6 +105,9 @@
       <RootProperty Name="Color" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Forms.Login" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />
+    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Forms.SignupKorisnik" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -115,7 +122,6 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.KorisnikListView" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Fill" />
