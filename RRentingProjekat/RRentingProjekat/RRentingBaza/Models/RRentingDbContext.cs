@@ -15,7 +15,7 @@ namespace RRentingProjekat.RRentingBaza.Models
     {
         public DbSet<Soba> Sobe { get; set; } //sve sobe
         public DbSet<Rezervacija> Rezervacije { get; set; } //sve rezervacije
-        public DbSet<Osoba> Osobe { get; set; } //sve osobe
+        public DbSet<Korisnik> Korisnici { get; set; } //sve osobe
         public DbSet<Zahtjev> Zahtjevi { get; set; } //svi zahtjevi
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

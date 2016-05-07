@@ -11,7 +11,7 @@ namespace RRentingProjekatMigrations
     {
         public override string Id
         {
-            get { return "20160427211057_InitialMigration"; }
+            get { return "20160507103846_InitialMigration"; }
         }
 
         public override string ProductVersion
@@ -24,12 +24,14 @@ namespace RRentingProjekatMigrations
             builder
                 .Annotation("ProductVersion", "7.0.0-beta6-13815");
 
-            builder.Entity("RRentingProjekat.RRentingBaza.Models.Osoba", b =>
+            builder.Entity("RRentingProjekat.RRentingBaza.Models.Korisnik", b =>
                 {
-                    b.Property<int>("OsobaId")
+                    b.Property<int>("KorisnikId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Adresa");
+
+                    b.Property<string>("Email");
 
                     b.Property<string>("Ime");
 
@@ -41,7 +43,7 @@ namespace RRentingProjekatMigrations
 
                     b.Property<string>("fourSqaureId");
 
-                    b.Key("OsobaId");
+                    b.Key("KorisnikId");
                 });
 
             builder.Entity("RRentingProjekat.RRentingBaza.Models.Rezervacija", b =>
@@ -84,9 +86,6 @@ namespace RRentingProjekatMigrations
                     b.Property<int>("BrojSobe");
 
                     b.Property<float>("CijenaSobe");
-
-                    b.Property<byte[]>("SlikaSobe")
-                        .Annotation("Relational:ColumnType", "image");
 
                     b.Property<int>("Status");
 

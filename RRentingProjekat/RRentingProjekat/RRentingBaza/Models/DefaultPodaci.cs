@@ -12,7 +12,7 @@ namespace RRentingProjekat.RRentingBaza.Models
         {
             if (!context.Sobe.Any())
             {
-               // DateTime nulti = new DateTime(0000, 00, 00);
+              
                 context.Sobe.AddRange(
                     new Soba()
                     {
@@ -27,7 +27,6 @@ namespace RRentingProjekat.RRentingBaza.Models
             }
             if (!context.Rezervacije.Any())
             {
-                // DateTime nulti = new DateTime(0000, 00, 00);
                 context.Rezervacije.AddRange(
                     new Rezervacija()
                     {
@@ -38,12 +37,44 @@ namespace RRentingProjekat.RRentingBaza.Models
                         parking = false,
                         ljubimac = false,
                         dodatniKrevet = false,
-                        cijena = 500,
+                        cijena = 0,
                         nacinPlacanja = NacinPlacanja.Gotovinsko,
                     });
                 context.SaveChanges();
 
             }
-        }
+
+            if (!context.Zahtjevi.Any())
+            {
+                context.Zahtjevi.AddRange(
+                    new Zahtjev()
+                    {
+                        nazivZahtjeva = "Spremanje sobe",
+                        brojSobe = 1,
+                        obavljenZahtjev = false,
+                    }
+                );
+                context.SaveChanges();
+            }
+
+            if (!context.Korisnici.Any())
+            {
+                context.Korisnici.AddRange(
+                    new Korisnik()
+                    {
+
+                        Ime = "",
+                        Prezime = "",
+                        Telefon = "",
+                        Adresa = "",
+                        Sifra = "",
+                        Email = "",
+                    }
+            );
+                context.SaveChanges();
+            }
+
+
+            }
     }
 }

@@ -447,13 +447,8 @@ C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\R
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\SobaListView.xaml
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RezervacijaListView.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\SobaListView.xbf
-C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\OsobaListView.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\RezervacijaListView.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\SobaListView.xbf
-C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\OsobaListView.g.i.cs
-C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\OsobaListView.g.cs
-C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\OsobaListView.xaml
-C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\OsobaListView.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Forms\Login.g.i.cs
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Forms\Login.g.cs
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Forms\SignupKorisnik.g.i.cs
@@ -723,3 +718,8 @@ C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\R
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\ZahtjevListView.g.cs
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\ZahtjevListView.xaml
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\ZahtjevListView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\KorisnikListView.g.i.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\KorisnikListView.g.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\KorisnikListView.xaml
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\KorisnikListView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\KorisnikListView.xbf

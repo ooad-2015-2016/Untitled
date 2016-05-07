@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RRentingProjekat.RRentingBaza.Models
 {
-    class Osoblje:Osoba
+    class Osoblje:Korisnik
     {
         public int SigurnosniID { get; set; }
         public List<Zahtjev> listaZahtjeva { get; set; }

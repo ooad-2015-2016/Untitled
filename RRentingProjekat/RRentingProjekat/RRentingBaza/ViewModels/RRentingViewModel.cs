@@ -14,7 +14,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 {
     class RRentingViewModel 
     {
-        public Osoba korisnik { get; set; }
+        public Korisnik korisnik { get; set; }
         //public string Validacija { get; set; }
        // public string Email { get; set; }
         //public string Password { get; set; }

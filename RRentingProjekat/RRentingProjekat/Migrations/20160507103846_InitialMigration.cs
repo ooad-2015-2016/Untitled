@@ -10,12 +10,13 @@ namespace RRentingProjekatMigrations
         public override void Up(MigrationBuilder migration)
         {
             migration.CreateTable(
-                name: "Osoba",
+                name: "Korisnik",
                 columns: table => new
                 {
-                    OsobaId = table.Column(type: "INTEGER", nullable: false),
+                    KorisnikId = table.Column(type: "INTEGER", nullable: false),
                        // .Annotation("Sqlite:Autoincrement", true),
                     Adresa = table.Column(type: "TEXT", nullable: true),
+                    Email = table.Column(type: "TEXT", nullable: true),
                     Ime = table.Column(type: "TEXT", nullable: true),
                     Prezime = table.Column(type: "TEXT", nullable: true),
                     Sifra = table.Column(type: "TEXT", nullable: true),
@@ -24,14 +25,14 @@ namespace RRentingProjekatMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Osoba", x => x.OsobaId);
+                    table.PrimaryKey("PK_Korisnik", x => x.KorisnikId);
                 });
             migration.CreateTable(
                 name: "Rezervacija",
                 columns: table => new
                 {
                     RezervacijaId = table.Column(type: "INTEGER", nullable: false),
-                        //.Annotation("Sqlite:Autoincrement", true),
+                       // .Annotation("Sqlite:Autoincrement", true),
                     brojDjece = table.Column(type: "INTEGER", nullable: false),
                     brojOdraslih = table.Column(type: "INTEGER", nullable: false),
                     cijena = table.Column(type: "REAL", nullable: false),
@@ -53,11 +54,10 @@ namespace RRentingProjekatMigrations
                 columns: table => new
                 {
                     SobaId = table.Column(type: "INTEGER", nullable: false),
-                       // .Annotation("Sqlite:Autoincrement", true),
+                        //.Annotation("Sqlite:Autoincrement", true),
                     BrojKreveta = table.Column(type: "INTEGER", nullable: false),
                     BrojSobe = table.Column(type: "INTEGER", nullable: false),
                     CijenaSobe = table.Column(type: "REAL", nullable: false),
-                    SlikaSobe = table.Column(type: "image", nullable: true),
                     Status = table.Column(type: "INTEGER", nullable: false),
                     fourSquareId = table.Column(type: "TEXT", nullable: true)
                 },
@@ -84,7 +84,7 @@ namespace RRentingProjekatMigrations
 
         public override void Down(MigrationBuilder migration)
         {
-            migration.DropTable("Osoba");
+            migration.DropTable("Korisnik");
             migration.DropTable("Rezervacija");
             migration.DropTable("Soba");
             migration.DropTable("Zahtjev");

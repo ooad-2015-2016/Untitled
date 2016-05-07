@@ -7,7 +7,7 @@ using RRentingProjekat.RRentingBaza.Models;
 
 namespace RRentingProjekat.RRentingBaza.Models
 {
-    class Recepcioner:Osoba
+    class Recepcioner:Korisnik
     {
         public int SigurnosniID { get; set; }
 

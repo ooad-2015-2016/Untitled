@@ -10,7 +10,7 @@ namespace RRentingProjekat.RRentingBaza.DataSource
     public class DataSourceRRenting
     {
         #region Korisnik - kreiranje početnog korisnika
-        private static List<Osoba> korisnici = new List<Osoba>()
+        private static List<Korisnik> korisnici = new List<Korisnik>()
         {
             new Sef(1, "AdminIme", "AdminPrezime", "033/555-555", "AdresaHotela", "AdminPass", "admin@gmailcom")
 

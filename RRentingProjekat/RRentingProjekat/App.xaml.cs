@@ -32,14 +32,13 @@ namespace RRentingProjekat
         public App()
         {
 
-            //KADA SVI POPUNIMO DEFAULT PODATKE MOZEMO BUILD URADITI SA OVIM DIJELOM KODA ?
-            /*
+           
             using (var db = new RRentingDbContext())
             {
                 db.Database.ApplyMigrations();
                 DefaultPodaci.Initialize(db);
             }
-            */ 
+            
 
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |

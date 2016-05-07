@@ -11,10 +11,10 @@ using Windows.UI.Xaml.Media;
 
 namespace RRentingProjekat.RRentingBaza.Views
 {
-    public sealed partial class OsobeListView : Page
+    public sealed partial class KorisnikListView : Page
     {
 
-        public OsobeListView()
+        public KorisnikListView()
         {
             this.InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             using (var db = new RRentingDbContext())
             {
-                OsobeIS.ItemsSource = db.Osobe.OrderBy(c => c.Ime).ToList();
+                KorisniciIS.ItemsSource = db.Korisnici.OrderBy(c => c.Ime).ToList();
             }
         }
 
@@ -40,7 +40,7 @@ namespace RRentingProjekat.RRentingBaza.Views
                     Prezime = GeoSirinaInput.Text,
 
                 };
-                db.Osobe.Add(contact);
+                db.Korisnici.Add(contact);
                 //SaveChanges obavezno da se reflektuju izmjene u bazi, tek tada dolazi do komunikacije
                 // sa bazom
                 db.SaveChanges();
@@ -50,7 +50,7 @@ namespace RRentingProjekat.RRentingBaza.Views
                 RatingInput.Text = string.Empty;
                 GeoDuzinaInput.Text = string.Empty;
                 GeoSirinaInput.Text = string.Empty;
-                OsobeIS.ItemsSource = db.Osobe.OrderBy(c => c.Ime).ToList();
+                KorisniciIS.ItemsSource = db.Korisnici.OrderBy(c => c.Ime).ToList();
             }
         }
 
@@ -66,11 +66,11 @@ namespace RRentingProjekat.RRentingBaza.Views
                 return;
             using (var db = new RRentingDbContext())
             {
-                db.Osobe.Remove((Osoba)OsobeIS.ItemFromContainer(dep));
+                db.Korisnici.Remove((Korisnik)KorisniciIS.ItemFromContainer(dep));
                 //Nije jos obrisano dok nije Save
                 db.SaveChanges();
                 //Refresh liste restorana
-                OsobeIS.ItemsSource = db.Osobe.OrderBy(c => c.Ime).ToList();
+                KorisniciIS.ItemsSource = db.Korisnici.OrderBy(c => c.Ime).ToList();
             }
         }
 

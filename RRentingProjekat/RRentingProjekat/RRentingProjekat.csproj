@@ -98,9 +98,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160427211057_InitialMigration.cs" />
-    <Compile Include="Migrations\20160427211057_InitialMigration.designer.cs">
-      <DependentUpon>20160427211057_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20160507103846_InitialMigration.cs" />
+    <Compile Include="Migrations\20160507103846_InitialMigration.designer.cs">
+      <DependentUpon>20160507103846_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\RRentingDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,7 +118,7 @@
     <Compile Include="RRentingBaza\Helper\RelayCommand.cs" />
     <Compile Include="RRentingBaza\Models\DefaultPodaci.cs" />
     <Compile Include="RRentingBaza\Models\Gost.cs" />
-    <Compile Include="RRentingBaza\Models\Osoba.cs" />
+    <Compile Include="RRentingBaza\Models\Korisnik.cs" />
     <Compile Include="RRentingBaza\Models\Osoblje.cs" />
     <Compile Include="RRentingBaza\Models\Recepcioner.cs" />
     <Compile Include="RRentingBaza\Models\Rezervacija.cs" />
@@ -128,8 +128,8 @@
     <Compile Include="RRentingBaza\Models\Soba.cs" />
     <Compile Include="RRentingBaza\Models\Zahtjev.cs" />
     <Compile Include="RRentingBaza\ViewModels\RRentingViewModel.cs" />
-    <Compile Include="RRentingBaza\Views\OsobaListView.xaml.cs">
-      <DependentUpon>OsobaListView.xaml</DependentUpon>
+    <Compile Include="RRentingBaza\Views\KorisnikListView.xaml.cs">
+      <DependentUpon>KorisnikListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\PictureConverter.cs" />
     <Compile Include="RRentingBaza\Forms\Pocetna.xaml.cs">
@@ -175,7 +175,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RRentingBaza\Views\OsobaListView.xaml">
+    <Page Include="RRentingBaza\Views\KorisnikListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

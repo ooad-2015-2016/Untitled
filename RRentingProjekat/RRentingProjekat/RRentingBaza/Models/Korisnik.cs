@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace RRentingProjekat.RRentingBaza.Models
 {
    
-        abstract class Osoba
+       class Korisnik
         {
             [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-            public int OsobaId { get; set; }
+            public int KorisnikId { get; set; }
             public string fourSqaureId { get; set; }
             public string Ime { get; set; }
             public string Prezime { get; set; }
@@ -20,10 +20,10 @@ namespace RRentingProjekat.RRentingBaza.Models
             public string Sifra { get; set; }
             public string Email { get; set; }
 
-        public Osoba() { }
-        public Osoba(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email)
+        public Korisnik() { }
+        public Korisnik(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email)
         {
-            OsobaId = ID;
+            KorisnikId = ID;
             this.Ime = Ime;
             this.Prezime = Prezime;
             this.Telefon = Telefon;

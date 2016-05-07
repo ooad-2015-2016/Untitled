@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace RRentingProjekat.RRentingBaza.Models
 {
     public enum Ocjena {losa, dobra, super}
-    class Gost : Osoba
+    class Gost : Korisnik
     {
         public static int brojTiketa { get; set; }
         public Soba soba { get; set; }

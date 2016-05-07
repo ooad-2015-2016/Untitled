@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RRentingProjekat.RRentingBaza.Models
 {
-    class Sef:Osoba
+    class Sef:Korisnik
     {
         //public int SigurnosniID { get; set; }
         public Sef() { }
