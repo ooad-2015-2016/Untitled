@@ -19,7 +19,7 @@
             <TextBox Name="txtTelefonS" PlaceholderText="Telefon" Margin="10,10,10,0" Width="150" />
             <TextBox Name="txtAdresaS" PlaceholderText="Adresa" Margin="10,10,10,0" Width="150" />
             <PasswordBox Name="txtPasswordS" PlaceholderText="Šifra" Margin="10,10,10,0" Width="150" />
-            <Button Name="btnSignup" Margin="30,10,0,0" Click="buttonSignup_Click"  >Prijava</Button>
+            <Button Name="btnSignup" Margin="30,10,0,0" Click="buttonSignup_Click"  Command="{Binding SignupKorisnika}" >Prijava</Button>
         </StackPanel>
     </Grid>
 </Page>
