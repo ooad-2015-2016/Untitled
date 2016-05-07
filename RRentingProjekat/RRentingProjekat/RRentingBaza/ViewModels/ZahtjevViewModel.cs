@@ -65,7 +65,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                     Poruka = "Zahtjevi su poslani";
                     NotifyPropertyChanged("Poruka");
                     // kako proslijediti ovu listu zahtjeva osoblju?
-                    NavigationServis.Navigate(typeof(GostView), new GostViewModel());
+                   // NavigationServis.Navigate(typeof(GostView), new GostViewModel());
                 }
             }
         }
@@ -73,7 +73,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         private void nazad(object parametar)
         {
      
-            NavigationServis.Navigate(typeof(GostView), new GostViewModel());
+           // NavigationServis.Navigate(typeof(GostView), new GostViewModel());
         }
     }
 }

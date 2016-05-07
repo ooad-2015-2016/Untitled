@@ -105,10 +105,12 @@
     <Compile Include="Migrations\RRentingDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RRentingBaza\DataSource\DataSourceRRenting.cs" />
+    <Compile Include="RRentingBaza\ViewModels\GostViewModel.cs" />
+    <Compile Include="RRentingBaza\ViewModels\ZahtjevViewModel.cs" />
     <Compile Include="RRentingBaza\Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RRentingBaza\Forms\SignupKorisnik.xaml.cs">
+    <Compile Include="RRentingBaza\Views\SignupKorisnik.xaml.cs">
       <DependentUpon>SignupKorisnik.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Helper\DateConverter.cs" />
@@ -135,7 +137,7 @@
       <DependentUpon>KorisnikListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\PictureConverter.cs" />
-    <Compile Include="RRentingBaza\Forms\Pocetna.xaml.cs">
+    <Compile Include="RRentingBaza\Views\Pocetna.xaml.cs">
       <DependentUpon>Pocetna.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\RezervacijaListView.xaml.cs">
@@ -155,7 +157,7 @@
     <None Include="RRentingProjekat_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RRentingBaza\Forms\rent.jpg" />
+    <Content Include="RRentingBaza\Views\rent.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -170,11 +172,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="RRentingBaza\Views\GostView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="RRentingBaza\Views\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RRentingBaza\Forms\SignupKorisnik.xaml">
+    <Page Include="RRentingBaza\Views\SignupKorisnik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,7 +188,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="RRentingBaza\Forms\Pocetna.xaml">
+    <Page Include="RRentingBaza\Views\Pocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,6 +199,10 @@
     <Page Include="RRentingBaza\Views\SobaListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Views\ZahtjeviView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="RRentingBaza\Views\ZahtjevListView.xaml">
       <Generator>MSBuild:Compile</Generator>

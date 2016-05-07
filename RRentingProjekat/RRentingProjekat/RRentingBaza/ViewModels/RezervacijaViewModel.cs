@@ -8,7 +8,6 @@ using RRentingProjekat.RRentingBaza.Models;
 using RRentingProjekat.RRentingBaza.Helper;
 using System.Windows.Input;
 using RRentingProjekat.RRentingBaza.Views;
-using RRentingProjekat.RRentingBaza.Forms;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {

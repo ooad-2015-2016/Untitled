@@ -8,7 +8,6 @@ using RRentingProjekat.RRentingBaza.Models;
 using RRentingProjekat.RRentingBaza.Helper;
 using System.Windows.Input;
 using RRentingProjekat.RRentingBaza.Views;
-using RRentingProjekat.RRentingBaza.Forms;
 using Windows.UI.Xaml;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
@@ -26,6 +25,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public PrijavaViewModel Parent { get; set; } //Dodano
+
         private void NotifyPropertyChanged(String info)
         {
             if (PropertyChanged != null)
@@ -34,9 +35,10 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             }
         }
 
-        public GostViewModel()
+        public GostViewModel(PrijavaViewModel parent)
         {
             NavigationServis = new NavigationService();
+            this.Parent = parent;
 
             DodajZahtjev = new RelayCommand<object>(dodajZahtjev);
             OcijeniRRenting = new RelayCommand<object>(dodajStatistiku);

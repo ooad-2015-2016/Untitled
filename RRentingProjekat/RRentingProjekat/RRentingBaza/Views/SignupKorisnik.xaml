@@ -1,11 +1,11 @@
 ﻿<Page
-    x:Class="RRentingProjekat.RRentingBaza.Forms.SignupKorisnik"
+    x:Class="RRentingProjekat.RRentingBaza.Views.SignupKorisnik"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:viewmodels="using:RRentingProjekat.RRentingBaza.ViewModels"
     xmlns:models="using:RRentingProjekat.RRentingBaza.Models"
     xmlns:triggers="using:RRentingProjekat.RRentingBaza.Helper"
-    xmlns:local="using:RRentingProjekat.RRentingBaza.Forms"
+    xmlns:local="using:RRentingProjekat.RRentingBaza.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">

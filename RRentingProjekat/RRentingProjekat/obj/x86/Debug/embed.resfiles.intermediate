@@ -1,8 +1,10 @@
 App.xbf
-RRentingBaza\Forms\Pocetna.xbf
-RRentingBaza\Forms\SignupKorisnik.xbf
+RRentingBaza\Views\GostView.xbf
 RRentingBaza\Views\KorisnikListView.xbf
 RRentingBaza\Views\Login.xbf
+RRentingBaza\Views\Pocetna.xbf
 RRentingBaza\Views\RezervacijaListView.xbf
+RRentingBaza\Views\SignupKorisnik.xbf
 RRentingBaza\Views\SobaListView.xbf
+RRentingBaza\Views\ZahtjeviView.xbf
 RRentingBaza\Views\ZahtjevListView.xbf

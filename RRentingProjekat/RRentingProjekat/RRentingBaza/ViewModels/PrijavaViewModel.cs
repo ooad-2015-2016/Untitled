@@ -15,10 +15,12 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
     {
 
         public Korisnik PrijavljeniGost { get; set; }
+        public Korisnik PrijavljeniUposlenik { get; set; }
+/*
         public Korisnik PrijavljeniSef { get; set; }
         public Korisnik PrijavljeniOsoblje { get; set; }
         public Korisnik PrijavljeniRecepcionier { get; set; }
-
+*/
         public string UnosMail { get; set; }
         public string UnosPass { get; set; }
 
@@ -32,9 +34,12 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             NavigationServis = new NavigationService();
             PrijavljeniGost = new Gost();
+            PrijavljeniUposlenik = new Korisnik();
+/*
             PrijavljeniSef = new Sef();
             PrijavljeniRecepcionier = new Recepcioner();
             PrijavljeniOsoblje = new Osoblje();
+*/
 
             UnosMail = "";
             UnosPass = "";
@@ -45,14 +50,13 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         public bool mozeLiSePrijavitiGost(object parametar)
         {
-            //ovdje se moze dodati uslov ako je potrebno da se komanda ne izvrsi
             return true;
         }
         public bool mozeLiSePrijavitiUposlenik(object parametar)
         {
-            //ovdje se moze dodati uslov ako je potrebno da se komanda ne izvrsi
             return true;
         }
+
         public void loginGost(object parametar)
         {
             using (var db = new RRentingDbContext())
@@ -63,7 +67,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                 { }
                 else
                 {
-                    // NavigationServis.Navigate(typeof(), GostViewModel(this));
+                   NavigationServis.Navigate(typeof(GostView), new GostViewModel(this));
                 }
             }
         }
@@ -71,19 +75,22 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             using (var db = new RRentingDbContext())
             {
-                PrijavljeniGost = db.Korisnici.Where(x => x.Email == UnosMail && x.Sifra == UnosPass).FirstOrDefault();
 
+                PrijavljeniUposlenik = db.Korisnici.Where(x => x.Email == UnosMail && x.Sifra == UnosPass).FirstOrDefault();
 
                 if (PrijavljeniGost == null)
                 { }
                 else
                 {
-
-                    // NavigationServis.Navigate(typeof(), GostViewModel(this));
+                    //if (PrijavljeniUposlenik is Sef) NavigationServis.Navigate(typeof(SefView), SefViewModel(this));
+                    // else if (PrijavljeniUposlenik is Osoblje) NavigationServis.Navigate(typeof(OsobljeView), OsobljeViewModel(this));
+                    //else if (PrijavljeniUspolenik is Recepcioner) NavigationServis.Navigate(typeof(OsobljeView), OsobljeViewModel(this));
 
                 }
 
             }
         }
+
+        
     }
 }

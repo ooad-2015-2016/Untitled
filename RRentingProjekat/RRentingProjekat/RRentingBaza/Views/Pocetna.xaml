@@ -10,8 +10,8 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,10.333">
         <Rectangle Fill="DarkRed" HorizontalAlignment="Left" Height="234" Stroke="Black" VerticalAlignment="Top" Width="1026"/>
         <Rectangle Fill="DarkRed" HorizontalAlignment="Left" Height="123" Margin="-2,851,0,-2" Stroke="Black" VerticalAlignment="Top" Width="1442"/>
-        <Button x:Name="button" Content="LOGIN" HorizontalAlignment="Left" Margin="642,461,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Width="245" Height="91" Background="#33FFFFFF" BorderBrush="#FF531515"/>
-        <Button x:Name="button1" Content="SIGNUP" HorizontalAlignment="Left" Margin="642,557,0,0" VerticalAlignment="Top" Height="91" Width="245" FontSize="36" FontWeight="Bold" Background="#33FFFFFF" BorderBrush="#FF531515"/>
+        <Button x:Name="button" Content="LOGIN" HorizontalAlignment="Left" Margin="642,461,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Width="245" Height="91" Background="#33FFFFFF" BorderBrush="#FF531515"  Command="{Binding Path=Login}"/>
+        <Button x:Name="button1" Content="SIGNUP" HorizontalAlignment="Left" Margin="642,557,0,0" VerticalAlignment="Top" Height="91" Width="245" FontSize="36" FontWeight="Bold" Background="#33FFFFFF" BorderBrush="#FF531515"  Command="{Binding Path=Signup}"/>
         <Image x:Name="image" Margin="15,352,379,0" Height="409" VerticalAlignment="Top" Source="rent.jpg"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="359,10,0,0" TextWrapping="Wrap" Text="RRenting" VerticalAlignment="Top" Height="74" Width="288" FontSize="60" FontWeight="Bold" />
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="359,89,0,0" TextWrapping="Wrap" Text="Naziv objekta" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
