@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="LoginUposlenik" />
+    <RootPropertyPathName Name="SelectedModel" />
+    <RootPropertyPathName Name="LoginGost" />
     <RootPropertyPathName Name="SignupKorisnika" />
     <RootPropertyPathName Name="Sifra" />
     <RootPropertyPathName Name="Telefon" />
@@ -62,10 +65,11 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Inlines" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Name" />
       <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="TextWrapping" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
@@ -91,6 +95,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
       <RootProperty Name="Command" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
@@ -101,13 +106,31 @@
       <RootProperty Name="BorderBrush" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="Items" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Path" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Forms.Login" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />
-    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Forms.SignupKorisnik" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -145,19 +168,11 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Items" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
-      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaListView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SobaListView" />

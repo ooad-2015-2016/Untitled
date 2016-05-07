@@ -28,25 +28,37 @@ namespace RRentingProjekat.RRentingBaza.Forms
 
             //inicijalizacija data source
             var inicijalizacija = new DataSourceRRenting();
+            listStatus.Visibility = Visibility.Collapsed;
         }
         //asinhrona metoda za provjeru prijave korisnika
-        private async void btnLogin_Click(object sender, RoutedEventArgs e)
+
+
+        private void btnLoginUposlenik_Click(object sender, RoutedEventArgs e)
         {
 
-            var korisnickoIme = txtUsername.Text;
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            var korisnickiMail = txtUsername.Text;
             var sifra = txtPassword.Password;
 
             //var korisnik = DataSourceRRenting.ProvjeraKorisnika(korisnickoIme, sifra);
-           /* if (korisnik != null && korisnik.KorisnikId > 0)
-            {
-                this.Frame.Navigate(typeof(MainPage), korisnik);
-            }
-            else
-            {
-                var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
-                await dialog.ShowAsync();
-            }
-            */
+            /* if (korisnik != null && korisnik.KorisnikId > 0)
+             {
+                 this.Frame.Navigate(typeof(MainPage), korisnik);
+             }
+             else
+             {
+                 var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+                 await dialog.ShowAsync();
+             }
+             */
+
+        }
+
+        private void checkStatus_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="RRentingProjekat.RRentingBaza.Forms.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RRentingProjekat.RRentingBaza.Forms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:RRentingProjekat.RRentingBaza.ViewModels"
+   mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="200" Height="400">
+        <StackPanel>
+            <TextBlock FontSize="18.667" FontWeight="Bold">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
+                </TextBlock.Foreground>Prijava na sistem</TextBlock>
+            <TextBox Name="txtUsername" PlaceholderText="Email" Margin="10,10,10,0" Width="150" />
+            <PasswordBox Name="txtPassword" PlaceholderText="Šifra" Margin="10,10,10,0" Width="150" />
+            <Button Name="btnLogin" Margin="30,10,0,0" Click="btnLogin_Click" Content="Prijava" Command="{Binding Path= LoginGost}" />
+
+            <TextBlock Name="labelStatus" Text="Uposlenik" Margin="10,10,10,0"/>
+            <CheckBox Name="checkStatus"  Margin="10,10,10,0"  Click="checkStatus_Click"/>
+            <ListBox Name="listStatus" SelectedItem="{Binding SelectedModel}" SelectionMode="Single">
+                <ListBox.Items>                    <ListBoxItem Content="Šef"/>
+                    <ListBoxItem Content="Osoblje"/>
+                    <ListBoxItem Content="Recepcioner"/>
+                </ListBox.Items>            </ListBox>
+            <Button Name="btnLoginUposlenik" Margin="30,10,0,0" Click="btnLoginUposlenik_Click" Content="Prijava" Command="{Binding Path=LoginUposlenik}" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -105,7 +105,7 @@
     <Compile Include="Migrations\RRentingDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RRentingBaza\DataSource\DataSourceRRenting.cs" />
-    <Compile Include="RRentingBaza\Forms\Login.xaml.cs">
+    <Compile Include="RRentingBaza\Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Forms\SignupKorisnik.xaml.cs">
@@ -127,6 +127,7 @@
     <Compile Include="RRentingBaza\Models\Sef.cs" />
     <Compile Include="RRentingBaza\Models\Soba.cs" />
     <Compile Include="RRentingBaza\Models\Zahtjev.cs" />
+    <Compile Include="RRentingBaza\ViewModels\PrijavaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\RegistracijaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\RezervacijaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\RRentingViewModel.cs" />
@@ -169,7 +170,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="RRentingBaza\Forms\Login.xaml">
+    <Page Include="RRentingBaza\Views\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
