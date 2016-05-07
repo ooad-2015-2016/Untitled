@@ -6,10 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Page_Loaded">
+    Loaded="Page_Loaded" Height="400">
 
     <Page.Resources>
-        <!--<local:PictureConverter x:Key="thePictureConverter"/> --> 
+        <!--<local:PictureConverter x:Key="thePictureConverter"/> -->
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
@@ -27,22 +27,22 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <TextBlock x:Name="BrojSobeTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0"
 TextWrapping="Wrap" Text="Broj sobe" VerticalAlignment="Top"/>
         <TextBox x:Name="BrojSobeInput" Grid.Column="1" HorizontalAlignment="Stretch"
 Margin="3,3,3,3" TextWrapping="Wrap" Text="" />
-        
+
         <TextBlock x:Name="CijenaSobeTextBlock" Grid.Row="1" HorizontalAlignment="Left" Margin="10,10,0,0"
 TextWrapping="Wrap" Text="Cijena sobe" VerticalAlignment="Top"/>
         <TextBox x:Name="CijenaSobeInput" Grid.Column="1"  Grid.Row="1" HorizontalAlignment="Stretch"
 Margin="3,3,3,3" TextWrapping="Wrap" Text="" />
-        
+
         <TextBlock x:Name="BrojKrevetaTextBlock" Grid.Row="2" HorizontalAlignment="Left" Margin="10,10,0,0" 
 TextWrapping="Wrap" Text="Broj kreveta" VerticalAlignment="Top"/>
         <TextBox x:Name="BrojKrevetaInput" Grid.Column="1"  Grid.Row="2" HorizontalAlignment="Stretch" 
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
-        
+
         <TextBlock x:Name="StatusSobeTextBlock" Grid.Row="3" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Status sobe" VerticalAlignment="Top"/>        <ListBox x:Name="StatusSobeListBox" Grid.Row="3" Grid.Column="1"HorizontalAlignment="Stretch" Margin="3,3,3,3" >
             <ListBox.Items>                <ListBoxItem Content="Slobodna"/>
@@ -52,10 +52,8 @@ Margin="10,10,0,0" TextWrapping="Wrap" Text="Status sobe" VerticalAlignment="Top
 TextWrapping="Wrap" Text="Rezervisani datum (d/m/g)" VerticalAlignment="Top"/>        <TextBox x:Name="DanInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Left"
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>        <TextBox x:Name="MjesecInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Center"
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>        <TextBox x:Name="GodinaInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Right"
-Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>                <TextBlock x:Name="SlikaSobeLabel" Grid.Row="5" HorizontalAlignment="Left" Margin="10,10,0,0"
-TextWrapping="Wrap" Text="SlikaSobe" VerticalAlignment="Top"/>
-        <Button x:Name="buttonUpload" Content="Upload" Grid.Column="1" Grid.Row="5"
-HorizontalAlignment="Stretch" Margin="5,5,5,0" VerticalAlignment="Top" Click="buttonUpload_Click" />
+Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
+
 
         <Button x:Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch"
 Margin="5,5,5,0" Grid.Row="6" VerticalAlignment="Top" Click="buttonDodaj_Click"/>
@@ -73,9 +71,7 @@ Margin="5,5,5,0" Grid.Row="6" VerticalAlignment="Top" Click="buttonDodaj_Click"/
                         <TextBlock Text="{Binding RezervisaniDatumi}" Margin="5,0,0,0 "/>
 
                         <Button Content="Delete" Click="Button_Click_Delete" Margin="5,5,5,5"/>
-                        <!--<Image x:Name="image" HorizontalAlignment="Left" Height="500"
-Margin="5,0,0,0" VerticalAlignment="Top" Source="{Binding SlikaSobe, Converter={StaticResource thePictureConverter}}"/> -->
-                       
+
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

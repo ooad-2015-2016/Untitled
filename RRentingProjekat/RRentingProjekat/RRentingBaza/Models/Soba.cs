@@ -19,7 +19,7 @@ namespace RRentingProjekat.RRentingBaza.Models
         public int BrojSobe { get; set; }
         public StatusSobe Status { get; set; }
         public float CijenaSobe { get; set; } //cijena sobe
-        public byte[] SlikaSobe { get; set; } //pocetna slika sobe
+       // public byte[] SlikaSobe { get; set; } //pocetna slika sobe
         public int BrojKreveta { get; set; } //broj kreveta u sobi
         public List<DateTime> RezervisaniDatumi { get; set; } //datumi kad je soba rezervisana
     }

@@ -25,7 +25,7 @@ namespace RRentingProjekat.RRentingBaza.Views
     public sealed partial class SobaListView : Page
     {
         //Potrebno je privremeno negdje staviti sliku koja se uploaduje
-        private byte[] uploadSlika;
+       
         public SobaListView()
         {
             this.InitializeComponent();
@@ -52,7 +52,6 @@ namespace RRentingProjekat.RRentingBaza.Views
                     CijenaSobe = (float)Convert.ToDouble(CijenaSobeInput.Text),
                     BrojKreveta = Convert.ToInt32(BrojKrevetaInput.Text),
                     Status = (StatusSobe)Enum.Parse(typeof(StatusSobe), StatusSobeListBox.SelectedItem.ToString()),
-                    SlikaSobe = uploadSlika,
                     RezervisaniDatumi = new List<DateTime>(),
                     
                 };
@@ -75,6 +74,7 @@ namespace RRentingProjekat.RRentingBaza.Views
                 SobeIS.ItemsSource = db.Sobe.OrderBy(c => c.CijenaSobe).ToList();
             }
         }
+        /*
         //event za upload slike
         private async void buttonUpload_Click(object sender, RoutedEventArgs e)
         {
@@ -95,6 +95,7 @@ namespace RRentingProjekat.RRentingBaza.Views
                 buttonUpload.Content = "Picked photo: " + file.Name;
             }
         }
+        */
         //Event za brisanje sobe
         private void Button_Click_Delete(object sender, RoutedEventArgs e)
         {

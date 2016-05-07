@@ -19,6 +19,9 @@
     <RootPropertyPathName Name="BrojKreveta" />
     <RootPropertyPathName Name="CijenaSobe" />
     <RootPropertyPathName Name="BrojSobe" />
+    <RootPropertyPathName Name="obavljenZahtjev" />
+    <RootPropertyPathName Name="brojSobe" />
+    <RootPropertyPathName Name="nazivZahtjeva" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -26,9 +29,9 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -152,5 +155,6 @@
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaListView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SobaListView" />
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.ZahtjevListView" />
   </Roots.RootTypes>
 </Roots>

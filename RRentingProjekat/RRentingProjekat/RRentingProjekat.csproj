@@ -141,6 +141,9 @@
     <Compile Include="RRentingBaza\Views\SobaListView.xaml.cs">
       <DependentUpon>SobaListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RRentingBaza\Views\ZahtjevListView.xaml.cs">
+      <DependentUpon>ZahtjevListView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -187,6 +190,10 @@
     <Page Include="RRentingBaza\Views\SobaListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Views\ZahtjevListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup />

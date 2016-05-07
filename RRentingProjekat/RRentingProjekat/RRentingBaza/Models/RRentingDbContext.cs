@@ -35,7 +35,7 @@ namespace RRentingProjekat.RRentingBaza.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //jedno od polja je image da se zna šta je zapravo predstavlja byte[]; SLIKA SOBE
-            modelBuilder.Entity<Soba>().Property(p => p.SlikaSobe).HasColumnType("image");
+            //modelBuilder.Entity<Soba>().Property(p => p.SlikaSobe).HasColumnType("image");
         }
     }
 }

@@ -25,7 +25,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public RRentingViewModel()
         {
             NavigationServis = new NavigationService();
-            korisnik = new Osoba();
+           // korisnik = new Osoba();
             LoginKorisnika = new RelayCommand<object>(login);
 
 
