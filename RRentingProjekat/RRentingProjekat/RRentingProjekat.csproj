@@ -106,9 +106,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RRentingBaza\DataSource\DataSourceRRenting.cs" />
     <Compile Include="RRentingBaza\ViewModels\GostViewModel.cs" />
+    <Compile Include="RRentingBaza\ViewModels\SefViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\ZahtjevViewModel.cs" />
     <Compile Include="RRentingBaza\Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RRentingBaza\Views\OsobljeView.xaml.cs">
+      <DependentUpon>OsobljeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RRentingBaza\Views\SefView.xaml.cs">
+      <DependentUpon>SefView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\SignupKorisnik.xaml.cs">
       <DependentUpon>SignupKorisnik.xaml</DependentUpon>
@@ -177,6 +184,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RRentingBaza\Views\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Views\OsobljeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Views\SefView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

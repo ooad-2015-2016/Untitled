@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="RRentingProjekat.RRentingBaza.Views.SefView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RRentingProjekat.RRentingBaza.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="240" Margin="80,186,40,189">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="120" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="18.667" FontWeight="Bold">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
+            </TextBlock.Foreground>Sobe</TextBlock>
+
+        <ListBox HorizontalAlignment="Left" Margin="10,10,0,0"
+                    ItemsSource="{Binding Path=RRenting.Sobe}" 
+                    DisplayMemberPath="BrojSobe" SelectedItem="{Binding Path=Soba.BrojSobe}"
+                    Grid.Row="1"></ListBox>
+        <Button Name="btnSoba" Margin="10,10,0,0"  Grid.Row="1" Grid.Column="1" Click="btnSoba_Click"  Content="Prikaži sobu" Command="{Binding Path= Soba1}" />
+
+        <TextBlock Name="labelDoNabavke" Grid.Row="4" Text="Do nabavke:"/>
+        <TextBlock Name="labelNabavka" Grid.Row="4" Grid.Column="1"/>
+
+        <Button Name="btnUposlenici" Margin="10,10,10,0" Grid.Row="5" Click="btnUposlenici_Click" Content="Zaposleni" Command="{Binding Path= Uposlenici}" />
+        <Button Name="btnStatistika" Margin="10,10,10,0" Grid.Row="5" Grid.Column="1" Click="btnStatistika_Click" Content="Statistika" Command="{Binding Path= Statistika}" />
+
+    </Grid>
+</Page>

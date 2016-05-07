@@ -2,8 +2,10 @@ App.xbf
 RRentingBaza\Views\GostView.xbf
 RRentingBaza\Views\KorisnikListView.xbf
 RRentingBaza\Views\Login.xbf
+RRentingBaza\Views\OsobljeView.xbf
 RRentingBaza\Views\Pocetna.xbf
 RRentingBaza\Views\RezervacijaListView.xbf
+RRentingBaza\Views\SefView.xbf
 RRentingBaza\Views\SignupKorisnik.xbf
 RRentingBaza\Views\SobaListView.xbf
 RRentingBaza\Views\ZahtjeviView.xbf

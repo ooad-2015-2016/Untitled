@@ -738,3 +738,13 @@ C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\R
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\Pocetna.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\SignupKorisnik.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\Pocetna.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\OsobljeView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\SefView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\OsobljeView.g.i.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\OsobljeView.g.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\SefView.g.i.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\SefView.g.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\OsobljeView.xaml
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\SefView.xaml
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\OsobljeView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\SefView.xbf

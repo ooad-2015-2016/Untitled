@@ -6,6 +6,13 @@
     <RootPropertyPathName Name="Dodaj" />
     <RootPropertyPathName Name="LoginUposlenik" />
     <RootPropertyPathName Name="LoginGost" />
+    <RootPropertyPathName Name="BrojSobe" />
+    <RootPropertyPathName Name="Statistika" />
+    <RootPropertyPathName Name="Uposlenici" />
+    <RootPropertyPathName Name="Soba1" />
+    <RootPropertyPathName Name="RRenting" />
+    <RootPropertyPathName Name="Sobe" />
+    <RootPropertyPathName Name="Soba" />
     <RootPropertyPathName Name="SignupKorisnika" />
     <RootPropertyPathName Name="Sifra" />
     <RootPropertyPathName Name="Telefon" />
@@ -27,7 +34,6 @@
     <RootPropertyPathName Name="Status" />
     <RootPropertyPathName Name="BrojKreveta" />
     <RootPropertyPathName Name="CijenaSobe" />
-    <RootPropertyPathName Name="BrojSobe" />
     <RootPropertyPathName Name="obavljenZahtjev" />
     <RootPropertyPathName Name="brojSobe" />
     <RootPropertyPathName Name="nazivZahtjeva" />
@@ -52,10 +58,10 @@
       <RootProperty Name="Height" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
     </RootType>
@@ -146,15 +152,25 @@
       <RootProperty Name="Color" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Login" />
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />
-    <RootType FullName="RRentingProjekat.RRentingBaza.Views.SignupKorisnik" />
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.SefView" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.SignupKorisnik" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />
       <RootProperty Name="ItemTemplate" />
@@ -184,11 +200,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="HorizontalAlignment" />

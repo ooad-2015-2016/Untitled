@@ -16,11 +16,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         public Korisnik PrijavljeniGost { get; set; }
         public Korisnik PrijavljeniUposlenik { get; set; }
-/*
-        public Korisnik PrijavljeniSef { get; set; }
-        public Korisnik PrijavljeniOsoblje { get; set; }
-        public Korisnik PrijavljeniRecepcionier { get; set; }
-*/
+
         public string UnosMail { get; set; }
         public string UnosPass { get; set; }
 
@@ -35,11 +31,6 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
             PrijavljeniGost = new Gost();
             PrijavljeniUposlenik = new Korisnik();
-/*
-            PrijavljeniSef = new Sef();
-            PrijavljeniRecepcionier = new Recepcioner();
-            PrijavljeniOsoblje = new Osoblje();
-*/
 
             UnosMail = "";
             UnosPass = "";
@@ -82,9 +73,9 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                 { }
                 else
                 {
-                    //if (PrijavljeniUposlenik is Sef) NavigationServis.Navigate(typeof(SefView), SefViewModel(this));
+                    if (PrijavljeniUposlenik is Sef) NavigationServis.Navigate(typeof(SefView), new SefViewModel(this));
                     // else if (PrijavljeniUposlenik is Osoblje) NavigationServis.Navigate(typeof(OsobljeView), OsobljeViewModel(this));
-                    //else if (PrijavljeniUspolenik is Recepcioner) NavigationServis.Navigate(typeof(OsobljeView), OsobljeViewModel(this));
+                    //else if (PrijavljeniUspolenik is Recepcioner) NavigationServis.Navigate(typeof(RecepcionerView), OsobljeViewModel(this));
 
                 }
 

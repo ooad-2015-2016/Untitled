@@ -13,7 +13,7 @@
             <TextBlock FontSize="18.667" FontWeight="Bold">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
-                </TextBlock.Foreground>Prijava na sistem</TextBlock>
+                </TextBlock.Foreground>Prijava</TextBlock>
             <TextBox Name="txtUsername" PlaceholderText="Email" Margin="10,10,10,0" Width="150" />
             <PasswordBox Name="txtPassword" PlaceholderText="Šifra" Margin="10,10,10,0" Width="150" />
             <Button Name="btnLogin" Margin="30,10,0,0" Click="btnLogin_Click" Content="Prijava" Command="{Binding Path= LoginGost}" />
