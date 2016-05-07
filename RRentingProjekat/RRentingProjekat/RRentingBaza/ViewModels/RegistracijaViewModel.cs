@@ -41,7 +41,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             //using (var db = new RRentingDbContext())
             
                 RegistrovaniKorisnik = new Gost(Id, txtIme, txtPrezime, txtTelefon, txtAdresa, txtPassword, txtEmail);
-                NavigationServis.Navigate(typeof(RezervacijaListView, new RezervacijaViewModel(this));
+                NavigationServis.Navigate(typeof(RezervacijaListView), new RezervacijaViewModel(this));
                 
             
 
