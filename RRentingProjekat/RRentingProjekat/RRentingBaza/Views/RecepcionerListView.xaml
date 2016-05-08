@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="RRentingProjekat.RRentingBaza.ViewModels.RecepcionerListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RRentingProjekat.RRentingBaza.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid Background="{ThemeResource AppBarBackgroundThemeBrush}" BorderThickness="0" Height="640" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textblock" HorizontalAlignment="Center" Margin="26,71,16,537" TextWrapping="Wrap" FontSize="15" Width="174" Text="Spisak Slobodnih Soba" Grid.Column="2" Foreground="#FF0C0B0B"/>
+        <ComboBox   HorizontalAlignment="Left" Margin="25,103,0,0"
+                    VerticalAlignment="Top" ItemsSource="{Binding Path=Soba}" 
+                    DisplayMemberPath="Naziv" SelectedValue="{Binding Path=StatusSobe, Mode=TwoWay}" Grid.Column="2" Width="175"
+        />
+        <Button x:Name="button" Content="Obracun Cijene" Click="btn_Click" Grid.Column="2" HorizontalAlignment="Center"  Margin="25,161,16,447" VerticalAlignment="Center" Width="175" RenderTransformOrigin="0.48,0.604" />
+        <Button x:Name="button2" Content="Logout" Grid.Column="2" HorizontalAlignment="Center" Margin="180,561,42,47" VerticalAlignment="Center" Grid.ColumnSpan="2" Background="#33F10F0F"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Center" Margin="32,231,10,377" TextWrapping="Wrap" FontSize="15" Width="174" Text="Promijeni Status Sobe" Grid.Column="2" Foreground="#FF0C0B0B"/>
+        <Button x:Name="button4" Content="Sigurnosni ID.ovi" Grid.Column="2" HorizontalAlignment="Center"  Margin="25,312,16,296" VerticalAlignment="Center" Width="175" />
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="15,10,45,574" TextWrapping="Wrap" FontSize="36" Grid.ColumnSpan="4" Width="300" Text="RRenting"/>
+        <ComboBox   HorizontalAlignment="Left" Margin="25,349,0,0"
+                    VerticalAlignment="Top" ItemsSource="{Binding Path=Sifra}" 
+                    DisplayMemberPath="Naziv" SelectedValue="{Binding Path=ListaSifri, Mode=TwoWay}" Grid.Column="2" Width="175"
+        />
+        <Image x:Name="image" Margin="19,445,119,0" VerticalAlignment="Top" Source="Recepcija.jpg" Grid.ColumnSpan="2" Grid.Column="1" Height="185" RenderTransformOrigin="0.496,0.658"/>
+        <!--<ComboBox   HorizontalAlignment="Left" Margin="5,5,5,5"
+                    VerticalAlignment="Top" ItemsSource="{Binding Path=Soba}" 
+                    DisplayMemberPath="Naziv" SelectedValue="{Binding Path=StatusSobe, Mode=TwoWay}"
+                    Grid.Row="1" Grid.Column="1"
+        />-->
+
+    </Grid>
+
+</Page>
