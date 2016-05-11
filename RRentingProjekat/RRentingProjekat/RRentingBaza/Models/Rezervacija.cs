@@ -29,5 +29,6 @@ namespace RRentingProjekat.RRentingBaza.Models
         public DateTime datumOdlaska { get; set; }
         public DateTime datumDolaska { get; set; }
 
+
     }
 }
