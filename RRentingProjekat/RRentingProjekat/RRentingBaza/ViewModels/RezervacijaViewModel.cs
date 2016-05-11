@@ -22,6 +22,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         Boolean ParkingRB;
         Boolean LjubimacRB;
         Boolean DodatnikrevetRB;
+        private static int m_Counter2 = 0;
         float CijenaInput;
         NacinPlacanja NacinPlacanjaListBox;
         public Rezervacija DodanaRezervacija { get; set; }
@@ -31,12 +32,12 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             RegistrovaniGost = rvm.RegistrovaniKorisnik;
             DodajRezervaciju = new RelayCommand<object>(rezervisi);
-            this.Id = System.Threading.Interlocked.Increment(ref m_Counter); ;
+            this.Id = System.Threading.Interlocked.Increment(ref m_Counter2); ;
         }
         private void rezervisi(object parametar)
         {
 //            RegistrovaniKorisnik = new Gost(Id, txtIme, txtPrezime, txtTelefon, txtAdresa, txtPassword, txtEmail);
-            NavigationServis.Navigate(typeof(GostView), new GostViewModel(this));
+           // NavigationServis.Navigate(typeof(GostView), new GostViewModel());
             DodanaRezervacija.brojOdraslih = BrojOdraslihInput;
             DodanaRezervacija.brojDjece = BrojDjeceInput;
             DodanaRezervacija.datumDolaska = Dolazak;

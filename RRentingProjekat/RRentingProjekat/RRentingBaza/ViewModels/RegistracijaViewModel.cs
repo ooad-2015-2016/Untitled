@@ -33,7 +33,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
             RegistrovaniKorisnik = new Gost();
             SignupKorisnika = new RelayCommand<object>(signup);
-            this.Id= System.Threading.Interlocked.Increment(ref m_Counter); ;
+            this.Id= System.Threading.Interlocked.Increment(ref m_Counter); 
         }
         private void signup(object parametar)
         {

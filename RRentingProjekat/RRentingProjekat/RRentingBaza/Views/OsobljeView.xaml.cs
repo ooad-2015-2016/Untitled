@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RRentingProjekat.RRentingBaza.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,13 @@ namespace RRentingProjekat.RRentingBaza.Views
         public OsobljeView()
         {
             this.InitializeComponent();
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (var db = new RRentingDbContext())
+            {
+               
+            }
         }
     }
 }
