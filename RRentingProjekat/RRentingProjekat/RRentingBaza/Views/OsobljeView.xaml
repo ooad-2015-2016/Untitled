@@ -4,10 +4,40 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:RRentingProjekat.RRentingBaza.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:viewmodels="using:RRentingProjekat.RRentingBaza.ViewModels"
+    xmlns:models="using:RRentingProjekat.RRentingBaza.Models"
+    xmlns:triggers="using:RRentingProjekat.RRentingBaza.Helper"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,96">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--Polja za unos novog restorana-->
+
+
+        <TextBlock x:Name="SobaTextBlock" Grid.Row="2" HorizontalAlignment="Left"
+Margin="10,10,0,10" TextWrapping="Wrap" Text="Broj Sobe" Width="107"/>
+        <TextBlock x:Name="ListaZahtjeva" Grid.Row="0" HorizontalAlignment="Left"
+Margin="10,10,0,0" TextWrapping="Wrap" Text="Odabir zahtjeva" VerticalAlignment="Top" Height="20" Width="107"/>
+        <ListBox x:Name="ZahtjeviListBox" Grid.Row="0" Grid.Column="1"
+HorizontalAlignment="Stretch" Margin="3,3,3,3" 
+            ItemsSource="{Binding Path=RRenting.Zahtjevi}" 
+                    DisplayMemberPath="nazivZahtjeva" SelectedItem="{Binding Path=Zahtjev.nazivZahtjeva}"
+                    ></ListBox>
+        <CheckBox x:Name="ObavljenocheckBox" Content="Obavljeno" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top"/>
 
     </Grid>
+
 </Page>
