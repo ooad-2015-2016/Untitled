@@ -6,11 +6,14 @@
     <RootPropertyPathName Name="Dodaj" />
     <RootPropertyPathName Name="LoginUposlenik" />
     <RootPropertyPathName Name="LoginGost" />
+    <RootPropertyPathName Name="nazivZahtjeva" />
+    <RootPropertyPathName Name="RRenting" />
+    <RootPropertyPathName Name="Zahtjevi" />
+    <RootPropertyPathName Name="Zahtjev" />
     <RootPropertyPathName Name="BrojSobe" />
     <RootPropertyPathName Name="Statistika" />
     <RootPropertyPathName Name="Uposlenici" />
     <RootPropertyPathName Name="Soba1" />
-    <RootPropertyPathName Name="RRenting" />
     <RootPropertyPathName Name="Sobe" />
     <RootPropertyPathName Name="Soba" />
     <RootPropertyPathName Name="SignupKorisnika" />
@@ -36,7 +39,6 @@
     <RootPropertyPathName Name="CijenaSobe" />
     <RootPropertyPathName Name="obavljenZahtjev" />
     <RootPropertyPathName Name="brojSobe" />
-    <RootPropertyPathName Name="nazivZahtjeva" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -127,9 +129,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
@@ -152,7 +154,6 @@
       <RootProperty Name="Color" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Login" />
-    <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
@@ -167,6 +168,7 @@
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="Items" />
     </RootType>
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SefView" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />

@@ -106,7 +106,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RRentingBaza\DataSource\DataSourceRRenting.cs" />
     <Compile Include="RRentingBaza\ViewModels\GostViewModel.cs" />
-    <Compile Include="RRentingBaza\ViewModels\OsobljeViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\SefViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\ZahtjevViewModel.cs" />
     <Compile Include="RRentingBaza\Views\Login.xaml.cs">
