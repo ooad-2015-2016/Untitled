@@ -768,3 +768,14 @@ C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRent
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\SignupKorisnik.xbf
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\Pocetna.xbf
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\ZahtjeviView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\RecepcionerView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingProjekat.csprojResolveAssemblyReference.cache
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.g.i.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.g.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.g.i.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.g.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.xaml
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xaml
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xbf

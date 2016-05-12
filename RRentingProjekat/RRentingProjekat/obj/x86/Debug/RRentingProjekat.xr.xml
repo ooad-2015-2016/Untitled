@@ -180,6 +180,7 @@
       <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.RecepcionerView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SefView" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />
@@ -225,6 +226,7 @@
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaListView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SobaListView" />
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
