@@ -1,4 +1,5 @@
-﻿using RRentingProjekat.RRentingBaza.Models;
+﻿using RRentingProjekat.RRentingBaza.DataSource;
+using RRentingProjekat.RRentingBaza.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,8 +27,24 @@ namespace RRentingProjekat.RRentingBaza.Views
     {
         public OsobljeView()
         {
-            this.InitializeComponent();
+            //inicijalizacija data source
+            var inicijalizacija = new DataSourceRRenting();
+
+            //staviti da se vidi back
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
         }
+
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
+        }
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             using (var db = new RRentingDbContext())
