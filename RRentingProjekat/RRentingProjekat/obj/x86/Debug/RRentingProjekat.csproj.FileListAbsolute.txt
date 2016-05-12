@@ -588,7 +588,6 @@ C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\Syste
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\System.Xml.XDocument.dll
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\System.Xml.XmlSerializer.dll
-C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingProjekat.csprojResolveAssemblyReference.cache
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\App.g.i.cs
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\App.g.cs
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RezervacijaListView.g.i.cs
@@ -770,7 +769,6 @@ C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRent
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\ZahtjeviView.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\RecepcionerView.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xbf
-C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingProjekat.csprojResolveAssemblyReference.cache
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.g.i.cs
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.g.cs
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.g.i.cs

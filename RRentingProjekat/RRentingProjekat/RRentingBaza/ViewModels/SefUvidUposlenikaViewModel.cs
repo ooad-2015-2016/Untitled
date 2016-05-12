@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
-    class SefovUvidUposlenikaViewModel
+    class SefUvidUposlenikaViewModel
     {
+        public SefUvidUposlenikaViewModel(SefViewModel svm)
+        {
+            
+        }
     }
 }

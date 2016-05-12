@@ -47,11 +47,11 @@ Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Datum Dolaska" VerticalAlignment="Top" Height="20" Width="107"/>
         <TextBlock x:Name="DatumOdlaskaTextBlock" Grid.Row="3" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Datum Odlaska" VerticalAlignment="Top" Height="20" Width="107"/>
-        <RadioButton x:Name="LjubimacRB" Content="Ljubimac " Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="4" VerticalAlignment="Top"/>
+        <CheckBox x:Name="LjubimacRB" Content="Ljubimac " Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="4" VerticalAlignment="Top"/>
         <TextBlock x:Name="DodatnoTextBlock" Grid.Row="4" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Dodatne opcije" VerticalAlignment="Top" Height="20" Width="107"/>
-        <RadioButton x:Name="ParkingRB" Content="Parking" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="5" VerticalAlignment="Top"/>
-        <RadioButton x:Name="DodatnikrevetRB" Content="Dodatnikrevet" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="6" VerticalAlignment="Top"/>
+        <CheckBox x:Name="ParkingRB" Content="Parking" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="5" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DodatnikrevetRB" Content="Dodatnikrevet" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="6" VerticalAlignment="Top"/>
         <Button x:Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch"
 Margin="0,10,10,0" Grid.Row="9" VerticalAlignment="Top" Click="buttonDodaj_Click" Height="32"  Command="{Binding DodajRezervaciju}"/>
         <TextBlock x:Name="NacinPlacanjaBlock" Grid.Row="8" HorizontalAlignment="Left"
@@ -71,14 +71,14 @@ HorizontalAlignment="Stretch" Margin="3,3,3,3" >
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" >
                         <!--Polja od restorana povezana preko binding, direktno se uzimaju vrijednosti iz objekata u listi-->
-                        <TextBlock Text="{Binding brojOdraslih}" Margin="5,0,0,0"/>
-                        <TextBlock Text="{Binding brojDjece}" Margin="5,0,0,0" />
-                        <TextBlock Text="{Binding datumDolaska}" Margin="5,0,0,0" />
-                        <TextBlock Text="{Binding datumOdlaska}" Margin="5,0,0,0"/>
-                        <TextBlock Text="{Binding ljubimac}" Margin="5,0,0,0" />
-                        <TextBlock Text="{Binding parking}" Margin="5,0,0,0" />
-                        <TextBlock Text="{Binding dodatniKrevet}" Margin="5,0,0,0" />
-                        <TextBlock Text="{Binding cijena}" Margin="5,0,0,0" />
+                        <TextBlock Text="{Binding brojOdraslih, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,0,0,0"/>
+                        <TextBlock Text="{Binding brojDjece, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,0,0,0" />
+                        <TextBlock Text="{Binding datumDolaska, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,0,0,0" />
+                        <TextBlock Text="{Binding datumOdlaska, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,0,0,0"/>
+                        <TextBlock Text="{Binding ljubimac, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,0,0,0" />
+                        <TextBlock Text="{Binding parking, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,0,0,0" />
+                        <TextBlock Text="{Binding dodatniKrevet, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,0,0,0" />
+                        <TextBlock Text="{Binding cijena, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,0,0,0" />
 
                     </StackPanel>
                 </DataTemplate>

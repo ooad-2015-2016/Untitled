@@ -29,7 +29,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
 
             SobaIzbor = new RelayCommand<object>(sobaIzbor, mozeLiSobuNaci);
-            Uposlenici = new RelayCommand<object>(uposlenici, mozeLiSeUposlenikaNaci);
+            Uposlenici = new RelayCommand<object>(uposlenici, mozeLiUposlenikaNaci);
             Statistika = new RelayCommand<object>(statistika, mozeLiStatistika);
 
             this.Parent = parent;
@@ -43,18 +43,19 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         public void uposlenici(object parametar)
         {
-
+            NavigationServis.Navigate(typeof(UvidUposlenikaView), new SefUvidUposlenikaViewModel(this));
         }
 
         public void statistika(object parametar)
         {
 
         }
+
         public bool mozeLiSobuNaci(object parametar)
         {
             return true;
         }
-        public bool mozeLiSeUposlenikaNaci(object parametar)
+        public bool mozeLiUposlenikaNaci(object parametar)
         {
             return true;
         }

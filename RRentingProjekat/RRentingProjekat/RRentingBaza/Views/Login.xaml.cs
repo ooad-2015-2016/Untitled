@@ -45,7 +45,7 @@ namespace RRentingProjekat.RRentingBaza.Views
             }
         }
 
-        private async void btnLoginUposlenik_Click(object sender, RoutedEventArgs e)
+        private void btnLoginUposlenik_Click(object sender, RoutedEventArgs e)
         {
             var uposlenikID = txtID.Text;
             var korisnickiMail = txtUsername.Text;

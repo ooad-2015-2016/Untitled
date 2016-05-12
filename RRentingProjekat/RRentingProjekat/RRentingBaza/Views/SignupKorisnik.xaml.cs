@@ -51,7 +51,7 @@ namespace RRentingProjekat.RRentingBaza.Views
        
 
         //asinhrona metoda za provjeru prijave korisnika
-        private async void buttonSignup_Click(object sender, RoutedEventArgs e)
+        private void buttonSignup_Click(object sender, RoutedEventArgs e)
         {
             var korisnickoIme = txtImeS.Text;
             var korisnickoPrezime = txtPrezimeS.Text;

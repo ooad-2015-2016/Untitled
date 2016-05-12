@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -12,7 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using RRentingProjekat.RRentingBaza.ViewModels;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace RRentingProjekat.RRentingBaza.Views
@@ -25,43 +26,12 @@ namespace RRentingProjekat.RRentingBaza.Views
         public SefView()
         {
             this.InitializeComponent();
+
+            NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        private void btnSoba1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSoba2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSoba3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSoba4_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSoba5_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSoba6_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnUposlenici_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+       
+       
         private void btnStatistika_Click(object sender, RoutedEventArgs e)
         {
 
@@ -70,6 +40,11 @@ namespace RRentingProjekat.RRentingBaza.Views
         private void btnSoba_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+      
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (SefViewModel)e.Parameter;
         }
     }
 }

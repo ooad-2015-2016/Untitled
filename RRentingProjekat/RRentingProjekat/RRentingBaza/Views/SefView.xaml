@@ -36,7 +36,7 @@
         <TextBlock Name="labelDoNabavke" Grid.Row="4" Text="Do nabavke:"/>
         <TextBlock Name="labelNabavka" Grid.Row="4" Grid.Column="1"/>
 
-        <Button Name="btnUposlenici" Margin="10,10,10,0" Grid.Row="5" Click="btnUposlenici_Click" Content="Zaposleni" Command="{Binding Path= Uposlenici}" />
+        <Button Name="btnUposlenici" Margin="10,10,10,0" Grid.Row="5" Content="Zaposleni" Command="{Binding Path= Uposlenici}" />
         <Button Name="btnStatistika" Margin="10,10,10,0" Grid.Row="5" Grid.Column="1" Click="btnStatistika_Click" Content="Statistika" Command="{Binding Path= Statistika}" />
 
     </Grid>

@@ -5,17 +5,14 @@
     xmlns:local="using:RRentingProjekat.RRentingBaza.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="994.818" Width="426.909">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock FontSize="18.667" FontWeight="Bold" Margin="10,10,0,0" Height="630" VerticalAlignment="Top">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
-            </TextBlock.Foreground>Osoblje: </TextBlock>
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,84,10,406.667">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="100" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
@@ -24,10 +21,60 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
-        
-       
+
+        <TextBlock FontSize="18" FontWeight="Bold">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
+            </TextBlock.Foreground>OSOBLJE:</TextBlock>
+        <TextBlock Name="cistacicaIme_label" Grid.Row="1" Text="Ime: "></TextBlock>
+        <TextBox Name="cistacicaIme_txt" Grid.Row="1" Grid.Column="1" Text="{Binding Ime}"></TextBox>
+        <TextBlock Name="cistacicaPrezime_label" Grid.Row="2" Text="Prezime: "></TextBlock>
+        <TextBox Name="cistacicaPrezime_txt" Grid.Row="2" Grid.Column="1" Text="{Binding Prezime}"></TextBox>
+        <TextBlock Name="cistacicaMail_label" Grid.Row="3" Text="Email: "></TextBlock>
+        <TextBox Name="cistacicaMail_txt" Grid.Row="3" Grid.Column="1" Text="{Binding Email}"></TextBox>
+        <TextBlock Name="cistacicaTelefon_label" Grid.Row="4" Text="Telefon: "></TextBlock>
+        <TextBox Name="cistacicaTelefon_txt" Grid.Row="4" Grid.Column="1" Text="{Binding Telefon}"></TextBox>
+        <TextBlock Name="cistacicaSID_label" Grid.Row="5" Text="Sigurnosni ID: "></TextBlock>
+        <TextBox Name="cistacicaSID_txt" Grid.Row="5" Grid.Column="1" Text="{Binding SigurnosniID}"></TextBox>
+
+        <TextBlock Name="domarIme_label" Grid.Row="7" Text="Ime: "></TextBlock>
+        <TextBox Name="domarIme_txt" Grid.Row="7" Grid.Column="1" Text="{Binding Ime}"></TextBox>
+        <TextBlock Name="domarPrezime_label" Grid.Row="8" Text="Prezime: "></TextBlock>
+        <TextBox Name="domarPrezime_txt" Grid.Row="8" Grid.Column="1" Text="{Binding Prezime}"></TextBox>
+        <TextBlock Name="domarMail_label" Grid.Row="9" Text="Email: "></TextBlock>
+        <TextBox Name="domarMail_txt" Grid.Row="9" Grid.Column="1" Text="{Binding Email}"></TextBox>
+        <TextBlock Name="domarTelefon_label" Grid.Row="10" Text="Telefon: "></TextBlock>
+        <TextBox Name="domarTelefon_txt" Grid.Row="10" Grid.Column="1" Text="{Binding Telefon}"></TextBox>
+        <TextBlock Name="domarSID_label" Grid.Row="11" Text="Sigurnosni ID: "></TextBlock>
+        <TextBox Name="domarSID_txt" Grid.Row="11" Grid.Column="1" Text="{Binding SigurnosniID}"></TextBox>
+
+        <TextBlock FontSize="18" FontWeight="Bold" Grid.Row="0" Grid.Column="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
+            </TextBlock.Foreground>RECEPCIONER:</TextBlock>
+        <TextBlock Name="recIme_label" Grid.Row="1" Grid.Column="2" Text="Ime: "></TextBlock>
+        <TextBox Name="recIme_txt" Grid.Row="1" Grid.Column="3" Text="{Binding Ime}"></TextBox>
+        <TextBlock Name="recPrezime_label" Grid.Row="2" Grid.Column="2" Text="Prezime: "></TextBlock>
+        <TextBox Name="recPrezime_txt" Grid.Row="2" Grid.Column="3" Text="{Binding Prezime}"></TextBox>
+        <TextBlock Name="recMail_label" Grid.Row="3" Grid.Column="2" Text="Email: "></TextBlock>
+        <TextBox Name="recMail_txt" Grid.Row="3" Grid.Column="3" Text="{Binding Email}"></TextBox>
+        <TextBlock Name="recTelefon_label" Grid.Row="4" Grid.Column="2" Text="Telefon: "></TextBlock>
+        <TextBox Name="recTelefon_txt" Grid.Row="4" Grid.Column="3" Text="{Binding Telefon}"></TextBox>
+        <TextBlock Name="recSID_label" Grid.Row="5" Grid.Column="2" Text="Sigurnosni ID: "></TextBlock>
+        <TextBox Name="recSID_txt" Grid.Row="5" Grid.Column="3" Text="{Binding SigurnosniID}"></TextBox>
+
+
+
+
+
+
 
     </Grid>
 </Page>
