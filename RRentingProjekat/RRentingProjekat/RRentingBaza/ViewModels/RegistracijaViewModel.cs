@@ -38,7 +38,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         private void signup(object parametar)
         {
             //using (var db = new RRentingDbContext())
-                RegistrovaniKorisnik = new Gost(Id, txtIme, txtPrezime, txtTelefon, txtAdresa, txtPassword, txtEmail);
+                RegistrovaniKorisnik = new Gost(Id, txtIme, txtPrezime, txtTelefon, txtAdresa, txtPassword, txtEmail, 0);
                 NavigationServis.Navigate(typeof(RezervacijaListView), new RezervacijaViewModel(this));
                 
             

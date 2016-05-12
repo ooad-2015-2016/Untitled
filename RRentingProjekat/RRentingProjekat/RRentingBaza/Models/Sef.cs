@@ -8,13 +8,18 @@ namespace RRentingProjekat.RRentingBaza.Models
 {
     class Sef:Korisnik
     {
-        //public int SigurnosniID { get; set; }
-        public Sef() { }
-        public Sef(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email) : base(ID, Ime, Prezime, Telefon, Adresa, Sifra, Email)
+        
+        public Sef() { this.SigurnosniID = 123; }
+        public Sef(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(ID, Ime, Prezime, Telefon, Adresa, Sifra, Email, 123)
         {
             BrojDanaDoNabavke = 0;
             uposlenici = new List<Osoblje>();
+
         }
+
+        public void promijeniOsobljeId(Osoblje o, int novi ) { o.SigurnosniID = novi; }
+        public void promijeniRecepcionerId(Recepcioner r, int novi) { r.SigurnosniID = novi; }
+
         public int BrojDanaDoNabavke { get; set; }
         public List<Osoblje> uposlenici { get; set; }
         //JOS JEDAN KONSTRUKTOR

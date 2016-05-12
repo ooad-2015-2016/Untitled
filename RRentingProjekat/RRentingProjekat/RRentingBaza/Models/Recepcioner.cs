@@ -9,13 +9,19 @@ namespace RRentingProjekat.RRentingBaza.Models
 {
     class Recepcioner:Korisnik
     {
-        public int SigurnosniID { get; set; }
+        public Recepcioner() { }
+        public Recepcioner(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(ID, Ime, Prezime, Telefon, Adresa, Sifra, Email, 03)
+        {
+      
 
-        /*public float ObracunCijene (int tiket)
+        }
+
+        public float ObracunCijene (int tiket)
         {
             return tiket*20;
         }
-        public bool StatusSobe { get; set; }
-        */
+
+        public void promijeniStatusSobe(Soba soba, StatusSobe s) { soba.Status = s; }
+ 
     }
 }

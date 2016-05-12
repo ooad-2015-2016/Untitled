@@ -14,14 +14,14 @@
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
                 </TextBlock.Foreground>Prijava</TextBlock>
-            <TextBox Name="txtUsername" PlaceholderText="Email" Margin="10,10,10,0" Width="150" />
+            <TextBox Name="txtUsername" Text="{Binding UnosMail , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" />
             <PasswordBox Name="txtPassword" PlaceholderText="Šifra" Margin="10,10,10,0" Width="150" />
-            <Button Name="btnLogin" Margin="30,10,0,0" Click="btnLogin_Click" Content="Prijava" Command="{Binding Path= LoginGost}" />
+            <Button Name="btnLogin" Margin="30,10,0,0" Click="btnLogin_Click" Content="Prijava" Command="{Binding Path= LoginGost}" CommandParameter="{Binding ElementName= txtPassword}" />
 
             <TextBlock Name="labelStatus" Text="Uposlenik" Margin="10,10,10,0"/>
             <CheckBox Name="checkStatus"  Margin="10,10,10,0"  Click="checkStatus_Click"/>
-            <TextBox Name="txtID" PlaceholderText="SigurnosniID" Margin="10,10,10,0" Width="150" Visibility="Collapsed"/>
-            <Button Name="btnLoginUposlenik" Margin="30,10,0,0" Click="btnLoginUposlenik_Click" Content="Prijava" Command="{Binding Path=LoginUposlenik}" Visibility="Collapsed"/>
+            <TextBox Name="txtID" Text="{Binding UnosID,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" Visibility="Collapsed"/>
+            <Button Name="btnLoginUposlenik" Margin="30,10,0,0" Click="btnLoginUposlenik_Click" Content="Prijava" Command="{Binding Path=LoginUposlenik}" Visibility="Collapsed" CommandParameter="{Binding ElementName= txtPassword}" />
         </StackPanel>
     </Grid>
 </Page>

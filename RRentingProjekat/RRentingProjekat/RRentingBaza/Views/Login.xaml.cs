@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using RRentingProjekat.RRentingBaza.ViewModels;
+using RRentingProjekat.RRentingBaza.DataSource;
+using Windows.UI.Popups;
 
 namespace RRentingProjekat.RRentingBaza.Views
 {
@@ -43,23 +45,25 @@ namespace RRentingProjekat.RRentingBaza.Views
             }
         }
 
-        private void btnLoginUposlenik_Click(object sender, RoutedEventArgs e)
+        private async void btnLoginUposlenik_Click(object sender, RoutedEventArgs e)
         {
             var uposlenikID = txtID.Text;
             var korisnickiMail = txtUsername.Text;
             var sifra = txtPassword.Password;
-
-            //var korisnik = DataSourceRRenting.ProvjeraKorisnika(korisnickoIme, sifra);
-            /* if (korisnik != null && korisnik.KorisnikId > 0)
+/*
+            var korisnik = DataSourceRRenting.ProvjeraKorisnika(korisnickiMail, sifra);
+             if (korisnik != null && korisnik.KorisnikId > 0)
              {
                  this.Frame.Navigate(typeof(MainPage), korisnik);
              }
              else
+             if (korisnik == null)
              {
                  var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
                  await dialog.ShowAsync();
-             }
-             */
+             }*/
+             
+             
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)

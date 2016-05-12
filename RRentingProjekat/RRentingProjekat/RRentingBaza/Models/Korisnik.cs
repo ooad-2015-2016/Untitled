@@ -19,9 +19,12 @@ namespace RRentingProjekat.RRentingBaza.Models
             public string Adresa { get; set; }
             public string Sifra { get; set; }
             public string Email { get; set; }
+            
+            public int SigurnosniID { get; set; }
+            
 
         public Korisnik() { }
-        public Korisnik(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email)
+        public Korisnik(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID)
         {
             KorisnikId = ID;
             this.Ime = Ime;
@@ -30,6 +33,7 @@ namespace RRentingProjekat.RRentingBaza.Models
             this.Adresa = Adresa;
             this.Email = Email;
             this.Sifra = Sifra;
+            SigurnosniID = SID;
 
         }
         }

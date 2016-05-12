@@ -5,7 +5,9 @@
     <RootPropertyPathName Name="OcijeniRRenting" />
     <RootPropertyPathName Name="Dodaj" />
     <RootPropertyPathName Name="LoginUposlenik" />
+    <RootPropertyPathName Name="UnosID" />
     <RootPropertyPathName Name="LoginGost" />
+    <RootPropertyPathName Name="UnosMail" />
     <RootPropertyPathName Name="nazivZahtjeva" />
     <RootPropertyPathName Name="RRenting" />
     <RootPropertyPathName Name="Zahtjevi" />
@@ -81,8 +83,8 @@
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Background" />
       <RootProperty Name="Name" />
-      <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -96,6 +98,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Name" />
+      <RootProperty Name="CommandParameter" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Height" />
       <RootProperty Name="BorderBrush" />
@@ -104,6 +107,9 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">
       <RootProperty Name="EndPoint" />
