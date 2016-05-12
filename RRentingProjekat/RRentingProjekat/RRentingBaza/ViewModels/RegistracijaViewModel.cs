@@ -8,10 +8,12 @@ using RRentingProjekat.RRentingBaza.Models;
 using RRentingProjekat.RRentingBaza.Helper;
 using System.Windows.Input;
 using RRentingProjekat.RRentingBaza.Views;
+using RRentingProjekat.RRentingBaza.DataSource;
+using Windows.UI.Xaml.Controls;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
-    
+
     class RegistracijaViewModel
     {
         private static int m_Counter = 0;
@@ -19,12 +21,12 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public int Id { get; set; }
         public Gost RegistrovaniKorisnik { get; set; }
         //public string Validacija { get; set; }
-        public string txtIme{ get; set; }
-        public string txtPrezime { get; set; }
-        public string txtAdresa { get; set; }
-        public string txtTelefon{ get; set; }
-        public string txtEmail { get; set; }
-        public string txtPassword { get; set; }
+        public string UIme { get; set; }
+        public string UPrezime { get; set; }
+        public string UAdresa { get; set; }
+        public string UTelefon { get; set; }
+        public string UEmail { get; set; }
+        public string UPassword { get; set; }
 
         public INavigacija NavigationServis { get; set; }
         public ICommand SignupKorisnika { get; set; }
@@ -32,16 +34,28 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             NavigationServis = new NavigationService();
             RegistrovaniKorisnik = new Gost();
-            SignupKorisnika = new RelayCommand<object>(signup);
-            this.Id= System.Threading.Interlocked.Increment(ref m_Counter); 
+            UIme = "";
+            UPassword = "";
+            UPrezime = "";
+            UAdresa = "";
+            UEmail = "";
+            UTelefon = "";
+            SignupKorisnika = new RelayCommand<object>(signup, mozeLiSeRegistrovati);
+            this.Id = System.Threading.Interlocked.Increment(ref m_Counter);
+        }
+        public bool mozeLiSeRegistrovati(object parametar)
+        {
+            return true;
         }
         private void signup(object parametar)
         {
+            var UnosPassBox1 = parametar as PasswordBox;
+            UPassword = UnosPassBox1.Password;
             //using (var db = new RRentingDbContext())
-                RegistrovaniKorisnik = new Gost(Id, txtIme, txtPrezime, txtTelefon, txtAdresa, txtPassword, txtEmail, 0);
-                NavigationServis.Navigate(typeof(RezervacijaListView), new RezervacijaViewModel(this));
-                
-            
+            RegistrovaniKorisnik = new Gost(Id, UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
+            NavigationServis.Navigate(typeof(RezervacijaListView), new RezervacijaViewModel(this));
+
+
 
         }
     }
