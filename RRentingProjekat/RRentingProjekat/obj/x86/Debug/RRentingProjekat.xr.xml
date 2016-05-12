@@ -19,6 +19,11 @@
     <RootPropertyPathName Name="Sobe" />
     <RootPropertyPathName Name="Soba" />
     <RootPropertyPathName Name="SignupKorisnika" />
+    <RootPropertyPathName Name="UAdresa" />
+    <RootPropertyPathName Name="UTelefon" />
+    <RootPropertyPathName Name="UEmail" />
+    <RootPropertyPathName Name="UPrezime" />
+    <RootPropertyPathName Name="UIme" />
     <RootPropertyPathName Name="Sifra" />
     <RootPropertyPathName Name="Telefon" />
     <RootPropertyPathName Name="Adresa" />

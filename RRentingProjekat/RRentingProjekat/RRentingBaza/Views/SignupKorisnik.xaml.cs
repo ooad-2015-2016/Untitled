@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using RRentingProjekat.RRentingBaza.DataSource;
+using RRentingProjekat.RRentingBaza.ViewModels;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -30,7 +31,7 @@ namespace RRentingProjekat.RRentingBaza.Views
             this.InitializeComponent();
 
             //inicijalizacija data source
-            var inicijalizacija = new DataSourceRRenting();
+            //  var inicijalizacija = new DataSourceRRenting();
 
             //staviti da se vidi back
             var currentView = SystemNavigationManager.GetForCurrentView();
@@ -71,6 +72,10 @@ namespace RRentingProjekat.RRentingBaza.Views
                  await dialog.ShowAsync();
              }
              */
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (RegistracijaViewModel)e.Parameter;
         }
     }
 }

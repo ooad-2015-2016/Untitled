@@ -66,7 +66,7 @@ HorizontalAlignment="Stretch" Margin="3,3,3,3" >
         <CalendarDatePicker x:Name="Dolazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="2" VerticalAlignment="Top" Height="38" />
         <CalendarDatePicker x:Name="Odlazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
         <!--Lista za prikaz svih restorana-->
-        <ListView Name="RezervacijeIS" Grid.ColumnSpan="2" Grid.Row="6">
+        <ListView Name="RezervacijeIS" Grid.ColumnSpan="2" Grid.Row="9">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" >
