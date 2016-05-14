@@ -9,9 +9,11 @@
     <RootPropertyPathName Name="LoginGost" />
     <RootPropertyPathName Name="UnosMail" />
     <RootPropertyPathName Name="nazivZahtjeva" />
+    <RootPropertyPathName Name="SpasiPromjene" />
     <RootPropertyPathName Name="RRenting" />
     <RootPropertyPathName Name="Zahtjevi" />
     <RootPropertyPathName Name="Zahtjev" />
+    <RootPropertyPathName Name="brojSobe_" />
     <RootPropertyPathName Name="BrojSobe" />
     <RootPropertyPathName Name="Statistika" />
     <RootPropertyPathName Name="Uposlenici" />

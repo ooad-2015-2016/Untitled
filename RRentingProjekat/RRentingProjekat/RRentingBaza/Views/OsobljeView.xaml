@@ -29,15 +29,19 @@
 
         <TextBlock x:Name="SobaTextBlock" Grid.Row="2" HorizontalAlignment="Left"
 Margin="10,10,0,10" TextWrapping="Wrap" Text="Broj Sobe" Width="107"/>
+        <TextBlock x:Name="BrojSobeText" Grid.Column="1"  Grid.Row="2" HorizontalAlignment="Left"
+ Margin="10,10,10,0"  Text="{Binding brojSobe_,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="107"/>
+
         <TextBlock x:Name="ListaZahtjeva" Grid.Row="0" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Odabir zahtjeva" VerticalAlignment="Top" Height="20" Width="107"/>
+        
         <ListBox x:Name="ZahtjeviListBox" Grid.Row="0" Grid.Column="1"
 HorizontalAlignment="Stretch" Margin="3,3,3,3" 
             ItemsSource="{Binding Path=RRenting.Zahtjevi}" 
                     DisplayMemberPath="nazivZahtjeva" SelectedItem="{Binding Path=Zahtjev.nazivZahtjeva}"
                     ></ListBox>
-        <CheckBox x:Name="ObavljenocheckBox" Content="Obavljeno" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-        <Button x:Name="Promjenibutton" Content="Spasi promjene" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="4" VerticalAlignment="Top"/>
+        <CheckBox x:Name="ObavljenocheckBox" IsChecked="{Binding Obavljeno_}" Content="Obavljeno" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Button x:Name="Promjenibutton" Content="Spasi promjene" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="4" VerticalAlignment="Top" Command="{Binding SpasiPromjene}"/>
 
     </Grid>
 

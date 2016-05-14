@@ -17,6 +17,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public PrijavaViewModel Parent { get; set; }
         public Zahtjev Zahtjev_ { get; set; }
         public Soba Soba_ { get; set; }
+        public int brojSobe_ { get; set; }
         public bool Obavljeno_ { get; set; }
         public ICommand SpasiPromjene { get; set; }
         public OsobljeViewModel(PrijavaViewModel parent)
