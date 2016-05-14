@@ -1,6 +1,4 @@
-﻿using RRentingProjekat.RRentingBaza.DataSource;
-using RRentingProjekat.RRentingBaza.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,6 +13,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using RRentingProjekat.RRentingBaza.DataSource;
+using RRentingProjekat.RRentingBaza.ViewModels;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -47,10 +48,14 @@ namespace RRentingProjekat.RRentingBaza.Views
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            using (var db = new RRentingDbContext())
+            /*using (var db = new RRentingDbContext())
             {
                
-            }
+            }*/
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (OsobljeViewModel)e.Parameter;
         }
     }
 }

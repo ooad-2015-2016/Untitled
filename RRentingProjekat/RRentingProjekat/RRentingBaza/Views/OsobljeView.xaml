@@ -37,6 +37,7 @@ HorizontalAlignment="Stretch" Margin="3,3,3,3"
                     DisplayMemberPath="nazivZahtjeva" SelectedItem="{Binding Path=Zahtjev.nazivZahtjeva}"
                     ></ListBox>
         <CheckBox x:Name="ObavljenocheckBox" Content="Obavljeno" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Button x:Name="Promjenibutton" Content="Spasi promjene" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="4" VerticalAlignment="Top"/>
 
     </Grid>
 

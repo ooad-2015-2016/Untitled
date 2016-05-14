@@ -777,3 +777,14 @@ C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\R
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xaml
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.xbf
 C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xbf
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\RecepcionerView.xbf
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xbf
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingProjekat.csprojResolveAssemblyReference.cache
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.g.i.cs
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.g.cs
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.g.i.cs
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.g.cs
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.xaml
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xaml
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.xbf
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xbf
