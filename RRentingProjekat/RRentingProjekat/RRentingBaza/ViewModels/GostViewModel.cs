@@ -17,32 +17,25 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public Gost gost { get; set;  }
         public Soba soba { get; set;  }
 
-        public string Poruka { get; set; }
         public INavigacija NavigationServis { get; set; }
-        public ICommand DodajZahtjev{ get; set; }
+
+        public ICommand Dodaj{ get; set; }
         public ICommand OcijeniRRenting { get; set; }
         public ICommand Izlaz { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public PrijavaViewModel Parent { get; set; } //Dodano
 
-        private void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
 
         public GostViewModel(PrijavaViewModel parent)
         {
             NavigationServis = new NavigationService();
-            this.Parent = parent;
+            
 
-            DodajZahtjev = new RelayCommand<object>(dodajZahtjev);
-            OcijeniRRenting = new RelayCommand<object>(dodajStatistiku);
-            Izlaz = new RelayCommand<object>(izlaz);
+            Dodaj = new RelayCommand<object>(dodajZahtjev, mozeLiDodatiZahtjev);
+            OcijeniRRenting = new RelayCommand<object>(dodajStatistiku, mozeLiOcijeniti);
+            Izlaz = new RelayCommand<object>(izlaz, mozeLiIzaci);
+
+            this.Parent = parent;
         }
 
         private void dodajZahtjev(object parametar)
@@ -55,6 +48,18 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         }
 
+        public bool mozeLiDodatiZahtjev(object parametar)
+        {
+            return true;
+        }
+        public bool mozeLiOcijeniti(object parametar)
+        {
+            return true;
+        }
+        public bool mozeLiIzaci(object parametar)
+        {
+            return true;
+        }
         private void izlaz(object parametar)
         {
             Application.Current.Exit();

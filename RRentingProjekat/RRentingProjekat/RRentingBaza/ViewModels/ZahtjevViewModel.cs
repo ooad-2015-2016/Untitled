@@ -28,7 +28,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         public ZahtjevViewModel(GostViewModel gostVM)
         {
-            DataContext = new ZahtjeviView();
+           // DataContext = new ZahtjeviView();
             zahtjev = new Zahtjev();
             soba = gostVM.soba;
             gost = gostVM.gost;
@@ -75,5 +75,6 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
      
            // NavigationServis.Navigate(typeof(GostView), new GostViewModel());
         }
+
     }
 }

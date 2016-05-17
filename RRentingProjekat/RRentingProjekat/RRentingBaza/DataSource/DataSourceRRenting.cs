@@ -9,10 +9,11 @@ namespace RRentingProjekat.RRentingBaza.DataSource
 {
     public class DataSourceRRenting
     {
-        #region Korisnik - kreiranje početnog korisnika
+        #region Korisnik - kreiranje testnih korisnika
         private static List<Korisnik> korisnici = new List<Korisnik>()
         {
-            new Sef(1, "AdminIme", "AdminPrezime", "033/555-555", "AdresaHotela", "AdminPass", "admin@gmail.com", 01)
+            new Sef(1, "AdminIme", "AdminPrezime", "033/555-555", "AdresaHotela", "AdminPass", "admin@gmail.com", 01),
+            new Gost(2, "GostIme1", "GostPrezime1", "033/555-555", "AdresaGost1", "Gost1Pass", "gost1@gmail.com", 0)
 
 
         };
@@ -27,12 +28,9 @@ namespace RRentingProjekat.RRentingBaza.DataSource
             return korisnici.Where(k => k.KorisnikId.Equals(korisnikId)).FirstOrDefault();
         }
 
-        internal static Korisnik ProvjeraKorisnika(string korisnickiMail, string sifra, int ID)
+        internal static Korisnik ProvjeraUposlenika(string korisnickiMail, string sifra, int ID)
         {
-            /* Korisnik sef = new Sef();
-             Korisnik osoblje = new Osoblje();
-             Korisnik rec = new Recepcioner();
-             */
+            
 
             Korisnik kor = new Korisnik();
             foreach (var k in korisnici)
@@ -42,6 +40,19 @@ namespace RRentingProjekat.RRentingBaza.DataSource
             return kor;
 
         }
+
+
+        internal static Korisnik ProvjeraGosta(string korisnickiMail, string sifra)
+        {
+            Korisnik kor = new Korisnik();
+            foreach (var k in korisnici)
+            {
+                if (k.Email == korisnickiMail && k.Sifra == sifra) kor = k;
+            }
+            return kor;
+
+        }
+
         #endregion
 
     }

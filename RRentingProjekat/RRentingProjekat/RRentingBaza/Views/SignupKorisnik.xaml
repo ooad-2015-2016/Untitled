@@ -14,19 +14,30 @@
             <NavigationThemeTransition />
         </TransitionCollection>
     </Page.Transitions>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="200" Height="400">
+    <Grid Background="WhiteSmoke" Margin="0,0,0,0">
         <StackPanel>
-            <TextBlock FontSize="18.667" FontWeight="Bold">
+            <TextBlock FontSize="18.667" FontWeight="Bold" Margin="100,0,0,0"  VerticalAlignment="Top" HorizontalAlignment="Right" Width="93">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="RosyBrown"/>
+                </TextBlock.Foreground>RRenting</TextBlock>
+            <TextBlock FontSize="18.667" FontWeight="Bold" Margin="20,10,0,0">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
                 </TextBlock.Foreground>Registracija Korisnika</TextBlock>
-            <TextBox Name="txtImeS" PlaceholderText="Ime" Text="{Binding UIme,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" />
+            <TextBox Name="txtImeS" PlaceholderText="Ime" Text="{Binding UIme,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,50,10,0" Width="150" />
             <TextBox Name="txtPrezimeS" PlaceholderText="Prezime" Text="{Binding UPrezime,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" />
             <TextBox Name="txtEmailS" PlaceholderText="Email" Text="{Binding UEmail,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" />
             <TextBox Name="txtTelefonS" PlaceholderText="Telefon" Text="{Binding UTelefon,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" />
             <TextBox Name="txtAdresaS" PlaceholderText="Adresa" Text="{Binding UAdresa,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" />
             <PasswordBox Name="txtPasswordS" PlaceholderText="Šifra"  Margin="10,10,10,0" Width="150" />
-            <Button Name="btnSignup" Margin="30,10,0,0" Click="buttonSignup_Click"  Command="{Binding Path= SignupKorisnika}" CommandParameter="{Binding ElementName= txtPasswordS}" >Registracija</Button>
+            <Button Name="btnSignup" Margin="0,50,0,0" Click="buttonSignup_Click"  VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding Path= SignupKorisnika}" CommandParameter="{Binding ElementName= txtPasswordS}" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkRed" Offset="0"/>
+                        <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+             Registracija</Button>
         </StackPanel>
     </Grid>
 </Page>

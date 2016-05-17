@@ -9,10 +9,11 @@
     xmlns:triggers="using:RRentingProjekat.RRentingBaza.Helper"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Page_Loaded">
+    Loaded="Page_Loaded" Width="318.667">
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,96">
+    <Grid Background="WhiteSmoke" Margin="0,0,0,0">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="127" />
             <ColumnDefinition />
@@ -22,9 +23,12 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-        <!--Polja za unos novog restorana-->
+        <TextBlock FontSize="18.667" FontWeight="Bold"  VerticalAlignment="Center"  HorizontalAlignment="Right" Width="93" Grid.Column="1">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="RosyBrown"/>
+            </TextBlock.Foreground>RRenting</TextBlock>
 
 
         <TextBlock x:Name="SobaTextBlock" Grid.Row="2" HorizontalAlignment="Left"
@@ -32,16 +36,23 @@ Margin="10,10,0,10" TextWrapping="Wrap" Text="Broj Sobe" Width="107"/>
         <TextBlock x:Name="BrojSobeText" Grid.Column="1"  Grid.Row="2" HorizontalAlignment="Left"
  Margin="10,10,10,0"  Text="{Binding brojSobe_,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="107"/>
 
-        <TextBlock x:Name="ListaZahtjeva" Grid.Row="0" HorizontalAlignment="Left"
+        <TextBlock x:Name="ListaZahtjeva" Grid.Row="1" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Odabir zahtjeva" VerticalAlignment="Top" Height="20" Width="107"/>
         
-        <ListBox x:Name="ZahtjeviListBox" Grid.Row="0" Grid.Column="1"
+        <ListBox x:Name="ZahtjeviListBox" Grid.Row="1" Grid.Column="1"
 HorizontalAlignment="Stretch" Margin="3,3,3,3" 
             ItemsSource="{Binding Path=RRenting.Zahtjevi}" 
                     DisplayMemberPath="nazivZahtjeva" SelectedItem="{Binding Path=Zahtjev.nazivZahtjeva}"
                     ></ListBox>
-        <CheckBox x:Name="ObavljenocheckBox" IsChecked="{Binding Obavljeno_}" Content="Obavljeno" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-        <Button x:Name="Promjenibutton" Content="Spasi promjene" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="4" VerticalAlignment="Top" Command="{Binding SpasiPromjene}"/>
+        <CheckBox x:Name="ObavljenocheckBox" IsChecked="{Binding Obavljeno_}" Content="Obavljeno" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Button x:Name="Promjenibutton" Content="Spasi promjene" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,30,0,0" Grid.Row="4" Command="{Binding SpasiPromjene}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="DarkRed" Offset="0"/>
+                    <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 

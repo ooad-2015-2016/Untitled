@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using RRentingProjekat.RRentingBaza.DataSource;
+using RRentingProjekat.RRentingBaza.ViewModels;
 
 namespace RRentingProjekat.RRentingBaza.Views
 {
@@ -23,41 +23,32 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             this.InitializeComponent();
 
-            //inicijalizacija data source
-            var inicijalizacija = new DataSourceRRenting();
+            NavigationCacheMode = NavigationCacheMode.Required;
 
-            //staviti da se vidi back
-            var currentView = SystemNavigationManager.GetForCurrentView();
-            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
+
         }
 
-        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+
+        /* //asinhrona metoda za provjeru da li je kliknut neki zahtjev
+         private async void buttonZahtjev_Click (object sender, RoutedEventArgs e)
+         {
+             var Ime = ImePrezime.Text;
+             var soba = BrojSobe.Text;
+
+         }
+
+         private async void buttonOcijeni_Click(object sender, RoutedEventArgs e)
+         {
+             var Ime = ImePrezime.Text;
+             var soba = BrojSobe.Text;
+         }
+
+     */
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (Frame.CanGoBack)
-            {
-                Frame.GoBack();
-                e.Handled = true;
-            }
+            DataContext = (GostViewModel)e.Parameter;
         }
 
-
-
-        //asinhrona metoda za provjeru da li je kliknut neki zahtjev
-        private async void buttonZahtjev_Click (object sender, RoutedEventArgs e)
-        {
-            var Ime = ImePrezime.Text;
-            var soba = BrojSobe.Text;
-           
-        }
-
-        private async void buttonOcijeni_Click(object sender, RoutedEventArgs e)
-        {
-            var Ime = ImePrezime.Text;
-            var soba = BrojSobe.Text;
-        }
-
-        
 
     }
 }

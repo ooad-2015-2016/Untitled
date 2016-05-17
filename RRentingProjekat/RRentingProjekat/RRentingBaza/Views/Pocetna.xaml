@@ -5,17 +5,38 @@
     xmlns:local="using:RRentingProjekat"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="1026" Height="982.333">
+    mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,10.333">
-        <Rectangle Fill="DarkRed" HorizontalAlignment="Left" Height="234" Stroke="Black" VerticalAlignment="Top" Width="1026"/>
-        <Rectangle Fill="DarkRed" HorizontalAlignment="Left" Height="123" Margin="-2,851,0,-2" Stroke="Black" VerticalAlignment="Top" Width="1442"/>
-        <Button x:Name="button" Content="LOGIN" HorizontalAlignment="Left" Margin="642,461,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Width="245" Height="91" Background="#33FFFFFF" BorderBrush="#FF531515"  Command="{Binding Path=Login}"/>
-        <Button x:Name="button1" Content="SIGNUP" HorizontalAlignment="Left" Margin="642,557,0,0" VerticalAlignment="Top" Height="91" Width="245" FontSize="36" FontWeight="Bold" Background="#33FFFFFF" BorderBrush="#FF531515"  Command="{Binding Path=Signup}"/>
-        <Image x:Name="image" Margin="15,352,379,0" Height="409" VerticalAlignment="Top" Source="rent.jpg"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="359,10,0,0" TextWrapping="Wrap" Text="RRenting" VerticalAlignment="Top" Height="74" Width="288" FontSize="60" FontWeight="Bold" />
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="359,89,0,0" TextWrapping="Wrap" Text="Naziv objekta" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="15,851,0,0" TextWrapping="Wrap" Text="Kontakt telefon: xxx xxx-xxx" VerticalAlignment="Top" FontSize="36"/>
+    <Grid Background="Black" Margin="0,0,0,0">
+        <StackPanel>
+            <TextBlock FontSize="60" FontWeight="Bold"  Margin="0,0,0,0" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="119">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="RosyBrown"/>
+                </TextBlock.Foreground>RRenting</TextBlock>
+            <Image x:Name="image"  Margin="0,0,0,0" Source="rentheart.png" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="250"/>
 
+            <Button x:Name="button" Content="LOGIN"  Margin="0,50,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="150" FontSize="30" FontWeight="Bold" BorderBrush="#FF531515"  Command="{Binding Path=Login}">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkRed" Offset="0"/>
+                        <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button1" Content="SIGNUP" Margin="0,30,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="150" FontSize="30" FontWeight="Bold" BorderBrush="#FF531515"  Command="{Binding Path=Signup}">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkRed" Offset="0"/>
+                        <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBlock FontSize="20" FontWeight="Bold"  Margin="30,60,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="RosyBrown"/>
+                </TextBlock.Foreground>Kontakt broj: 000/111-222</TextBlock>
+
+        </StackPanel>
     </Grid>
 </Page>

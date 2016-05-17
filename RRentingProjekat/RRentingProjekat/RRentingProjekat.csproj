@@ -92,6 +92,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="RRentingBaza\Views\rentheart.png" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +111,9 @@
     <Compile Include="RRentingBaza\ViewModels\SefUvidUposlenikaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\SefViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\ZahtjevViewModel.cs" />
+    <Compile Include="RRentingBaza\Views\GostView.xaml.cs">
+      <DependentUpon>GostView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RRentingBaza\Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -161,6 +165,9 @@
     <Compile Include="RRentingBaza\Views\UvidUposlenikaView.xaml.cs">
       <DependentUpon>UvidUposlenikaView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RRentingBaza\Views\ZahtjeviView.xaml.cs">
+      <DependentUpon>ZahtjeviView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RRentingBaza\Views\ZahtjevListView.xaml.cs">
       <DependentUpon>ZahtjevListView.xaml</DependentUpon>
     </Compile>
@@ -172,7 +179,6 @@
     <None Include="RRentingProjekat_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RRentingBaza\Views\rent.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -188,8 +194,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="RRentingBaza\Views\GostView.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RRentingBaza\Views\Login.xaml">
       <SubType>Designer</SubType>
@@ -232,8 +238,8 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RRentingBaza\Views\ZahtjeviView.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RRentingBaza\Views\ZahtjevListView.xaml">
       <Generator>MSBuild:Compile</Generator>

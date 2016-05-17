@@ -33,8 +33,6 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public PrijavaViewModel()
         {
             NavigationServis = new NavigationService();
-            PrijavljeniGost = new Gost();
-            PrijavljeniUposlenik = new Korisnik();
 
             UnosMail = "";
             UnosPass = "";
@@ -62,17 +60,20 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
            
             using (var db = new RRentingDbContext())
             {
-                PrijavljeniGost = db.Korisnici.Where(x => x.Email == UnosMail && x.Sifra == UnosPass).FirstOrDefault();
+                // PrijavljeniGost = db.Korisnici.Where(x => x.Email == UnosMail && x.Sifra == UnosPass).FirstOrDefault();
 
-                if (PrijavljeniGost == null)
+                PrijavljeniGost = DataSourceRRenting.ProvjeraGosta(UnosMail, UnosPass);
+
+                if (PrijavljeniGost.Email != null && PrijavljeniGost.Sifra != null)
                 {
-                    var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješnaprijava");
-                    await dialog.ShowAsync();
+                    NavigationServis.Navigate(typeof(GostView), new GostViewModel(this));
                 }
                 else
                 {
-                   NavigationServis.Navigate(typeof(GostView), new GostViewModel(this));
+                    var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+                    await dialog.ShowAsync();
                 }
+                
             }
         }
 
@@ -89,23 +90,23 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
 
                 int unos = int.Parse(UnosID);
-                    PrijavljeniUposlenik = DataSourceRRenting.ProvjeraKorisnika(UnosMail, UnosPass, unos);
+                PrijavljeniUposlenik = DataSourceRRenting.ProvjeraUposlenika(UnosMail, UnosPass, unos);
 
-                    if (PrijavljeniUposlenik == null)
-                    {
-                        var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
-                        await dialog.ShowAsync();
-                    }
 
-                 if (PrijavljeniUposlenik != null)
+                if (PrijavljeniUposlenik.Email != null && PrijavljeniUposlenik.Sifra!= null && PrijavljeniUposlenik.SigurnosniID != 0)
                 {
 
-
                     if (PrijavljeniUposlenik is Sef && PrijavljeniUposlenik.SigurnosniID == unos) NavigationServis.Navigate(typeof(SefView), new SefViewModel(this));
-                    //else if (PrijavljeniUposlenik is Osoblje) NavigationServis.Navigate(typeof(OsobljeView),new  OsobljeViewModel(this));
-                    //else if (PrijavljeniUspolenik is Recepcioner) NavigationServis.Navigate(typeof(RecepcionerView), OsobljeViewModel(this));
+                    else if (PrijavljeniUposlenik is Osoblje) NavigationServis.Navigate(typeof(OsobljeView), new OsobljeViewModel(this));
+                    //else if (PrijavljeniUspolenik is Recepcioner) NavigationServis.Navigate(typeof(RecepcionerView), RecepcionerViewModel(this));
 
                 }
+                else
+                {
+                     var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+                     await dialog.ShowAsync();
+                }
+
             }
         }
 
