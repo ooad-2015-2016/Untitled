@@ -92,8 +92,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="RRentingBaza\Views\logo.jpg" />
+    <Content Include="RRentingBaza\Views\login.png" />
+    <Content Include="RRentingBaza\Views\logo.png" />
     <Content Include="RRentingBaza\Views\rentheart.png" />
+    <Content Include="RRentingBaza\Views\signup.png" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

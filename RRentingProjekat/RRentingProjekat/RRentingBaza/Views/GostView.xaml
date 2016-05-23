@@ -18,11 +18,11 @@
             <TextBlock x:Name="textBox2" HorizontalAlignment="Left" Margin="30,0,0,0" TextWrapping="Wrap" Text="Broj sobe:" VerticalAlignment="Top" FontSize="20"></TextBlock>
             <TextBlock x:Name="BrojSobe" HorizontalAlignment="Left" Margin="30,0,0,0" TextWrapping="Wrap" Text="br" VerticalAlignment="Top" Width="70" FontSize="20" FontStyle="Italic"></TextBlock>
         
-        <Button x:Name="DodajZahtjev" Content="Zahtjevi" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Center" Command="{Binding Path=Dodaj}" Width="234" FontSize="20"  FontWeight="Medium" Background="DarkRed">
+        <Button x:Name="DodajZahtjev" Content="Zahtjevi" HorizontalAlignment="Center" Margin="0,50,0,0" Foreground="WhiteSmoke" VerticalAlignment="Center" Command="{Binding Path=Dodaj}" Width="234" FontSize="20"  FontWeight="Medium" Background="DarkRed">
         </Button>
-        <Button x:Name="OcijeniRRenting" Content="Ocijeni RRenting" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Center" Command="{Binding Path=OcijeniRRenting}" Width="234" FontSize="20" FontWeight="Medium" Background="DarkRed">
+            <Button x:Name="OcijeniRRenting" Content="Ocijeni RRenting" HorizontalAlignment="Center" Foreground="WhiteSmoke" Margin="0,20,0,0" VerticalAlignment="Center" Command="{Binding Path=OcijeniRRenting}" Width="234" FontSize="20" FontWeight="Medium" Background="DarkRed">
         </Button>
-        <Button x:Name="LogOut" Content="Log Out" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Center" Command="{Binding Path=Izlaz}" Width="234" FontSize="20"  Background="DarkRed" FontWeight="Medium"></Button>
+            <Button x:Name="LogOut" Content="Log Out" HorizontalAlignment="Center" Margin="0,20,0,0" Foreground="WhiteSmoke" VerticalAlignment="Center" Command="{Binding Path=Izlaz}" Width="234" FontSize="20"  Background="DarkRed" FontWeight="Medium"></Button>
         </StackPanel>
     </Grid>
 </Page>

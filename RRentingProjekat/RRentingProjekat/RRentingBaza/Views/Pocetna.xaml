@@ -10,13 +10,23 @@
     <Grid Background="White" Margin="0,0,0,0">
         <StackPanel>
 
-            <Image x:Name="image"  Margin="0,0,0,0" Source="logo.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="250"/>
-            <Button x:Name="button" Content="LOGIN"  Margin="0,50,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="150" FontSize="30" FontWeight="Medium" BorderBrush="#FF531515"  Command="{Binding Path=Login}" Background="DarkRed">
-                
+            <Image x:Name="image"  Margin="0,0,0,0" Source="logo.png" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="250"/>
+            <Button x:Name="button" Margin="0,50,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" BorderBrush="#FF531515"  Command="{Binding Path=Login}" >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="login.png"/>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
-            <Button x:Name="button1" Content="SIGNUP" Margin="0,30,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="150" FontSize="30" FontWeight="Medium" BorderBrush="#FF531515"  Command="{Binding Path=Signup}" Background="DarkRed"> </Button>
+            <Button x:Name="button1" Content="SIGNUP" Margin="0,30,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" BorderBrush="#FF531515"  Command="{Binding Path=Signup}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="signup.png"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
 
-            <TextBlock FontSize="20" FontWeight="Bold"  Margin="30,150,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom">
+            <TextBlock FontSize="18" FontWeight="Bold"  Margin="0,250,0,0" HorizontalAlignment="Center"  VerticalAlignment="Bottom" SelectionHighlightColor="#FFA21216">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="DarkRed"/>
                 </TextBlock.Foreground>Kontakt broj: 000/111-222</TextBlock>

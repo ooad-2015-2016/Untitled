@@ -26,11 +26,14 @@ namespace RRentingProjekat.RRentingBaza.Views
     {
         public Pocetna()
         {
+
             this.InitializeComponent();
             DataContext = new RRentingViewModel();
             //Kada se sa neke druge forme uradi GoBack bez ove linije opet bi se pozvao konstruktor KorpaView i izgubili bi se podaci u KorpaViewModel
             //ovim se za povratak nazad cuva forma da se ponovo iskoristi
-            NavigationCacheMode = NavigationCacheMode.Required;
+            NavigationCacheMode = NavigationCacheMode.Required;            
+
+
         }
 
         //Sluzi da kad se dodje na ovu formu, treba onemoguciti back dugme jer se nema gdje vratiti

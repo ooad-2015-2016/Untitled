@@ -21,12 +21,12 @@
            
             <TextBox Name="txtUsername" PlaceholderText="Email" Text="{Binding UnosMail , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,30,10,0" Width="200" />
             <PasswordBox Name="txtPassword" PlaceholderText="Šifra" Margin="10,10,10,0" Width="200" />
-            <Button Name="btnLogin" Margin="0,30,0,0" Click="btnLogin_Click" HorizontalAlignment="Center" Content="Prijavite se"  Command="{Binding Path= LoginGost}" CommandParameter="{Binding ElementName= txtPassword}" Background="DarkRed" FontWeight="Bold">
+            <Button Name="btnLogin" Margin="0,30,0,0" Click="btnLogin_Click" HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Prijavite se"  Command="{Binding Path= LoginGost}" CommandParameter="{Binding ElementName= txtPassword}" Background="DarkRed" FontWeight="Bold">
             </Button>
 
             <CheckBox Name="checkStatus" BorderBrush="DarkRed"  Margin="30,60,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="checkStatus_Click" Content="Uposlenik" Foreground="Black" />
             <TextBox Name="txtID" PlaceholderText="Sigurnosni ID" Text="{Binding UnosID,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" Visibility="Collapsed"/>
-            <Button Name="btnLoginUposlenik" Margin="0,30,0,0" Click="btnLoginUposlenik_Click" HorizontalAlignment="Center" Content="Prijavite se" Command="{Binding Path=LoginUposlenik}" Visibility="Collapsed" CommandParameter="{Binding ElementName= txtPassword}" Background="DarkRed" FontWeight="Bold">
+            <Button Name="btnLoginUposlenik" Margin="0,30,0,0" Click="btnLoginUposlenik_Click" HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Prijavite se" Command="{Binding Path=LoginUposlenik}" Visibility="Collapsed" CommandParameter="{Binding ElementName= txtPassword}" Background="DarkRed" FontWeight="Bold">
                 
             </Button>
         </StackPanel>

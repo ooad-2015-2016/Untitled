@@ -20,7 +20,7 @@
         <CheckBox x:Name="checkBox2" BorderBrush="DarkRed" Content="Promjena posteljine" HorizontalAlignment="Left" Margin="102,115,0,0" VerticalAlignment="Top" FontSize="20"/>
         <CheckBox x:Name="checkBox3" BorderBrush="DarkRed" Content="Bacanje otpada" HorizontalAlignment="Left" Margin="102,152,0,0" VerticalAlignment="Top" FontSize="20" Width="179"/>
         <CheckBox x:Name="checkBox4" BorderBrush="DarkRed" Content="Servis" HorizontalAlignment="Left" Margin="102,185,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="DodajZahtjev" BorderBrush="DarkRed" Content="Dodaj Zahtjeve" Margin="0,180,0,0" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center" Background="DarkRed" FontWeight="Medium"></Button>
+        <Button x:Name="DodajZahtjev" BorderBrush="DarkRed" Foreground="WhiteSmoke" Content="Dodaj Zahtjeve" Margin="0,180,0,0" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center" Background="DarkRed" FontWeight="Medium"></Button>
         
     </Grid>
 </Page>
