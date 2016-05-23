@@ -64,7 +64,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
                 PrijavljeniGost = DataSourceRRenting.ProvjeraGosta(UnosMail, UnosPass);
 
-                if (PrijavljeniGost.Email != null && PrijavljeniGost.Sifra != null)
+                if (PrijavljeniGost.Email != null && PrijavljeniGost.Sifra != null && PrijavljeniGost.SigurnosniID == 0)
                 {
                     NavigationServis.Navigate(typeof(GostView), new GostViewModel(this));
                 }

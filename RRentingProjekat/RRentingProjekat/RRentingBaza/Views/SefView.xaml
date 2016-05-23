@@ -9,8 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="180" />
-            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
@@ -18,51 +18,24 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock FontSize="18.667" FontWeight="Bold"  VerticalAlignment="Top" HorizontalAlignment="Right" Width="93" Grid.Column="1">
+        <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="93" Grid.Column="1">
             <TextBlock.Foreground>
-                <SolidColorBrush Color="RosyBrown"/>
+                <SolidColorBrush Color="DarkRed"/>
             </TextBlock.Foreground>RRenting</TextBlock>
-
-        <TextBlock FontSize="18.667" FontWeight="Bold" Grid.Row="1"  Margin="10,10,10,0">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
-            </TextBlock.Foreground>Sobe</TextBlock>
-
-        <ListBox HorizontalAlignment="Left" Margin="10,10,0,0"
+        <ListBox HorizontalAlignment="Left" Margin="30,0,0,0"
                     ItemsSource="{Binding Path=RRenting.Sobe}" 
                     DisplayMemberPath="BrojSobe" SelectedItem="{Binding Path=Soba.BrojSobe}"
                     Grid.Row="2"></ListBox>
-        <Button Name="btnSoba" Margin="10,10,0,0"  Grid.Row="2" Grid.Column="1" Click="btnSoba_Click"  Content="Prikaži sobu" Command="{Binding Path= Soba1}" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="DarkRed" Offset="0"/>
-                    <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button Name="btnSoba" Margin="30,0,0,0"  Grid.Row="2" Grid.Column="1" Click="btnSoba_Click"  Content="Prikaži sobu" Command="{Binding Path= Soba1}" Background="DarkRed" FontWeight="Medium" >
         </Button>
 
-        <TextBlock Name="labelDoNabavke" Grid.Row="4" Text="Do nabavke:"  Margin="10,10,10,0"/>
-        <TextBlock Name="labelNabavka" Grid.Row="4" Grid.Column="1"  Margin="10,10,10,0"/>
+        <TextBlock Name="labelDoNabavke" Grid.Row="4" Text="Do nabavke:"  Margin="10,0,10,0" FontWeight="Medium"/>
+        <TextBlock Name="labelNabavka" Grid.Row="4" Grid.Column="1"  Margin="10,0,10,0"/>
 
-        <Button Name="btnUposlenici" Margin="10,10,10,0" Grid.Row="5" Content="Zaposleni" Command="{Binding Path= Uposlenici}" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="DarkRed" Offset="0"/>
-                    <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Name="btnStatistika" Margin="10,10,10,0" Grid.Row="5" Grid.Column="1" Click="btnStatistika_Click" Content="Statistika" Command="{Binding Path= Statistika}" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="DarkRed" Offset="0"/>
-                    <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Button Name="btnUposlenici" Margin="30,0,0,0" Grid.Row="6" Content="Zaposleni" Command="{Binding Path= Uposlenici}" Background="DarkRed" FontWeight="Medium" ></Button>
+        <Button Name="btnStatistika" Margin="30,0,0,0" Grid.Row="6" Grid.Column="1" Click="btnStatistika_Click" Content="Statistika" Command="{Binding Path= Statistika}" Background="DarkRed" FontWeight="Medium"></Button>
 
     </Grid>
 </Page>

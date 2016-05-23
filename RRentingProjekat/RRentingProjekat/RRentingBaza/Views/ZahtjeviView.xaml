@@ -11,25 +11,16 @@
     mc:Ignorable="d">
 
     <Grid Background="WhiteSmoke" Margin="0,0,0,0">
-        <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="141,157,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox x:Name="checkBox1" Content="Pospremanje sobe" HorizontalAlignment="Left" Margin="102,78,0,0" VerticalAlignment="Top" FontSize="20" IsChecked="True"/>
-        <CheckBox x:Name="checkBox2" Content="Promjena posteljine" HorizontalAlignment="Left" Margin="102,115,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <CheckBox x:Name="checkBox3" Content="Bacanje otpada" HorizontalAlignment="Left" Margin="102,152,0,0" VerticalAlignment="Top" FontSize="20" Width="179"/>
-        <CheckBox x:Name="checkBox4" Content="Servis" HorizontalAlignment="Left" Margin="102,185,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="DodajZahtjev" Content="Dodaj Zahtjeve" Margin="0,200,0,0" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="DarkRed" Offset="0"/>
-                    <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-
-        <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,0,0,0"  VerticalAlignment="Top" HorizontalAlignment="Right" Width="93">
+        <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="93">
             <TextBlock.Foreground>
-                <SolidColorBrush Color="RosyBrown"/>
+                <SolidColorBrush Color="DarkRed"/>
             </TextBlock.Foreground>RRenting</TextBlock>
-
+        <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="141,157,0,0" VerticalAlignment="Top" Width="100" BorderBrush="DarkRed"/>
+        <CheckBox x:Name="checkBox1" BorderBrush="DarkRed" Content="Pospremanje sobe" HorizontalAlignment="Left" Margin="102,78,0,0" VerticalAlignment="Top" FontSize="20" IsChecked="True"/>
+        <CheckBox x:Name="checkBox2" BorderBrush="DarkRed" Content="Promjena posteljine" HorizontalAlignment="Left" Margin="102,115,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <CheckBox x:Name="checkBox3" BorderBrush="DarkRed" Content="Bacanje otpada" HorizontalAlignment="Left" Margin="102,152,0,0" VerticalAlignment="Top" FontSize="20" Width="179"/>
+        <CheckBox x:Name="checkBox4" BorderBrush="DarkRed" Content="Servis" HorizontalAlignment="Left" Margin="102,185,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="DodajZahtjev" BorderBrush="DarkRed" Content="Dodaj Zahtjeve" Margin="0,180,0,0" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center" Background="DarkRed" FontWeight="Medium"></Button>
+        
     </Grid>
 </Page>

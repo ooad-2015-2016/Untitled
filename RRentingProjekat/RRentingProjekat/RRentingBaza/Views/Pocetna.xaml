@@ -7,34 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Black" Margin="0,0,0,0">
+    <Grid Background="White" Margin="0,0,0,0">
         <StackPanel>
-            <TextBlock FontSize="60" FontWeight="Bold"  Margin="0,0,0,0" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="119">
-                <TextBlock.Foreground>
-                    <SolidColorBrush Color="RosyBrown"/>
-                </TextBlock.Foreground>RRenting</TextBlock>
-            <Image x:Name="image"  Margin="0,0,0,0" Source="rentheart.png" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="250"/>
 
-            <Button x:Name="button" Content="LOGIN"  Margin="0,50,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="150" FontSize="30" FontWeight="Bold" BorderBrush="#FF531515"  Command="{Binding Path=Login}">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="DarkRed" Offset="0"/>
-                        <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
+            <Image x:Name="image"  Margin="0,0,0,0" Source="logo.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="250"/>
+            <Button x:Name="button" Content="LOGIN"  Margin="0,50,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="150" FontSize="30" FontWeight="Medium" BorderBrush="#FF531515"  Command="{Binding Path=Login}" Background="DarkRed">
+                
             </Button>
-            <Button x:Name="button1" Content="SIGNUP" Margin="0,30,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="150" FontSize="30" FontWeight="Bold" BorderBrush="#FF531515"  Command="{Binding Path=Signup}">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="DarkRed" Offset="0"/>
-                        <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:Name="button1" Content="SIGNUP" Margin="0,30,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="150" FontSize="30" FontWeight="Medium" BorderBrush="#FF531515"  Command="{Binding Path=Signup}" Background="DarkRed"> </Button>
 
-            <TextBlock FontSize="20" FontWeight="Bold"  Margin="30,60,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom">
+            <TextBlock FontSize="20" FontWeight="Bold"  Margin="30,150,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom">
                 <TextBlock.Foreground>
-                    <SolidColorBrush Color="RosyBrown"/>
+                    <SolidColorBrush Color="DarkRed"/>
                 </TextBlock.Foreground>Kontakt broj: 000/111-222</TextBlock>
 
         </StackPanel>

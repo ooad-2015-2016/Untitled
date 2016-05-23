@@ -10,35 +10,24 @@
 
     <Grid Background="WhiteSmoke" Margin="0,0,0,0">
         <StackPanel>
-            <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="93">
+            <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="93">
                 <TextBlock.Foreground>
-                    <SolidColorBrush Color="RosyBrown"/>
+                    <SolidColorBrush Color="DarkRed"/>
                 </TextBlock.Foreground>RRenting</TextBlock>
-            <TextBlock FontSize="18.667" FontWeight="Bold" Margin="30,0,0,0">
+            <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
                 </TextBlock.Foreground>Prijava</TextBlock>
            
-            <TextBox Name="txtUsername" PlaceholderText="Email" Text="{Binding UnosMail , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" />
-            <PasswordBox Name="txtPassword" PlaceholderText="Šifra" Margin="10,10,10,0" Width="150" />
-            <Button Name="btnLogin" Margin="0,30,0,0" Click="btnLogin_Click" HorizontalAlignment="Center" Content="Prijava"  Command="{Binding Path= LoginGost}" CommandParameter="{Binding ElementName= txtPassword}" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="DarkRed" Offset="0"/>
-                        <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
+            <TextBox Name="txtUsername" PlaceholderText="Email" Text="{Binding UnosMail , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,30,10,0" Width="200" />
+            <PasswordBox Name="txtPassword" PlaceholderText="Šifra" Margin="10,10,10,0" Width="200" />
+            <Button Name="btnLogin" Margin="0,30,0,0" Click="btnLogin_Click" HorizontalAlignment="Center" Content="Prijavite se"  Command="{Binding Path= LoginGost}" CommandParameter="{Binding ElementName= txtPassword}" Background="DarkRed" FontWeight="Bold">
             </Button>
 
-            <CheckBox Name="checkStatus"  Margin="30,60,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="checkStatus_Click" Content="Uposlenik" Foreground="Black" />
+            <CheckBox Name="checkStatus" BorderBrush="DarkRed"  Margin="30,60,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="checkStatus_Click" Content="Uposlenik" Foreground="Black" />
             <TextBox Name="txtID" PlaceholderText="Sigurnosni ID" Text="{Binding UnosID,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,10,10,0" Width="150" Visibility="Collapsed"/>
-            <Button Name="btnLoginUposlenik" Margin="0,30,0,0" Click="btnLoginUposlenik_Click" HorizontalAlignment="Center" Content="Prijava" Command="{Binding Path=LoginUposlenik}" Visibility="Collapsed" CommandParameter="{Binding ElementName= txtPassword}" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="DarkRed" Offset="0"/>
-                        <GradientStop Color="{ThemeResource SystemAltMediumLowColor}" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
+            <Button Name="btnLoginUposlenik" Margin="0,30,0,0" Click="btnLoginUposlenik_Click" HorizontalAlignment="Center" Content="Prijavite se" Command="{Binding Path=LoginUposlenik}" Visibility="Collapsed" CommandParameter="{Binding ElementName= txtPassword}" Background="DarkRed" FontWeight="Bold">
+                
             </Button>
         </StackPanel>
     </Grid>
