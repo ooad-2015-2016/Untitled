@@ -8,9 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="White" Margin="0,0,0,0">
-        <StackPanel>
 
-            <Image x:Name="image"  Margin="0,0,0,0" Source="logo.png" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="250"/>
+        <StackPanel>
+            <Image x:Name="image2"  Margin="0,0,0,0" Source="natpis.png" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="120"/>
+
             <Button x:Name="button" Margin="0,50,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" BorderBrush="#FF531515"  Command="{Binding Path=Login}" >
                 <Button.Template>
                     <ControlTemplate>
@@ -26,11 +27,16 @@
                 </Button.Template>
             </Button>
 
-            <TextBlock FontSize="18" FontWeight="Bold"  Margin="0,250,0,0" HorizontalAlignment="Center"  VerticalAlignment="Bottom" SelectionHighlightColor="#FFA21216">
+            <Image x:Name="image" Source="novilogo.png" Margin="0,30,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="270"/>
+
+            <TextBlock FontSize="18" FontWeight="Bold"  Margin="0,15,0,0" HorizontalAlignment="Center"  VerticalAlignment="Bottom" SelectionHighlightColor="#FFA21216">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="DarkRed"/>
                 </TextBlock.Foreground>Kontakt broj: 000/111-222</TextBlock>
 
         </StackPanel>
+
+
+
     </Grid>
 </Page>

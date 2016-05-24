@@ -94,6 +94,8 @@
     </Content>
     <Content Include="RRentingBaza\Views\login.png" />
     <Content Include="RRentingBaza\Views\logo.png" />
+    <Content Include="RRentingBaza\Views\natpis.png" />
+    <Content Include="RRentingBaza\Views\novilogo.png" />
     <Content Include="RRentingBaza\Views\rentheart.png" />
     <Content Include="RRentingBaza\Views\signup.png" />
     <None Include="project.json" />
