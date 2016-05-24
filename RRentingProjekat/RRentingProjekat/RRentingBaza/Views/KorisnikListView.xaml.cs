@@ -23,7 +23,7 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             using (var db = new RRentingDbContext())
             {
-                KorisniciIS.ItemsSource = db.Korisnici.OrderBy(c => c.Ime).ToList();
+                //KorisniciIS.ItemsSource = db.Korisnici.OrderBy(c => c.Ime).ToList();
             }
         }
 
@@ -52,6 +52,9 @@ namespace RRentingProjekat.RRentingBaza.Views
                 GeoSirinaInput.Text = string.Empty;
                 KorisniciIS.ItemsSource = db.Korisnici.OrderBy(c => c.Ime).ToList();
             }
+
+            Frame rezervacija = Window.Current.Content as Frame;
+            rezervacija.Navigate(typeof (RezervacijaListView));
         }
 
         private void Button_Click_Delete(object sender, RoutedEventArgs e)

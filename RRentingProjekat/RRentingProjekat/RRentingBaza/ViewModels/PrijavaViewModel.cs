@@ -98,7 +98,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
                     if (PrijavljeniUposlenik is Sef && PrijavljeniUposlenik.SigurnosniID == unos) NavigationServis.Navigate(typeof(SefView), new SefViewModel(this));
                     else if (PrijavljeniUposlenik is Osoblje) NavigationServis.Navigate(typeof(OsobljeView), new OsobljeViewModel(this));
-                    //else if (PrijavljeniUspolenik is Recepcioner) NavigationServis.Navigate(typeof(RecepcionerView), RecepcionerViewModel(this));
+                    else if (PrijavljeniUposlenik is Recepcioner) NavigationServis.Navigate(typeof(RecepcionerView), new RecepcionerViewModel(this));
 
                 }
                 else

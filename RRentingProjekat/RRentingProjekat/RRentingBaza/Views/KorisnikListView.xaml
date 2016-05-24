@@ -73,7 +73,6 @@ iz objekata u listi-->
 
                         <Button Content="Delete" Click="Button_Click_Delete" Margin="5,5,5,5"/>
 
-
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

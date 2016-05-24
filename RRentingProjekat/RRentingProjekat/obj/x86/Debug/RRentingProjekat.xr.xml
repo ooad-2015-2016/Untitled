@@ -15,6 +15,9 @@
     <RootPropertyPathName Name="Zahtjevi" />
     <RootPropertyPathName Name="Zahtjev" />
     <RootPropertyPathName Name="brojSobe_" />
+    <RootPropertyPathName Name="StatusSobe" />
+    <RootPropertyPathName Name="ObracunCijene" />
+    <RootPropertyPathName Name="DodajGost" />
     <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="dodatniKrevet" />
     <RootPropertyPathName Name="parking" />
@@ -176,14 +179,14 @@
       <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
-    <RootType FullName="RRentingProjekat.RRentingBaza.Views.RecepcionerView" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Margin" />
       <RootProperty Name="Source" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.RecepcionerView" />
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
