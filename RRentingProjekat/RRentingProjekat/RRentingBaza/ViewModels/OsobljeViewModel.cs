@@ -31,6 +31,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
 
 
+
         }
         public bool mozeLiUpdateovati(object parametar)
         {

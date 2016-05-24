@@ -29,21 +29,13 @@ namespace RRentingProjekat.RRentingBaza.Views
         public OsobljeView()
         {
             //inicijalizacija data source
-            var inicijalizacija = new DataSourceRRenting();
+            // var inicijalizacija = new DataSourceRRenting();
 
-            //staviti da se vidi back
-            var currentView = SystemNavigationManager.GetForCurrentView();
-            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
-        }
+            this.InitializeComponent();
 
-        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
-        {
-            if (Frame.CanGoBack)
-            {
-                Frame.GoBack();
-                e.Handled = true;
-            }
+            NavigationCacheMode = NavigationCacheMode.Required;
+
+
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
