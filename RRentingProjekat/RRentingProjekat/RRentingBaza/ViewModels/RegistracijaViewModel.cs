@@ -53,7 +53,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             UPassword = UnosPassBox1.Password;
             //using (var db = new RRentingDbContext())
             RegistrovaniKorisnik = new Gost(Id, UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
-            NavigationServis.Navigate(typeof(RezervacijaListView), new RezervacijaViewModel(this));
+            NavigationServis.Navigate(typeof(RezervacijaView), new RezervacijaViewModel(this));
 
 
 

@@ -15,6 +15,13 @@
     <RootPropertyPathName Name="Zahtjevi" />
     <RootPropertyPathName Name="Zahtjev" />
     <RootPropertyPathName Name="brojSobe_" />
+    <RootPropertyPathName Name="DodajRezervaciju" />
+    <RootPropertyPathName Name="dodatniKrevet" />
+    <RootPropertyPathName Name="parking" />
+    <RootPropertyPathName Name="ljubimac" />
+    <RootPropertyPathName Name="cijena" />
+    <RootPropertyPathName Name="brojDjece" />
+    <RootPropertyPathName Name="brojOdraslih" />
     <RootPropertyPathName Name="BrojSobe" />
     <RootPropertyPathName Name="Statistika" />
     <RootPropertyPathName Name="Uposlenici" />
@@ -34,15 +41,8 @@
     <RootPropertyPathName Name="Ime" />
     <RootPropertyPathName Name="Signup" />
     <RootPropertyPathName Name="Login" />
-    <RootPropertyPathName Name="cijena" />
-    <RootPropertyPathName Name="dodatniKrevet" />
-    <RootPropertyPathName Name="parking" />
-    <RootPropertyPathName Name="ljubimac" />
     <RootPropertyPathName Name="datumOdlaska" />
     <RootPropertyPathName Name="datumDolaska" />
-    <RootPropertyPathName Name="brojDjece" />
-    <RootPropertyPathName Name="brojOdraslih" />
-    <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="RezervisaniDatumi" />
     <RootPropertyPathName Name="Status" />
     <RootPropertyPathName Name="BrojKreveta" />
@@ -111,9 +111,9 @@
       <RootProperty Name="Name" />
       <RootProperty Name="CommandParameter" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Height" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Template" />
-      <RootProperty Name="Height" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
@@ -134,9 +134,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="IsReadOnly" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
@@ -186,6 +186,23 @@
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RecepcionerView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SefView" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />
@@ -198,26 +215,10 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.KorisnikListView" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ControlTemplate">
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Pocetna" />
-    <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Height" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
-      <RootProperty Name="Content" />
-    </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaListView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SobaListView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView" />

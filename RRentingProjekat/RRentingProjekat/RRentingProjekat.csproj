@@ -126,6 +126,9 @@
     <Compile Include="RRentingBaza\Views\RecepcionerView.xaml.cs">
       <DependentUpon>RecepcionerView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RRentingBaza\Views\RezervacijaView.xaml.cs">
+      <DependentUpon>RezervacijaView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RRentingBaza\Views\SefView.xaml.cs">
       <DependentUpon>SefView.xaml</DependentUpon>
     </Compile>
@@ -211,6 +214,10 @@
     <Page Include="RRentingBaza\Views\RecepcionerView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RRentingBaza\Views\RezervacijaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RRentingBaza\Views\SefView.xaml">
       <SubType>Designer</SubType>

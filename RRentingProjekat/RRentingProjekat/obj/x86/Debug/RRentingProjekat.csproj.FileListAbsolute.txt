@@ -788,3 +788,8 @@ C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRent
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xaml
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RecepcionerView.xbf
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidUposlenikaView.xbf
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RezervacijaView.g.i.cs
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RezervacijaView.g.cs
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RezervacijaView.xaml
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\RezervacijaView.xbf
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\RezervacijaView.xbf

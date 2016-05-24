@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="RRentingProjekat.RRentingBaza.Views.RezervacijaView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RRentingProjekat.RRentingBaza.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:viewmodels="using:RRentingProjekat.RRentingBaza.ViewModels"
+    xmlns:models="using:RRentingProjekat.RRentingBaza.Models"
+    xmlns:triggers="using:RRentingProjekat.RRentingBaza.Helper"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--Polja za unos novog restorana-->
+        <Image x:Name="image"  Margin="0,0,0,0" Source="logo.png" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="250"/>
+        
+        <TextBlock x:Name="BrojOdraslihTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0"
+TextWrapping="Wrap" Text="Broj Odraslih" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="115"/>
+        <TextBox x:Name="BrojOdraslihInput" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"
+Margin="3,3,3,3" TextWrapping="Wrap" Text="{Binding brojOdraslih, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"  />
+        <TextBlock x:Name="BrojDjeceTextBlock" Grid.Row="2" HorizontalAlignment="Left"
+Margin="10,10,0,0" TextWrapping="Wrap" Text="Broj Djece" VerticalAlignment="Top" Height="20" Width="107"/>
+        <TextBox x:Name="BrojDjeceInput" Grid.Row="2" Grid.Column="1"
+HorizontalAlignment="Stretch" Margin="3,3,3,3" TextWrapping="Wrap" Text="{Binding brojDjece, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+
+        <TextBlock x:Name="CijenaLabel" Grid.Row="8" HorizontalAlignment="Left" Margin="10,20,0,0"
+TextWrapping="Wrap" Text="Cijena" VerticalAlignment="Top" Height="20" Width="85"/>
+        <TextBox x:Name="CijenaInput" IsReadOnly="True" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Stretch"
+Margin="3,3,3,3" TextWrapping="Wrap" Text="{Binding cijena, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+        <TextBlock x:Name="DatumDolaskaTextBlock" Grid.Row="3" HorizontalAlignment="Left"
+Margin="10,10,0,0" TextWrapping="Wrap" Text="Datum Dolaska" VerticalAlignment="Top" Height="20" Width="107"/>
+        <TextBlock x:Name="DatumOdlaskaTextBlock" Grid.Row="4" HorizontalAlignment="Left"
+Margin="10,10,0,0" TextWrapping="Wrap" Text="Datum Odlaska" VerticalAlignment="Top" Height="20" Width="107"/>
+        <CheckBox x:Name="LjubimacRB" IsChecked="{Binding ljubimac, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Ljubimac " Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="5" VerticalAlignment="Top"/>
+        <TextBlock x:Name="DodatnoTextBlock" Grid.Row="5" HorizontalAlignment="Left"
+Margin="10,10,0,0" TextWrapping="Wrap" Text="Dodatne opcije" VerticalAlignment="Top" Height="20" Width="107"/>
+        <CheckBox x:Name="ParkingRB" IsChecked="{Binding parking, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Parking" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="6" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DodatnikrevetRB"  IsChecked="{Binding dodatniKrevet, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Dodatnikrevet" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="7" VerticalAlignment="Top"/>
+        <Button x:Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch" Background="DarkRed" Foreground="White"
+Margin="0,10,10,0" Grid.Row="10" VerticalAlignment="Top" Click="buttonDodaj_Click" Height="32"  Command="{Binding DodajRezervaciju}"/>
+        <TextBlock x:Name="NacinPlacanjaBlock" Grid.Row="9" HorizontalAlignment="Left"
+Margin="10,10,0,0" TextWrapping="Wrap" Text="Nacin placanja" VerticalAlignment="Top" Height="20" Width="107"/>
+        <ListBox x:Name="NacinPlacanjaListBox" Grid.Row="9" Grid.Column="1"
+HorizontalAlignment="Stretch" Margin="3,3,3,3" >
+            <ListBox.Items>
+                <ListBoxItem Content="Gotovinsko"/>
+                <ListBoxItem Content="Karticom"/>
+            </ListBox.Items>
+        </ListBox>
+        <CalendarDatePicker x:Name="Dolazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
+        <CalendarDatePicker x:Name="Odlazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
+       
+
+    </Grid>
+
+</Page>
