@@ -29,6 +29,8 @@ namespace RRentingProjekatMigrations
 
                     b.Property<string>("Sifra");
 
+                    b.Property<int>("SigurnosniID");
+
                     b.Property<string>("Telefon");
 
                     b.Property<string>("fourSqaureId");

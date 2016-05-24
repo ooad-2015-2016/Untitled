@@ -7,11 +7,11 @@ using RRentingProjekat.RRentingBaza.Models;
 namespace RRentingProjekatMigrations
 {
     [ContextType(typeof(RRentingDbContext))]
-    partial class InitialMigration
+    partial class IntialMigration
     {
         public override string Id
         {
-            get { return "20160507103846_InitialMigration"; }
+            get { return "20160524161255_IntialMigration"; }
         }
 
         public override string ProductVersion
@@ -38,6 +38,8 @@ namespace RRentingProjekatMigrations
                     b.Property<string>("Prezime");
 
                     b.Property<string>("Sifra");
+
+                    b.Property<int>("SigurnosniID");
 
                     b.Property<string>("Telefon");
 

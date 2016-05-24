@@ -14,7 +14,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
     class ZahtjevViewModel : UserControl
     {
         Zahtjev zahtjev { get; set; }
-        List<Zahtjev> listaZahtjeva;
+        List<Zahtjev> listaZahtjeva { get; set; }
         Soba soba { get; set; }
         Gost gost { get; set; }
 
@@ -32,6 +32,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             zahtjev = new Zahtjev();
             soba = gostVM.soba;
             gost = gostVM.gost;
+
+            listaZahtjeva = new List<Zahtjev>();
 
             DodajZahtjev = new RelayCommand<object>(dodajZahtjev);
             Nazad = new RelayCommand<object>(nazad);

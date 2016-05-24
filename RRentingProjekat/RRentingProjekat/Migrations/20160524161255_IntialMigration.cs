@@ -5,7 +5,7 @@ using Microsoft.Data.Entity.Migrations.Operations;
 
 namespace RRentingProjekatMigrations
 {
-    public partial class InitialMigration : Migration
+    public partial class IntialMigration : Migration
     {
         public override void Up(MigrationBuilder migration)
         {
@@ -20,6 +20,7 @@ namespace RRentingProjekatMigrations
                     Ime = table.Column(type: "TEXT", nullable: true),
                     Prezime = table.Column(type: "TEXT", nullable: true),
                     Sifra = table.Column(type: "TEXT", nullable: true),
+                    SigurnosniID = table.Column(type: "INTEGER", nullable: false),
                     Telefon = table.Column(type: "TEXT", nullable: true),
                     fourSqaureId = table.Column(type: "TEXT", nullable: true)
                 },
@@ -54,7 +55,7 @@ namespace RRentingProjekatMigrations
                 columns: table => new
                 {
                     SobaId = table.Column(type: "INTEGER", nullable: false),
-                        //.Annotation("Sqlite:Autoincrement", true),
+                      //  .Annotation("Sqlite:Autoincrement", true),
                     BrojKreveta = table.Column(type: "INTEGER", nullable: false),
                     BrojSobe = table.Column(type: "INTEGER", nullable: false),
                     CijenaSobe = table.Column(type: "REAL", nullable: false),

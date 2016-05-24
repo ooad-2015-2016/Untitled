@@ -104,9 +104,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160507103846_InitialMigration.cs" />
-    <Compile Include="Migrations\20160507103846_InitialMigration.designer.cs">
-      <DependentUpon>20160507103846_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20160524161255_IntialMigration.cs" />
+    <Compile Include="Migrations\20160524161255_IntialMigration.designer.cs">
+      <DependentUpon>20160524161255_IntialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\RRentingDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

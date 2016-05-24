@@ -15,16 +15,18 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
     {
         public Gost RegistrovaniGost {get; set; }
         public int Id { get; set; }
-        int BrojOdraslihInput;
-        int BrojDjeceInput;
-        DateTime Dolazak;
-        DateTime Odlazak;
-        Boolean ParkingRB;
-        Boolean LjubimacRB;
-        Boolean DodatnikrevetRB;
+        public int BrojOdraslihInput { get; set; }
+        public int BrojDjeceInput { get; set; }
+        public DateTime Dolazak { get; set; }
+        public DateTime Odlazak { get; set; }
+        public Boolean ParkingRB { get; set; }
+        public Boolean LjubimacRB { get; set; }
+        public Boolean DodatnikrevetRB { get; set; }
+
         private static int m_Counter2 = 0;
-        float CijenaInput;
-        NacinPlacanja NacinPlacanjaListBox;
+        public float CijenaInput { get; set; }
+        public NacinPlacanja NacinPlacanjaListBox { get; set; }
+
         public Rezervacija DodanaRezervacija { get; set; }
         public INavigacija NavigationServis { get; set; }
         public ICommand DodajRezervaciju { get; set; }
@@ -32,7 +34,18 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             RegistrovaniGost = rvm.RegistrovaniKorisnik;
             DodajRezervaciju = new RelayCommand<object>(rezervisi);
-            this.Id = System.Threading.Interlocked.Increment(ref m_Counter2); ;
+            this.Id = System.Threading.Interlocked.Increment(ref m_Counter2);
+
+            BrojDjeceInput = 0;
+            BrojOdraslihInput = 0;
+            Dolazak = DateTime.Now;
+            Odlazak = DateTime.Now;
+            ParkingRB = false;
+            LjubimacRB = false;
+            DodatnikrevetRB = false;
+            NacinPlacanjaListBox = NacinPlacanja.Gotovinsko;
+            CijenaInput = 0;
+
         }
         private void rezervisi(object parametar)
         {

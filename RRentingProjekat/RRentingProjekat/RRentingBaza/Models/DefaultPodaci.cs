@@ -31,7 +31,7 @@ namespace RRentingProjekat.RRentingBaza.Models
                     new Rezervacija()
                     {
                         brojOdraslih = 0,
-                        brojDjece =0,
+                        brojDjece = 0,
                         datumDolaska = DateTime.Now,
                         datumOdlaska = DateTime.Now,
                         parking = false,
@@ -39,6 +39,7 @@ namespace RRentingProjekat.RRentingBaza.Models
                         dodatniKrevet = false,
                         cijena = 0,
                         nacinPlacanja = NacinPlacanja.Gotovinsko,
+                        placeno = false,
                     });
                 context.SaveChanges();
 
@@ -69,6 +70,7 @@ namespace RRentingProjekat.RRentingBaza.Models
                         Adresa = "",
                         Sifra = "",
                         Email = "",
+                        SigurnosniID = 0,
                     }
             );
                 context.SaveChanges();

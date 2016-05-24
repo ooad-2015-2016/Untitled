@@ -36,6 +36,7 @@ namespace RRentingProjekat.RRentingBaza.Models
             SigurnosniID = SID;
 
         }
-        }
-    }
+
+      }
+ }
 
