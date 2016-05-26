@@ -1,5 +1,6 @@
 App.xbf
 RRentingBaza\Views\GostView.xbf
+RRentingBaza\Views\GPSView.xbf
 RRentingBaza\Views\KorisnikListView.xbf
 RRentingBaza\Views\Login.xbf
 RRentingBaza\Views\OsobljeView.xbf

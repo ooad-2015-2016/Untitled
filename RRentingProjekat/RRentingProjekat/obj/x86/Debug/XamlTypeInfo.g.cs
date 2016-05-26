@@ -132,41 +132,43 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[16];
+            _typeNameTable = new string[17];
             _typeNameTable[0] = "RRentingProjekat.RRentingBaza.Views.GostView";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "RRentingProjekat.RRentingBaza.Views.Login";
-            _typeNameTable[4] = "RRentingProjekat.RRentingBaza.Views.OsobljeView";
-            _typeNameTable[5] = "RRentingProjekat.RRentingBaza.Views.RecepcionerView";
-            _typeNameTable[6] = "RRentingProjekat.RRentingBaza.Views.RezervacijaView";
-            _typeNameTable[7] = "RRentingProjekat.RRentingBaza.Views.SefView";
-            _typeNameTable[8] = "RRentingProjekat.RRentingBaza.Views.SignupKorisnik";
-            _typeNameTable[9] = "RRentingProjekat.RRentingBaza.Views.KorisnikListView";
-            _typeNameTable[10] = "RRentingProjekat.RRentingBaza.Views.Pocetna";
-            _typeNameTable[11] = "RRentingProjekat.RRentingBaza.Views.RezervacijaListView";
-            _typeNameTable[12] = "RRentingProjekat.RRentingBaza.Views.SobaListView";
-            _typeNameTable[13] = "RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView";
-            _typeNameTable[14] = "RRentingProjekat.RRentingBaza.Views.ZahtjeviView";
-            _typeNameTable[15] = "RRentingProjekat.RRentingBaza.Views.ZahtjevListView";
+            _typeNameTable[3] = "RRentingProjekat.RRentingBaza.Views.GPSView";
+            _typeNameTable[4] = "RRentingProjekat.RRentingBaza.Views.Login";
+            _typeNameTable[5] = "RRentingProjekat.RRentingBaza.Views.OsobljeView";
+            _typeNameTable[6] = "RRentingProjekat.RRentingBaza.Views.RecepcionerView";
+            _typeNameTable[7] = "RRentingProjekat.RRentingBaza.Views.RezervacijaView";
+            _typeNameTable[8] = "RRentingProjekat.RRentingBaza.Views.SefView";
+            _typeNameTable[9] = "RRentingProjekat.RRentingBaza.Views.SignupKorisnik";
+            _typeNameTable[10] = "RRentingProjekat.RRentingBaza.Views.KorisnikListView";
+            _typeNameTable[11] = "RRentingProjekat.RRentingBaza.Views.Pocetna";
+            _typeNameTable[12] = "RRentingProjekat.RRentingBaza.Views.RezervacijaListView";
+            _typeNameTable[13] = "RRentingProjekat.RRentingBaza.Views.SobaListView";
+            _typeNameTable[14] = "RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView";
+            _typeNameTable[15] = "RRentingProjekat.RRentingBaza.Views.ZahtjeviView";
+            _typeNameTable[16] = "RRentingProjekat.RRentingBaza.Views.ZahtjevListView";
 
-            _typeTable = new global::System.Type[16];
+            _typeTable = new global::System.Type[17];
             _typeTable[0] = typeof(global::RRentingProjekat.RRentingBaza.Views.GostView);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::RRentingProjekat.RRentingBaza.Views.Login);
-            _typeTable[4] = typeof(global::RRentingProjekat.RRentingBaza.Views.OsobljeView);
-            _typeTable[5] = typeof(global::RRentingProjekat.RRentingBaza.Views.RecepcionerView);
-            _typeTable[6] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaView);
-            _typeTable[7] = typeof(global::RRentingProjekat.RRentingBaza.Views.SefView);
-            _typeTable[8] = typeof(global::RRentingProjekat.RRentingBaza.Views.SignupKorisnik);
-            _typeTable[9] = typeof(global::RRentingProjekat.RRentingBaza.Views.KorisnikListView);
-            _typeTable[10] = typeof(global::RRentingProjekat.RRentingBaza.Views.Pocetna);
-            _typeTable[11] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView);
-            _typeTable[12] = typeof(global::RRentingProjekat.RRentingBaza.Views.SobaListView);
-            _typeTable[13] = typeof(global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView);
-            _typeTable[14] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView);
-            _typeTable[15] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView);
+            _typeTable[3] = typeof(global::RRentingProjekat.RRentingBaza.Views.GPSView);
+            _typeTable[4] = typeof(global::RRentingProjekat.RRentingBaza.Views.Login);
+            _typeTable[5] = typeof(global::RRentingProjekat.RRentingBaza.Views.OsobljeView);
+            _typeTable[6] = typeof(global::RRentingProjekat.RRentingBaza.Views.RecepcionerView);
+            _typeTable[7] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaView);
+            _typeTable[8] = typeof(global::RRentingProjekat.RRentingBaza.Views.SefView);
+            _typeTable[9] = typeof(global::RRentingProjekat.RRentingBaza.Views.SignupKorisnik);
+            _typeTable[10] = typeof(global::RRentingProjekat.RRentingBaza.Views.KorisnikListView);
+            _typeTable[11] = typeof(global::RRentingProjekat.RRentingBaza.Views.Pocetna);
+            _typeTable[12] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView);
+            _typeTable[13] = typeof(global::RRentingProjekat.RRentingBaza.Views.SobaListView);
+            _typeTable[14] = typeof(global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView);
+            _typeTable[15] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView);
+            _typeTable[16] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -202,19 +204,20 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
         }
 
         private object Activate_0_GostView() { return new global::RRentingProjekat.RRentingBaza.Views.GostView(); }
-        private object Activate_3_Login() { return new global::RRentingProjekat.RRentingBaza.Views.Login(); }
-        private object Activate_4_OsobljeView() { return new global::RRentingProjekat.RRentingBaza.Views.OsobljeView(); }
-        private object Activate_5_RecepcionerView() { return new global::RRentingProjekat.RRentingBaza.Views.RecepcionerView(); }
-        private object Activate_6_RezervacijaView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaView(); }
-        private object Activate_7_SefView() { return new global::RRentingProjekat.RRentingBaza.Views.SefView(); }
-        private object Activate_8_SignupKorisnik() { return new global::RRentingProjekat.RRentingBaza.Views.SignupKorisnik(); }
-        private object Activate_9_KorisnikListView() { return new global::RRentingProjekat.RRentingBaza.Views.KorisnikListView(); }
-        private object Activate_10_Pocetna() { return new global::RRentingProjekat.RRentingBaza.Views.Pocetna(); }
-        private object Activate_11_RezervacijaListView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView(); }
-        private object Activate_12_SobaListView() { return new global::RRentingProjekat.RRentingBaza.Views.SobaListView(); }
-        private object Activate_13_UvidUposlenikaView() { return new global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView(); }
-        private object Activate_14_ZahtjeviView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView(); }
-        private object Activate_15_ZahtjevListView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView(); }
+        private object Activate_3_GPSView() { return new global::RRentingProjekat.RRentingBaza.Views.GPSView(); }
+        private object Activate_4_Login() { return new global::RRentingProjekat.RRentingBaza.Views.Login(); }
+        private object Activate_5_OsobljeView() { return new global::RRentingProjekat.RRentingBaza.Views.OsobljeView(); }
+        private object Activate_6_RecepcionerView() { return new global::RRentingProjekat.RRentingBaza.Views.RecepcionerView(); }
+        private object Activate_7_RezervacijaView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaView(); }
+        private object Activate_8_SefView() { return new global::RRentingProjekat.RRentingBaza.Views.SefView(); }
+        private object Activate_9_SignupKorisnik() { return new global::RRentingProjekat.RRentingBaza.Views.SignupKorisnik(); }
+        private object Activate_10_KorisnikListView() { return new global::RRentingProjekat.RRentingBaza.Views.KorisnikListView(); }
+        private object Activate_11_Pocetna() { return new global::RRentingProjekat.RRentingBaza.Views.Pocetna(); }
+        private object Activate_12_RezervacijaListView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView(); }
+        private object Activate_13_SobaListView() { return new global::RRentingProjekat.RRentingBaza.Views.SobaListView(); }
+        private object Activate_14_UvidUposlenikaView() { return new global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView(); }
+        private object Activate_15_ZahtjeviView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView(); }
+        private object Activate_16_ZahtjevListView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -241,93 +244,100 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  RRentingProjekat.RRentingBaza.Views.Login
+            case 3:   //  RRentingProjekat.RRentingBaza.Views.GPSView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_Login;
+                userType.Activator = Activate_3_GPSView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  RRentingProjekat.RRentingBaza.Views.OsobljeView
+            case 4:   //  RRentingProjekat.RRentingBaza.Views.Login
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_OsobljeView;
+                userType.Activator = Activate_4_Login;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  RRentingProjekat.RRentingBaza.Views.RecepcionerView
+            case 5:   //  RRentingProjekat.RRentingBaza.Views.OsobljeView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_RecepcionerView;
+                userType.Activator = Activate_5_OsobljeView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaView
+            case 6:   //  RRentingProjekat.RRentingBaza.Views.RecepcionerView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_RezervacijaView;
+                userType.Activator = Activate_6_RecepcionerView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  RRentingProjekat.RRentingBaza.Views.SefView
+            case 7:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_SefView;
+                userType.Activator = Activate_7_RezervacijaView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  RRentingProjekat.RRentingBaza.Views.SignupKorisnik
+            case 8:   //  RRentingProjekat.RRentingBaza.Views.SefView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_SignupKorisnik;
+                userType.Activator = Activate_8_SefView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  RRentingProjekat.RRentingBaza.Views.KorisnikListView
+            case 9:   //  RRentingProjekat.RRentingBaza.Views.SignupKorisnik
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_KorisnikListView;
+                userType.Activator = Activate_9_SignupKorisnik;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  RRentingProjekat.RRentingBaza.Views.Pocetna
+            case 10:   //  RRentingProjekat.RRentingBaza.Views.KorisnikListView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_Pocetna;
+                userType.Activator = Activate_10_KorisnikListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaListView
+            case 11:   //  RRentingProjekat.RRentingBaza.Views.Pocetna
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_RezervacijaListView;
+                userType.Activator = Activate_11_Pocetna;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  RRentingProjekat.RRentingBaza.Views.SobaListView
+            case 12:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaListView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_SobaListView;
+                userType.Activator = Activate_12_RezervacijaListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView
+            case 13:   //  RRentingProjekat.RRentingBaza.Views.SobaListView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_UvidUposlenikaView;
+                userType.Activator = Activate_13_SobaListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  RRentingProjekat.RRentingBaza.Views.ZahtjeviView
+            case 14:   //  RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_ZahtjeviView;
+                userType.Activator = Activate_14_UvidUposlenikaView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  RRentingProjekat.RRentingBaza.Views.ZahtjevListView
+            case 15:   //  RRentingProjekat.RRentingBaza.Views.ZahtjeviView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_ZahtjevListView;
+                userType.Activator = Activate_15_ZahtjeviView;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 16:   //  RRentingProjekat.RRentingBaza.Views.ZahtjevListView
+                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_ZahtjevListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

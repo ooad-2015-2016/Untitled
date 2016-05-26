@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Lokacija" />
     <RootPropertyPathName Name="Izlaz" />
     <RootPropertyPathName Name="OcijeniRRenting" />
     <RootPropertyPathName Name="Dodaj" />
+    <RootPropertyPathName Name="TrenutnaLokacija" />
+    <RootPropertyPathName Name="Adresa" />
     <RootPropertyPathName Name="LoginUposlenik" />
     <RootPropertyPathName Name="UnosID" />
     <RootPropertyPathName Name="LoginGost" />
@@ -39,7 +42,6 @@
     <RootPropertyPathName Name="UIme" />
     <RootPropertyPathName Name="Sifra" />
     <RootPropertyPathName Name="Telefon" />
-    <RootPropertyPathName Name="Adresa" />
     <RootPropertyPathName Name="Prezime" />
     <RootPropertyPathName Name="Ime" />
     <RootPropertyPathName Name="Signup" />
@@ -71,12 +73,12 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
-      <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
+      <RootProperty Name="ColumnDefinitions" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
     </RootType>
@@ -121,14 +123,25 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="UpdateSourceTrigger" />
-      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.GostView" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Maps.MapControl">
+      <RootProperty Name="Center" />
+    </RootType>
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.GPSView" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Name" />
       <RootProperty Name="PlaceholderText" />
@@ -162,14 +175,7 @@
       <RootProperty Name="Width" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Login" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />

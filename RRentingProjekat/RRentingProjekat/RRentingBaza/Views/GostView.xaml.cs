@@ -49,6 +49,9 @@ namespace RRentingProjekat.RRentingBaza.Views
             DataContext = (GostViewModel)e.Parameter;
         }
 
-
+        private void gps_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GPSView));
+        }
     }
 }

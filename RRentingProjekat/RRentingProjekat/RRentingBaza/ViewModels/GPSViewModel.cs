@@ -10,9 +10,9 @@ using Windows.Services.Maps;
 using Windows.UI;
 using Windows.UI.Xaml.Controls.Maps;
 
-namespace GPSApp.ViewModel
+namespace RRentingProjekat.RRentingBaza.ViewModels
 {
-    class GPSViewModel : INotifyPropertyChanged
+    class GPSViewModel
     {
         //trenutna lokacija koja ce se naci sa geolocation
         private Geopoint trenutnaLokacija;
