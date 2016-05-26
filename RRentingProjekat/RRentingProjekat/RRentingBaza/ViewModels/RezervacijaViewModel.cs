@@ -8,6 +8,7 @@ using RRentingProjekat.RRentingBaza.Models;
 using RRentingProjekat.RRentingBaza.Helper;
 using System.Windows.Input;
 using RRentingProjekat.RRentingBaza.Views;
+using Windows.UI.Popups;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
@@ -30,6 +31,11 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public Rezervacija DodanaRezervacija { get; set; }
         public INavigacija NavigationServis { get; set; }
         public ICommand DodajRezervaciju { get; set; }
+
+        RegistracijaViewModel parent;
+
+
+        Random rnd = new Random();
         public RezervacijaViewModel(RegistracijaViewModel rvm)
         {
             RegistrovaniGost = rvm.RegistrovaniKorisnik;
@@ -46,11 +52,18 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NacinPlacanjaListBox = NacinPlacanja.Gotovinsko;
             CijenaInput = 0;
 
+            this.parent = rvm;
         }
-        private void rezervisi(object parametar)
+        private async void rezervisi(object parametar)
         {
-//            RegistrovaniKorisnik = new Gost(Id, txtIme, txtPrezime, txtTelefon, txtAdresa, txtPassword, txtEmail);
-           // NavigationServis.Navigate(typeof(GostView), new GostViewModel());
+
+            //validaciju dodati
+           
+            //kreiranje tiketa i dodjela
+            int tiket = rnd.Next(1000);
+            parent.RegistrovaniKorisnik.dodijeliTiket(tiket);
+
+         
             DodanaRezervacija.brojOdraslih = BrojOdraslihInput;
             DodanaRezervacija.brojDjece = BrojDjeceInput;
             DodanaRezervacija.datumDolaska = Dolazak;
@@ -60,6 +73,15 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             DodanaRezervacija.dodatniKrevet = DodatnikrevetRB;
             DodanaRezervacija.cijena = CijenaInput;
             DodanaRezervacija.nacinPlacanja = NacinPlacanjaListBox;
+
+            var dialog = new MessageDialog("Vaš broj tiketa: " + tiket.ToString(), "Rezervacija uspješna");
+            await dialog.ShowAsync();
+
+            //using (var db = new RRentingDbContext())
+            // db.Korisnici.Add(RegistrovaniKorisnik);
+            //db.SaveChanges();
+
+            NavigationServis.Navigate(typeof(Pocetna));
 
 
 

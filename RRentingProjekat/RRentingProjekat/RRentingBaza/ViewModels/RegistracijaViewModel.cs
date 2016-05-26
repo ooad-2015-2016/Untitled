@@ -28,8 +28,6 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public string UEmail { get; set; }
         public string UPassword { get; set; }
 
-        public string ValidacijaPoruka { get; set; }
-
         public INavigacija NavigationServis { get; set; }
         public ICommand SignupKorisnika { get; set; }
         public RegistracijaViewModel()
@@ -45,21 +43,14 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             SignupKorisnika = new RelayCommand<object>(signup, mozeLiSeRegistrovati);
             this.Id = System.Threading.Interlocked.Increment(ref m_Counter);
 
-            ValidacijaPoruka = "";
+
         }
         public bool mozeLiSeRegistrovati(object parametar)
         {
             return true;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
+      
         private async void signup(object parametar)
         {
             var UnosPassBox1 = parametar as PasswordBox;
@@ -98,7 +89,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                 await dialog.ShowAsync();
 
                 //using (var db = new RRentingDbContext())
-                // db.Korisnici.Add(novi);
+                // db.Korisnici.Add(RegistrovaniKorisnik);
                 //db.SaveChanges();
                 RegistrovaniKorisnik = new Gost(Id, UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
 

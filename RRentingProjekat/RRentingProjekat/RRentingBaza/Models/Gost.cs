@@ -9,7 +9,7 @@ namespace RRentingProjekat.RRentingBaza.Models
     public enum Ocjena {losa, dobra, super}
     class Gost : Korisnik
     {
-        public static int brojTiketa { get; set; }
+        public int brojTiketa { get; set; }
         public Soba soba { get; set; }
         public DateTime datumDolaska { get; set; }
         public DateTime datumOdlaska { get; set; }
@@ -32,6 +32,11 @@ namespace RRentingProjekat.RRentingBaza.Models
             datumOdlaska = DateTime.Now;
             listaZahtjeva = new List<Zahtjev>();
 
+        }
+
+        public void dodijeliTiket(int t)
+        {
+            brojTiketa = t;
         }
 
         public Gost()

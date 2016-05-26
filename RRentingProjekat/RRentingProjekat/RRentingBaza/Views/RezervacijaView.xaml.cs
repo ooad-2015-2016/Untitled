@@ -27,6 +27,7 @@ namespace RRentingProjekat.RRentingBaza.Views
     /// </summary>
     public sealed partial class RezervacijaView : Page
     {
+        Random rnd = new Random();
         public RezervacijaView()
         {
             this.InitializeComponent();
@@ -35,7 +36,7 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             
         }
-        //Event dodavanja novog Restorana
+       
         private void buttonDodaj_Click(object sender, RoutedEventArgs e)
         {
             using (var db = new RRentingDbContext())
@@ -50,10 +51,12 @@ namespace RRentingProjekat.RRentingBaza.Views
                     ljubimac = LjubimacRB.IsChecked.Value,
                     dodatniKrevet = DodatnikrevetRB.IsChecked.Value,
                     cijena = 500,
-                    nacinPlacanja = (NacinPlacanja)Enum.Parse(typeof(NacinPlacanja), NacinPlacanjaListBox.SelectedItem.ToString()),
+                    nacinPlacanja = (NacinPlacanja)Enum.Parse(typeof(NacinPlacanja), NacinPlacanjaListBox.SelectedItem.ToString())
                 };
-                db.Rezervacije.Add(contact);
-                db.SaveChanges();
+
+               
+                //db.Rezervacije.Add(contact);
+                //db.SaveChanges();
                 //reset polja za unos
                 BrojOdraslihInput.Text = string.Empty;
                 BrojDjeceInput.Text = string.Empty;
