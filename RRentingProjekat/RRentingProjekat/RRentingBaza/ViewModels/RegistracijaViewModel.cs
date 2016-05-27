@@ -11,11 +11,12 @@ using RRentingProjekat.RRentingBaza.Views;
 using RRentingProjekat.RRentingBaza.DataSource;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Popups;
+using System.Runtime.CompilerServices;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
 
-    class RegistracijaViewModel
+    class RegistracijaViewModel : INotifyPropertyChanged
     {
         private static int m_Counter = 0;
 
@@ -55,7 +56,12 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             RegistrovaniKorisnik.RfidKartica = rfidKod;
         }
-
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
+        {
+            //? je skracena verzija ako nije null
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
+        }
 
         private async void signup(object parametar)
         {

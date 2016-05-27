@@ -30,10 +30,10 @@ namespace RRentingProjekat.RRentingBaza.Helper
         public Rfid()
         {
             //ucitavanje json konfiguracija radi laksih izmjena
-             rfidConfig = JsonValue.Parse(File.ReadAllText("RfidConfig.json")).GetObject();
+            // rfidConfig = JsonValue.Parse(File.ReadAllText("RfidConfig.json")).GetObject();
             //port bitan cesto ce se mijenjati ovisno o racunaru COM 1 - 4 najcesce a moze i vise
-            port = rfidConfig.GetNamedString("port");
-            //port = "COM9";
+           // port = rfidConfig.GetNamedString("port");
+            port = "COM9";
         }
 
         public async void InitializeReader(Action<string> callback)
