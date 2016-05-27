@@ -74,8 +74,23 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             DodanaRezervacija.cijena = CijenaInput;
             DodanaRezervacija.nacinPlacanja = NacinPlacanjaListBox;
 
-            var dialog = new MessageDialog("Vaš broj tiketa: " + tiket.ToString(), "Rezervacija uspješna");
+            /* using (var rdb = new RRentingDbContext())
+             {
+                 rdb.Rezervacije.Add(DodanaRezervacija);
+             }
+             //rdb.SaveChanges();
+
+             */
+
+            // PrijavljeniGost = DataSourceRRenting.ProvjeraGosta(UnosMail, UnosPass);
+
+            Soba slobodnaSoba = DataSource.DataSourceRRenting.dajSlobodnuSobu(DodanaRezervacija);
+            if (slobodnaSoba.CijenaSobe != 0) parent.RegistrovaniKorisnik.brojSobe = slobodnaSoba.BrojSobe;
+
+            var dialog = new MessageDialog("Vaš broj tiketa: " + tiket.ToString()+". \nBroj sobe: " + slobodnaSoba.BrojSobe.ToString(), "Rezervacija uspješna");
             await dialog.ShowAsync();
+
+
 
             //using (var db = new RRentingDbContext())
             // db.Korisnici.Add(RegistrovaniKorisnik);

@@ -17,8 +17,9 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
     class PrijavaViewModel
     {
 
-        public Korisnik PrijavljeniGost { get; set; }
+        public Gost PrijavljeniGost { get; set; }
         public Korisnik PrijavljeniUposlenik { get; set; }
+
 
         public string UnosMail { get; set; }
         public string UnosPass { get; set; }
@@ -42,6 +43,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             LoginUposlenik = new RelayCommand<object>(loginUposlenik, mozeLiSePrijavitiUposlenik);
         }
 
+
         public bool mozeLiSePrijavitiGost(object parametar)
         {
             return true;
@@ -63,11 +65,13 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                 // PrijavljeniGost = db.Korisnici.Where(x => x.Email == UnosMail && x.Sifra == UnosPass).FirstOrDefault();
 
                 PrijavljeniGost = DataSourceRRenting.ProvjeraGosta(UnosMail, UnosPass);
-
-                if (PrijavljeniGost.Email != null && PrijavljeniGost.Sifra != null && PrijavljeniGost.SigurnosniID == 0)
-                {
-                    NavigationServis.Navigate(typeof(GostView), new GostViewModel(this));
-                }
+               //DODATI DA SE SEF NE MOZE LOGIN KAO GOST if (PrijavljeniUposlenik != null && PrijavljeniUposlenik.SigurnosniID == 0) {  }
+                
+                    if (PrijavljeniGost.Email != null && PrijavljeniGost.Sifra != null)
+                    {
+                        NavigationServis.Navigate(typeof(GostView), new GostViewModel(this));
+                    }
+                
                 else
                 {
                     var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");

@@ -21,6 +21,24 @@ namespace RRentingProjekat.RRentingBaza.Models
         public float CijenaSobe { get; set; } //cijena sobe
        // public byte[] SlikaSobe { get; set; } //pocetna slika sobe
         public int BrojKreveta { get; set; } //broj kreveta u sobi
-        public List<DateTime> RezervisaniDatumi { get; set; } //datumi kad je soba rezervisana
+        public List<DateTime> RezervisaniDatumi { get; set; } //datumi kad je soba rezervisana
+
+        public Soba(){}
+
+        public Soba(int id, int broj, StatusSobe status, float cijena, int brKrev)
+        {
+            RezervisaniDatumi = new List<DateTime>();
+            SobaId = id;
+            BrojSobe = broj;
+            this.Status = status;
+            CijenaSobe = cijena;
+            BrojKreveta = brKrev;
+        }
+
+        //DODATI!
+        void azurirajRezervisaneDatume()
+        {
+        }
     }
+   
 }

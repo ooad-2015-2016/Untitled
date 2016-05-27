@@ -31,7 +31,6 @@ namespace RRentingProjekat.RRentingBaza.DataSource
 
         internal static Korisnik ProvjeraUposlenika(string korisnickiMail, string sifra, int ID)
         {
-            
 
             Korisnik kor = new Korisnik();
             foreach (var k in korisnici)
@@ -42,20 +41,73 @@ namespace RRentingProjekat.RRentingBaza.DataSource
 
         }
 
-
-        internal static Korisnik ProvjeraGosta(string korisnickiMail, string sifra)
+        internal static List<int> dajOcjeneGostiju()
         {
-            Korisnik kor = new Korisnik();
+            List<int> ocjene = new List<int>();
+
             foreach (var k in korisnici)
             {
-                if (k.Email == korisnickiMail && k.Sifra == sifra) kor = k;
+                if (k is Gost)
+                {
+                    ocjene.Add(k.dajOcjenu());
+                   
+                }
+            }
+    
+            return ocjene;
+        }
+
+        internal static Gost ProvjeraGosta(string korisnickiMail, string sifra)
+        {
+            Gost kor = new Gost();
+            foreach (var k in korisnici)
+            {
+                if (k.Email == korisnickiMail && k.Sifra == sifra) { kor = k as Gost; }
             }
             return kor;
 
         }
 
+       
+
+
         #endregion
 
+        #region - kreiranje Soba
+        private static List<Soba> sobe = new List<Soba>()
+        {
+            new Soba(1, 1, StatusSobe.Slobodna, 50, 3),
+             new Soba(2, 2, StatusSobe.Rezervisana, 100, 4),
+              new Soba(3, 3, StatusSobe.Slobodna, 30, 2),
+               new Soba(4, 4, StatusSobe.Zauzeta, 150, 5)
+
+        };
+
+        internal static IList<Soba> DajSveSobe()
+        {
+            return sobe;
+        }
+
+        internal static Soba DajSobePoId(int sobaId)
+        {
+            return sobe.Where(k => k.SobaId.Equals(sobaId)).FirstOrDefault();
+        }
+
+        internal static Soba dajSlobodnuSobu(Rezervacija rez)
+        {
+            Soba soba = new Soba();
+            foreach (var s in sobe)
+            {
+                if (s.Status == StatusSobe.Slobodna && (rez.brojDjece+rez.brojOdraslih == s.BrojKreveta)) { 
+                    soba = s;
+                    break;                    
+                }
+            }
+            return soba;
+
+        }
+        #endregion
     }
+
 
 }

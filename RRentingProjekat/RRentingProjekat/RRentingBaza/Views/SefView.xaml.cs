@@ -34,6 +34,7 @@ namespace RRentingProjekat.RRentingBaza.Views
        
         private void btnStatistika_Click(object sender, RoutedEventArgs e)
         {
+            this.Frame.Navigate(typeof(Statistika));
 
         }
 
@@ -46,5 +47,7 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             DataContext = (SefViewModel)e.Parameter;
         }
+
+       
     }
 }

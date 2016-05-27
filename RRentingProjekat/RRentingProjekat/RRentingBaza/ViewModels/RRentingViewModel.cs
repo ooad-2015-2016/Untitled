@@ -19,16 +19,19 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public ICommand Login { get; set; }
         public ICommand Signup { get; set; }
 
+        GostViewModel prethodna;
+
         public RRentingViewModel()
         {
             NavigationServis = new NavigationService();
             NavigationServis = new NavigationService();
-     
+
             Login = new RelayCommand<object>(login, mozeLiSePrijaviti);
             Signup = new RelayCommand<object>(signup, mozeLiSeRegistrovati);
 
 
         }
+        
         private void login(object parametar)
         {
             NavigationServis.Navigate(typeof(Login), new PrijavaViewModel());

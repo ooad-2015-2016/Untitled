@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using RRentingProjekat.RRentingBaza.ViewModels;
+using Windows.UI.Popups;
 
 namespace RRentingProjekat.RRentingBaza.Views
 {
@@ -53,5 +54,21 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             this.Frame.Navigate(typeof(GPSView));
         }
+
+        private void OcijeniRRenting_Click(object sender, RoutedEventArgs e)
+        {
+            stackp.Visibility = Visibility.Visible;
+        }
+
+        private async void btnPotvrdi_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new MessageDialog("Hvala Vam na ocjeni!", "Ugodan boravak");
+            await dialog.ShowAsync();
+            stackp.Visibility = Visibility.Collapsed;
+            OcijeniRRenting.Visibility = Visibility.Collapsed;
+
+        }
+
+       
     }
 }

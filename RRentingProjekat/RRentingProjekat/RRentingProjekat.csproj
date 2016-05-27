@@ -118,6 +118,7 @@
     <Compile Include="RRentingBaza\ViewModels\RecepcionerViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\SefUvidUposlenikaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\SefViewModel.cs" />
+    <Compile Include="RRentingBaza\ViewModels\StatistikaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\ZahtjevViewModel.cs" />
     <Compile Include="RRentingBaza\Views\GostView.xaml.cs">
       <DependentUpon>GostView.xaml</DependentUpon>
@@ -154,7 +155,6 @@
     <Compile Include="RRentingBaza\Models\Osoblje.cs" />
     <Compile Include="RRentingBaza\Models\Recepcioner.cs" />
     <Compile Include="RRentingBaza\Models\Rezervacija.cs" />
-    <Compile Include="RRentingBaza\Models\RRenting.cs" />
     <Compile Include="RRentingBaza\Models\RRentingDbContext.cs" />
     <Compile Include="RRentingBaza\Models\Sef.cs" />
     <Compile Include="RRentingBaza\Models\Soba.cs" />
@@ -175,6 +175,9 @@
     </Compile>
     <Compile Include="RRentingBaza\Views\SobaListView.xaml.cs">
       <DependentUpon>SobaListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RRentingBaza\Views\Statistika.xaml.cs">
+      <DependentUpon>Statistika.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\UvidUposlenikaView.xaml.cs">
       <DependentUpon>UvidUposlenikaView.xaml</DependentUpon>
@@ -253,6 +256,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RRentingBaza\Views\SobaListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Views\Statistika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -37,6 +37,8 @@ namespace RRentingProjekat.RRentingBaza.Models
 
         }
 
+        public virtual int dajOcjenu() { return 0; }
+
       }
  }
 

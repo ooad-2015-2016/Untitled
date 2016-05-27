@@ -10,21 +10,21 @@
     <Grid Background="WhiteSmoke" Margin="10,0,10,10">
 
         <StackPanel>
-            <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="93">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="DarkRed"/>
-            </TextBlock.Foreground>RRenting</TextBlock>
+            <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" Height="100"/>
 
-            <TextBlock x:Name="textBox2" HorizontalAlignment="Left" Margin="30,0,0,0" TextWrapping="Wrap" Text="Broj sobe:" VerticalAlignment="Top" FontSize="20"></TextBlock>
-            <TextBlock x:Name="BrojSobe" HorizontalAlignment="Left" Margin="30,0,0,0" TextWrapping="Wrap" Text="br" VerticalAlignment="Top" Width="70" FontSize="20" FontStyle="Italic"></TextBlock>
-        
-        <Button x:Name="DodajZahtjev" Content="Zahtjevi" HorizontalAlignment="Center" Margin="0,50,0,0" Foreground="WhiteSmoke" VerticalAlignment="Center" Command="{Binding Path=Dodaj}" Width="234" FontSize="20"  FontWeight="Medium" Background="DarkRed">
-        </Button>
-            <Button x:Name="OcijeniRRenting" Content="Ocijeni RRenting" HorizontalAlignment="Center" Foreground="WhiteSmoke" Margin="0,20,0,0" VerticalAlignment="Center" Command="{Binding Path=OcijeniRRenting}" Width="234" FontSize="20" FontWeight="Medium" Background="DarkRed">
-        </Button>
-            <Button x:Name="LogOut" Content="Log Out" HorizontalAlignment="Center" Margin="0,20,0,0" Foreground="WhiteSmoke" VerticalAlignment="Center" Command="{Binding Path=Izlaz}" Width="234" FontSize="20"  Background="DarkRed" FontWeight="Medium"></Button>
 
-            <Button x:Name="gps" Content="Lokacija..." HorizontalAlignment="Center" Click="gps_Click" Margin="130,270,0,0"  Width="100" Foreground="WhiteSmoke" VerticalAlignment="Center" Command="{Binding Path=Lokacija}" FontSize="15"  Background="Black" FontWeight="Normal"></Button>
+        <Button x:Name="DodajZahtjev" Content="Zahtjevi" HorizontalAlignment="Center" Margin="0,20,0,0" Foreground="WhiteSmoke" VerticalAlignment="Center" Command="{Binding Path=Dodaj}" Width="234" FontSize="20"  FontWeight="Medium" Background="DarkRed">
+        </Button>
+            <Button x:Name="OcijeniRRenting" Content="Ocijeni RRenting" HorizontalAlignment="Center" Foreground="WhiteSmoke" Margin="0,20,0,0" VerticalAlignment="Center" Command="{Binding Path=OcijeniRRenting}" Width="234" FontSize="20" FontWeight="Medium" Background="DarkRed" Click="OcijeniRRenting_Click">
+        </Button>
+
+            <StackPanel x:Name="stackp" Visibility="Collapsed">
+                <ListBox Name="lbxOcjene" ItemsSource="{Binding ocjene}" SelectedItem="{Binding izabranaOcjena}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" ></ListBox>
+                <Button x:Name="btnPotvrdi" Margin="0,10,0,0" Command="{Binding Path=SpremiOcjenu, Mode=TwoWay}" Content="Spremi" Background="Black" Foreground="WhiteSmoke" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnPotvrdi_Click"></Button>
+            </StackPanel>
+                <Button x:Name="LogOut" Content="Log Out" HorizontalAlignment="Center" Margin="0,20,0,0" Foreground="WhiteSmoke" VerticalAlignment="Center" Command="{Binding Path=Izlaz}" Width="234" FontSize="20"  Background="DarkRed" FontWeight="Medium"></Button>
+
+            <Button x:Name="gps" Content="Lokacija..." Click="gps_Click" Margin="0,20,50,0"  Width="100" Foreground="WhiteSmoke" Command="{Binding Path=Lokacija}" FontSize="15"  Background="Black" FontWeight="Normal" VerticalAlignment="Bottom" HorizontalAlignment="Right"></Button>
 
 
         </StackPanel>

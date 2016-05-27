@@ -16,11 +16,11 @@ namespace RRentingProjekat.RRentingBaza.Models
         public Soba soba { get; set; }
         public DateTime datumDolaska { get; set; }
         public DateTime datumOdlaska { get; set; }
-        private string rfidKartica;//Rfid string procitan sa kartice
-        //Regex da ocisti simbole koji bi mogli prouzrokovati probleme poput enter znaka i
-        //slicno
-       //mora prozvati property changed jer je na njega vezano polje koje se treba promijeniti kad se
-      // povuce kartica, bez ovog, textbox prazan
+        private string rfidKartica;
+
+        public int ocjena { get; set; }
+        public int brojSobe { get; set; }
+
  public string RfidKartica { get { return rfidKartica; }
             set
             {
@@ -50,10 +50,13 @@ namespace RRentingProjekat.RRentingBaza.Models
         public Gost(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(ID, Ime, Prezime, Telefon, Adresa, Sifra, Email, 0)
         {
             brojTiketa = 0;
+            brojSobe = 0;
             soba = null;
             datumOdlaska = DateTime.Now;
             datumOdlaska = DateTime.Now;
             listaZahtjeva = new List<Zahtjev>();
+
+            ocjena = 5;
 
         }
 
@@ -62,8 +65,15 @@ namespace RRentingProjekat.RRentingBaza.Models
             brojTiketa = t;
         }
 
-        public Gost()
+        public void dodijeliOcjenu(int ocjena)
         {
+            this.ocjena = ocjena;
         }
+
+        public override int dajOcjenu()
+        {
+            return ocjena;
+        }
+        public Gost() {}
     }
 }
