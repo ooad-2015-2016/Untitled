@@ -115,6 +115,7 @@
     <Compile Include="RRentingBaza\ViewModels\GostViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\GPSViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\OsobljeViewModel.cs" />
+    <Compile Include="RRentingBaza\ViewModels\PlacanjeViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\RecepcionerViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\SefUvidUposlenikaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\SefViewModel.cs" />
@@ -131,6 +132,9 @@
     </Compile>
     <Compile Include="RRentingBaza\Views\OsobljeView.xaml.cs">
       <DependentUpon>OsobljeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RRentingBaza\Views\PlacanjeView.xaml.cs">
+      <DependentUpon>PlacanjeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\RecepcionerView.xaml.cs">
       <DependentUpon>RecepcionerView.xaml</DependentUpon>
@@ -224,6 +228,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RRentingBaza\Views\OsobljeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Views\PlacanjeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

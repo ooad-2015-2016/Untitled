@@ -167,10 +167,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="IsReadOnly" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="BorderThickness" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -199,6 +199,7 @@
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Login" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.PlacanjeView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RecepcionerView" />
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="HorizontalAlignment" />
