@@ -62,12 +62,9 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
            
             using (var db = new RRentingDbContext())
             {
-                // PrijavljeniGost = db.Korisnici.Where(x => x.Email == UnosMail && x.Sifra == UnosPass).FirstOrDefault();
+                PrijavljeniGost = db.Gosti.Where(x => x.Email == UnosMail && x.Sifra == UnosPass && x.SigurnosniID == 0).FirstOrDefault();
 
-                PrijavljeniGost = DataSourceRRenting.ProvjeraGosta(UnosMail, UnosPass);
-               //DODATI DA SE SEF NE MOZE LOGIN KAO GOST if (PrijavljeniUposlenik != null && PrijavljeniUposlenik.SigurnosniID == 0) {  }
-                
-                    if (PrijavljeniGost.Email != null && PrijavljeniGost.Sifra != null)
+                   if (PrijavljeniGost != null)
                     {
                         NavigationServis.Navigate(typeof(GostView), new GostViewModel(this));
                     }
@@ -89,9 +86,6 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             
             using (var db = new RRentingDbContext())
             {
-
-                //PrijavljeniUposlenik = db.Korisnici.Where(x => x.Email == UnosMail && x.Sifra == UnosPass && x.SigurnosniID == int.Parse(UnosID)).FirstOrDefault();
-
 
                 int unos = int.Parse(UnosID);
                 PrijavljeniUposlenik = DataSourceRRenting.ProvjeraUposlenika(UnosMail, UnosPass, unos);

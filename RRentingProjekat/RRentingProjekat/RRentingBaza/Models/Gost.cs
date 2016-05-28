@@ -33,7 +33,7 @@ namespace RRentingProjekat.RRentingBaza.Models
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
         {
-            //? je skracena verzija ako nije null
+            
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
         }
 

@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using WinRTXamlToolkit.Controls.DataVisualization.Charting;
-
+using RRentingProjekat.RRentingBaza.Models;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace RRentingProjekat.RRentingBaza.Views
@@ -29,16 +29,26 @@ namespace RRentingProjekat.RRentingBaza.Views
     {
         public List<int> iznosi = new List<int>();
 
-       
-
         public Statistika()
         {
             this.InitializeComponent();
-            LoadChartContents();
+            
 
             NavigationCacheMode = NavigationCacheMode.Required;
 
-            iznosi = DataSource.DataSourceRRenting.dajOcjeneGostiju();
+
+            using (var db = new RRentingDbContext())
+            {
+                foreach (var g in db.Gosti)
+                {
+                    iznosi.Add(g.dajOcjenu()); 
+                }
+
+            }
+
+            LoadChartContents();
+
+
         }
 
         private void LoadChartContents()

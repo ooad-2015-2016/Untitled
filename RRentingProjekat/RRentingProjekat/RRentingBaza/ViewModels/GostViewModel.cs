@@ -12,7 +12,7 @@ using Windows.UI.Xaml;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
-    class GostViewModel 
+    class GostViewModel : INotifyPropertyChanged
     {
         public Gost gost { get; set;  }
         public Soba soba { get; set;  }
@@ -27,16 +27,20 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         //statistika
 
         public const string MyListPropertyName = "lbxOcjene";
-        public int izabranaOcjena { get; set; }
+        //public int izabranaOcjena { get; set; }
         private List<int> _myList = new List<int>() { 1, 2, 3, 4, 5 };
+
+        private int izabranaOcjena;
+
+        public int IzabranaOcjena
+        {
+            get { return izabranaOcjena; }
+            set { izabranaOcjena = value; OnPropertyChanged("Izabrana ocjena"); }
+        }
 
         public List<int> ocjene
         {
-            get
-            {
-                return _myList;
-            }
-
+            get { return _myList; }
             set
             {
                 if (_myList == value)
@@ -73,7 +77,24 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         private void SaveObject()
         {
-            Parent.PrijavljeniGost.ocjena = Convert.ToInt32(izabranaOcjena);
+
+            using (var db = new RRentingDbContext())
+            {
+                gost = db.Gosti.Where(x => x.Email == Parent.PrijavljeniGost.Email && x.Sifra == Parent.PrijavljeniGost.Sifra && x.SigurnosniID == 0).FirstOrDefault();
+
+                if (gost != null)
+                {
+                    gost.dodijeliOcjenu(Convert.ToInt32(izabranaOcjena));
+                }
+            }
+
+            //update changes
+            using (var rdb = new RRentingDbContext())
+            {
+                rdb.Entry(gost).State = Microsoft.Data.Entity.EntityState.Modified;
+
+                rdb.SaveChanges();
+            }
         }
 
         public GostViewModel(PrijavaViewModel parent)
@@ -107,6 +128,15 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         private void izlaz(object parametar)
         {
             NavigationServis.Navigate(typeof(Pocetna), new RRentingViewModel());
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }
