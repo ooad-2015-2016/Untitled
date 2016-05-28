@@ -67,47 +67,44 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             var UnosPassBox1 = parametar as PasswordBox;
             UPassword = UnosPassBox1.Password;
-            //using (var db = new RRentingDbContext()) { --> validacija }
-
-
-            //validacija:
-            if (UIme.Length == 0 || UPrezime.Length == 0 || UAdresa.Length == 0 || UTelefon.Length == 0 || UPassword.Length == 0 || UEmail.Length == 0)
+            using (var db = new RRentingDbContext())
             {
-                var dialog = new MessageDialog("Unesite sve tražene podatke", "Neuspješna prijava");
-                await dialog.ShowAsync();
-            }
-            else if (UIme.Length < 3 || UPrezime.Length < 3 || UAdresa.Length < 3)
-            {
-                var dialog = new MessageDialog("Prekratki su ime/prezime/adresa.", "Neuspješna prijava");
-                await dialog.ShowAsync();
-            }
-            else if (UTelefon.Length < 6)
-            {
+                //validacija:
+                if (UIme.Length == 0 || UPrezime.Length == 0 || UAdresa.Length == 0 || UTelefon.Length == 0 || UPassword.Length == 0 || UEmail.Length == 0)
+                {
+                    var dialog = new MessageDialog("Unesite sve tražene podatke", "Neuspješna prijava");
+                    await dialog.ShowAsync();
+                }
+                else if (UIme.Length < 3 || UPrezime.Length < 3 || UAdresa.Length < 3)
+                {
+                    var dialog = new MessageDialog("Prekratki su ime/prezime/adresa.", "Neuspješna prijava");
+                    await dialog.ShowAsync();
+                }
+                else if (UTelefon.Length < 6)
+                {
 
-                var dialog = new MessageDialog("Neispravan format telefona", "Neuspješna prijava");
-                await dialog.ShowAsync();
+                    var dialog = new MessageDialog("Neispravan format telefona", "Neuspješna prijava");
+                    await dialog.ShowAsync();
+                }
+
+                else if (UPassword.Length < 4 || !UEmail.Contains("@") || !UEmail.Contains("."))
+                {
+
+                    var dialog = new MessageDialog("Password je prekratak/Email nije ispravan.", "Neuspješna prijava");
+                    await dialog.ShowAsync();
+                }
+
+                else
+                {
+                    var dialog = new MessageDialog("Prijava uspješno završena.Dobrodošli!", "Uspješna prijava");
+                    await dialog.ShowAsync();
+
+                    Gost novi = new Gost(UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
+                    db.Gosti.Add(novi);
+                    db.SaveChanges();
+                    NavigationServis.Navigate(typeof(RezervacijaView), new RezervacijaViewModel(this));
+                }
             }
-        
-            else if (UPassword.Length < 4 || !UEmail.Contains("@") || !UEmail.Contains("."))
-            {
-               
-                var dialog = new MessageDialog("Password je prekratak/Email nije ispravan.", "Neuspješna prijava");
-                await dialog.ShowAsync();
-            }
-
-            else
-            {
-                var dialog = new MessageDialog("Prijava uspješno završena.Dobrodošli!", "Uspješna prijava");
-                await dialog.ShowAsync();
-
-                //using (var db = new RRentingDbContext())
-                // db.Korisnici.Add(RegistrovaniKorisnik);
-                //db.SaveChanges();
-                RegistrovaniKorisnik = new Gost(Id, UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
-
-                NavigationServis.Navigate(typeof(RezervacijaView), new RezervacijaViewModel(this));
-            }
-
                
 
         }

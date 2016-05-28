@@ -7,10 +7,10 @@ using RRentingProjekat.RRentingBaza.Models;
 
 namespace RRentingProjekat.RRentingBaza.Models
 {
-    class Recepcioner:Korisnik
+    class Recepcioner : Korisnik
     {
         public Recepcioner() { }
-        public Recepcioner(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(ID, Ime, Prezime, Telefon, Adresa, Sifra, Email, 03)
+        public Recepcioner(string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(Ime, Prezime, Telefon, Adresa, Sifra, Email, 03)
         {
       
 

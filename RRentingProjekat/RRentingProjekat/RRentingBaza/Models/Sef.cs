@@ -10,7 +10,7 @@ namespace RRentingProjekat.RRentingBaza.Models
     {
         
         public Sef() { this.SigurnosniID = 123; }
-        public Sef(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(ID, Ime, Prezime, Telefon, Adresa, Sifra, Email, 123)
+        public Sef(string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(Ime, Prezime, Telefon, Adresa, Sifra, Email, 123)
         {
             BrojDanaDoNabavke = 0;
             uposlenici = new List<Osoblje>();

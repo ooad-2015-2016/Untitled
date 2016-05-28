@@ -55,7 +55,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             //treba ispitati koji su checkboxovi chekirani i u skladu s tim te zahtjeve dodati u listView
             using (var db = new RRentingDbContext())
             {
-                soba = db.Sobe.Where(x => x.BrojSobe == gost.soba.BrojSobe).FirstOrDefault();
+                soba = db.Sobe.Where(x => x.BrojSobe == gost.brojSobe).FirstOrDefault();
 
                 if (listaZahtjeva.Count == 0)
                 {

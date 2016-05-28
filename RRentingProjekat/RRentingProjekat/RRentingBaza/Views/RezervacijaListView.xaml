@@ -14,10 +14,13 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="127" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="*" />
+           
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
@@ -30,43 +33,46 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <!--Polja za unos novog restorana-->
+        <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" Grid.Column="1" Height="80"/>
         <TextBlock x:Name="BrojOdraslihTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0"
-TextWrapping="Wrap" Text="Broj Odraslih" VerticalAlignment="Top" Height="20" Width="115"/>
-        <TextBox x:Name="BrojOdraslihInput" Grid.Column="1" HorizontalAlignment="Stretch"
+TextWrapping="Wrap" Text="Broj Odraslih" VerticalAlignment="Top" Height="20" Width="115" Grid.Row="1"/>
+        <TextBox x:Name="BrojOdraslihInput" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"
 Margin="3,3,3,3" TextWrapping="Wrap" Text="" />
-        <TextBlock x:Name="BrojDjeceTextBlock" Grid.Row="1" HorizontalAlignment="Left"
+        <TextBlock x:Name="BrojDjeceTextBlock" Grid.Row="2" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Broj Djece" VerticalAlignment="Top" Height="20" Width="107"/>
-        <TextBox x:Name="BrojDjeceInput" Grid.Row="1" Grid.Column="1"
+        <TextBox x:Name="BrojDjeceInput" Grid.Row="2" Grid.Column="1"
 HorizontalAlignment="Stretch" Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
 
-        <TextBlock x:Name="CijenaLabel" Grid.Row="7" HorizontalAlignment="Left" Margin="10,20,0,0"
+        <TextBlock x:Name="CijenaLabel" Grid.Row="8" HorizontalAlignment="Left" Margin="10,20,0,0"
 TextWrapping="Wrap" Text="Cijena" VerticalAlignment="Top" Height="20" Width="85"/>
-        <TextBox x:Name="CijenaInput" IsReadOnly="True" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch"
+        <TextBox x:Name="CijenaInput" IsReadOnly="True" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Stretch"
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
-        <TextBlock x:Name="DatumDolaskaTextBlock" Grid.Row="2" HorizontalAlignment="Left"
+        <TextBlock x:Name="DatumDolaskaTextBlock" Grid.Row="3" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Datum Dolaska" VerticalAlignment="Top" Height="20" Width="107"/>
-        <TextBlock x:Name="DatumOdlaskaTextBlock" Grid.Row="3" HorizontalAlignment="Left"
+        <TextBlock x:Name="DatumOdlaskaTextBlock" Grid.Row="4" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Datum Odlaska" VerticalAlignment="Top" Height="20" Width="107"/>
-        <CheckBox x:Name="LjubimacRB" Content="Ljubimac " Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="4" VerticalAlignment="Top"/>
-        <TextBlock x:Name="DodatnoTextBlock" Grid.Row="4" HorizontalAlignment="Left"
+        <CheckBox x:Name="LjubimacRB" Content="Ljubimac " Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="5" VerticalAlignment="Top"/>
+        <TextBlock x:Name="DodatnoTextBlock" Grid.Row="5" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Dodatne opcije" VerticalAlignment="Top" Height="20" Width="107"/>
-        <CheckBox x:Name="ParkingRB" Content="Parking" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="5" VerticalAlignment="Top"/>
-        <CheckBox x:Name="DodatnikrevetRB" Content="Dodatnikrevet" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="6" VerticalAlignment="Top"/>
-        <Button x:Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch"
-Margin="0,10,10,0" Grid.Row="9" VerticalAlignment="Top" Click="buttonDodaj_Click" Height="32"  Command="{Binding DodajRezervaciju}"/>
-        <TextBlock x:Name="NacinPlacanjaBlock" Grid.Row="8" HorizontalAlignment="Left"
+        <CheckBox x:Name="ParkingRB" Content="Parking" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="6" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DodatnikrevetRB" Content="Dodatnikrevet" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="7" VerticalAlignment="Top"/>
+        
+        <TextBlock x:Name="NacinPlacanjaBlock" Grid.Row="9" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Nacin placanja" VerticalAlignment="Top" Height="20" Width="107"/>
-        <ListBox x:Name="NacinPlacanjaListBox" Grid.Row="8" Grid.Column="1"
+        <ListBox x:Name="NacinPlacanjaListBox" Grid.Row="9" Grid.Column="1"
 HorizontalAlignment="Stretch" Margin="3,3,3,3" >
             <ListBox.Items>
                 <ListBoxItem Content="Gotovinsko"/>
                 <ListBoxItem Content="Karticom"/>
             </ListBox.Items>
         </ListBox>
-        <CalendarDatePicker x:Name="Dolazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="2" VerticalAlignment="Top" Height="38" />
-        <CalendarDatePicker x:Name="Odlazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
+        
+        <CalendarDatePicker x:Name="Dolazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
+        <CalendarDatePicker x:Name="Odlazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
         <!--Lista za prikaz svih restorana-->
-        <ListView Name="RezervacijeIS" Grid.ColumnSpan="2" Grid.Row="9">
+        <Button x:Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch"
+Margin="0,10,10,0" Grid.Row="10" VerticalAlignment="Top" Click="buttonDodaj_Click" Height="32"  Command="{Binding DodajRezervaciju}" FontWeight="Medium" Background="DarkRed" Foreground="WhiteSmoke"/>
+        <ListView Name="RezervacijeIS" Grid.ColumnSpan="2" Grid.Row="11">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" >

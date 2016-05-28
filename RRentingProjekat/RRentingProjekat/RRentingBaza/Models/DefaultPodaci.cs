@@ -58,10 +58,10 @@ namespace RRentingProjekat.RRentingBaza.Models
                 context.SaveChanges();
             }
 
-            if (!context.Korisnici.Any())
+            if (!context.Gosti.Any())
             {
-                context.Korisnici.AddRange(
-                    new Korisnik()
+                context.Gosti.AddRange(
+                    new Gost()
                     {
 
                         Ime = "",
@@ -71,6 +71,8 @@ namespace RRentingProjekat.RRentingBaza.Models
                         Sifra = "",
                         Email = "",
                         SigurnosniID = 0,
+                        brojTiketa = 0,
+                        brojSobe = 0,
                     }
             );
                 context.SaveChanges();

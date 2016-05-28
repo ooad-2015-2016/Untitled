@@ -10,8 +10,7 @@ namespace RRentingProjekat.RRentingBaza.Models
    
        class Korisnik
         {
-            [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-            public int KorisnikId { get; set; }
+            
             public string fourSqaureId { get; set; }
             public string Ime { get; set; }
             public string Prezime { get; set; }
@@ -24,9 +23,8 @@ namespace RRentingProjekat.RRentingBaza.Models
             
 
         public Korisnik() { }
-        public Korisnik(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID)
+        public Korisnik(string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID)
         {
-            KorisnikId = ID;
             this.Ime = Ime;
             this.Prezime = Prezime;
             this.Telefon = Telefon;

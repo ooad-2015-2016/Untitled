@@ -7,11 +7,11 @@ using RRentingProjekat.RRentingBaza.Models;
 namespace RRentingProjekatMigrations
 {
     [ContextType(typeof(RRentingDbContext))]
-    partial class IntialMigration
+    partial class InitialMigration
     {
         public override string Id
         {
-            get { return "20160524161255_IntialMigration"; }
+            get { return "20160528001103_InitialMigration"; }
         }
 
         public override string ProductVersion
@@ -24,9 +24,9 @@ namespace RRentingProjekatMigrations
             builder
                 .Annotation("ProductVersion", "7.0.0-beta6-13815");
 
-            builder.Entity("RRentingProjekat.RRentingBaza.Models.Korisnik", b =>
+            builder.Entity("RRentingProjekat.RRentingBaza.Models.Gost", b =>
                 {
-                    b.Property<int>("KorisnikId")
+                    b.Property<int>("GostId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Adresa");
@@ -37,15 +37,27 @@ namespace RRentingProjekatMigrations
 
                     b.Property<string>("Prezime");
 
+                    b.Property<string>("RfidKartica");
+
                     b.Property<string>("Sifra");
 
                     b.Property<int>("SigurnosniID");
 
                     b.Property<string>("Telefon");
 
+                    b.Property<int>("brojSobe");
+
+                    b.Property<int>("brojTiketa");
+
+                    b.Property<DateTime>("datumDolaska");
+
+                    b.Property<DateTime>("datumOdlaska");
+
                     b.Property<string>("fourSqaureId");
 
-                    b.Key("KorisnikId");
+                    b.Property<int>("ocjena");
+
+                    b.Key("GostId");
                 });
 
             builder.Entity("RRentingProjekat.RRentingBaza.Models.Rezervacija", b =>
@@ -101,6 +113,8 @@ namespace RRentingProjekatMigrations
                     b.Property<int>("ZahtjevId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("GostGostId");
+
                     b.Property<int>("brojSobe");
 
                     b.Property<string>("fourSqaureId");
@@ -110,6 +124,13 @@ namespace RRentingProjekatMigrations
                     b.Property<bool>("obavljenZahtjev");
 
                     b.Key("ZahtjevId");
+                });
+
+            builder.Entity("RRentingProjekat.RRentingBaza.Models.Zahtjev", b =>
+                {
+                    b.Reference("RRentingProjekat.RRentingBaza.Models.Gost")
+                        .InverseCollection()
+                        .ForeignKey("GostGostId");
                 });
         }
     }

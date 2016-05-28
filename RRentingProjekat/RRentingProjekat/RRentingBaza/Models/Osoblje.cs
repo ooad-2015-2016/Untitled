@@ -12,7 +12,7 @@ namespace RRentingProjekat.RRentingBaza.Models
         public List<Zahtjev> listaZahtjeva { get; set; }
 
         public Osoblje() { }
-        public Osoblje(int ID, string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(ID, Ime, Prezime, Telefon, Adresa, Sifra, Email, 02)
+        public Osoblje(string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(Ime, Prezime, Telefon, Adresa, Sifra, Email, 02)
         {
             
             listaZahtjeva = new List<Zahtjev>();

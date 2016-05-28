@@ -29,6 +29,25 @@ namespace RRentingProjekat.RRentingBaza.Models
         public DateTime datumOdlaska { get; set; }
         public DateTime datumDolaska { get; set; }
 
+        public Rezervacija() { }
+        public Rezervacija(int brO, int brD, DateTime dD, DateTime dO, Boolean par, Boolean ljubimac, Boolean dodatniKr, NacinPlacanja np)
+        {
+            this.brojOdraslih = brO;
+            this.brojDjece = brD;
+            this.datumDolaska = dD;
+            this.datumOdlaska = dO;
+            this.parking = par;
+            this.ljubimac = ljubimac;
+            this.dodatniKrevet = dodatniKr;
+            this.nacinPlacanja = np;
+        }
 
+       
+
+        public void izracunajCijenu(DateTime dD, DateTime dO, Soba s)
+        {
+            this.cijena = (dO.Year + dO.Month + dO.Day - (dD.Year + dD.Month + dD.Day)) * s.CijenaSobe;
+
+        }
     }
 }

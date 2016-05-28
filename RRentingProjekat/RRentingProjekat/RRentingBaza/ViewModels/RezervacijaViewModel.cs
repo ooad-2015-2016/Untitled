@@ -38,6 +38,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         Random rnd = new Random();
         public RezervacijaViewModel(RegistracijaViewModel rvm)
         {
+           
             RegistrovaniGost = rvm.RegistrovaniKorisnik;
             DodajRezervaciju = new RelayCommand<object>(rezervisi);
             this.Id = System.Threading.Interlocked.Increment(ref m_Counter2);
@@ -57,47 +58,49 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         private async void rezervisi(object parametar)
         {
 
-            //validaciju dodati
+   
            
-            //kreiranje tiketa i dodjela
-            int tiket = rnd.Next(1000);
-            parent.RegistrovaniKorisnik.dodijeliTiket(tiket);
+            using (var db = new RRentingDbContext())
+            {
+                if (BrojOdraslihInput == 0)
+                {
+                    var d = new MessageDialog("Unesite broj odraslih", "Neuspješna rezervacija");
+                    await d.ShowAsync();
+                }
+                else if (Dolazak.Date == DateTime.Now && Odlazak.Date == DateTime.Now)
+                {
+                    var d = new MessageDialog("Molimo unesite ispravan datum dolaska i odlaska.", "Neuspješna rezervacija");
+                    await d.ShowAsync();
+                }
+                else
+                {
+                    Soba slobodnaSoba = DataSource.DataSourceRRenting.dajSlobodnuSobu(DodanaRezervacija);
+                    if (slobodnaSoba.CijenaSobe != 0)
+                    {
+                        parent.RegistrovaniKorisnik.brojSobe = slobodnaSoba.BrojSobe;
 
-         
-            DodanaRezervacija.brojOdraslih = BrojOdraslihInput;
-            DodanaRezervacija.brojDjece = BrojDjeceInput;
-            DodanaRezervacija.datumDolaska = Dolazak;
-            DodanaRezervacija.datumOdlaska = Odlazak;
-            DodanaRezervacija.parking = ParkingRB;
-            DodanaRezervacija.ljubimac = LjubimacRB;
-            DodanaRezervacija.dodatniKrevet = DodatnikrevetRB;
-            DodanaRezervacija.cijena = CijenaInput;
-            DodanaRezervacija.nacinPlacanja = NacinPlacanjaListBox;
+                        Rezervacija nova = new Rezervacija(Convert.ToInt32(BrojOdraslihInput), Convert.ToInt32(BrojDjeceInput), Dolazak, Odlazak, ParkingRB, LjubimacRB, DodatnikrevetRB, NacinPlacanjaListBox);
+                        nova.izracunajCijenu(Dolazak, Odlazak, slobodnaSoba);
 
-            /* using (var rdb = new RRentingDbContext())
-             {
-                 rdb.Rezervacije.Add(DodanaRezervacija);
-             }
-             //rdb.SaveChanges();
+                        int tiket = rnd.Next(1000);
+                        parent.RegistrovaniKorisnik.dodijeliTiket(tiket);
 
-             */
+                        var dialog = new MessageDialog("Vaš broj tiketa: " + tiket.ToString(), "Rezervacija uspješna");
+                        await dialog.ShowAsync();
 
-            // PrijavljeniGost = DataSourceRRenting.ProvjeraGosta(UnosMail, UnosPass);
+                        db.Rezervacije.Add(nova);
+                        db.SaveChanges();
 
-            Soba slobodnaSoba = DataSource.DataSourceRRenting.dajSlobodnuSobu(DodanaRezervacija);
-            if (slobodnaSoba.CijenaSobe != 0) parent.RegistrovaniKorisnik.brojSobe = slobodnaSoba.BrojSobe;
+                        NavigationServis.Navigate(typeof(Pocetna));
+                    }
+                    else
+                    {
+                        var d = new MessageDialog("U tom periodu nemamo soba koje odgovaraju Vašim zahtjevima.", "Žao nam je");
+                        await d.ShowAsync();
+                    }
+                }
 
-            var dialog = new MessageDialog("Vaš broj tiketa: " + tiket.ToString()+". \nBroj sobe: " + slobodnaSoba.BrojSobe.ToString(), "Rezervacija uspješna");
-            await dialog.ShowAsync();
-
-
-
-            //using (var db = new RRentingDbContext())
-            // db.Korisnici.Add(RegistrovaniKorisnik);
-            //db.SaveChanges();
-
-            NavigationServis.Navigate(typeof(Pocetna));
-
+            }
 
 
         }

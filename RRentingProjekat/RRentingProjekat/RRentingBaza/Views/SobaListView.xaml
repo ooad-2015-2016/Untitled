@@ -44,14 +44,23 @@ TextWrapping="Wrap" Text="Broj kreveta" VerticalAlignment="Top"/>
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
 
         <TextBlock x:Name="StatusSobeTextBlock" Grid.Row="3" HorizontalAlignment="Left"
-Margin="10,10,0,0" TextWrapping="Wrap" Text="Status sobe" VerticalAlignment="Top"/>        <ListBox x:Name="StatusSobeListBox" Grid.Row="3" Grid.Column="1"HorizontalAlignment="Stretch" Margin="3,3,3,3" >
-            <ListBox.Items>                <ListBoxItem Content="Slobodna"/>
+Margin="10,10,0,0" TextWrapping="Wrap" Text="Status sobe" VerticalAlignment="Top"/>
+        <ListBox x:Name="StatusSobeListBox" Grid.Row="3" Grid.Column="1"
+HorizontalAlignment="Stretch" Margin="3,3,3,3" >
+            <ListBox.Items>
+                <ListBoxItem Content="Slobodna"/>
                 <ListBoxItem Content="Rezervisana"/>
                 <ListBoxItem Content="Zauzeta"/>
-            </ListBox.Items>        </ListBox>        <TextBlock x:Name="RezervisaniDatumiLabel" Grid.Row="4"  HorizontalAlignment="Left" Margin="10,10,0,0"
-TextWrapping="Wrap" Text="Rezervisani datum (d/m/g)" VerticalAlignment="Top"/>        <TextBox x:Name="DanInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Left"
-Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>        <TextBox x:Name="MjesecInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Center"
-Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>        <TextBox x:Name="GodinaInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Right"
+            </ListBox.Items>
+        </ListBox>
+
+        <TextBlock x:Name="RezervisaniDatumiLabel" Grid.Row="4"  HorizontalAlignment="Left" Margin="10,10,0,0"
+TextWrapping="Wrap" Text="Rezervisani datum (d/m/g)" VerticalAlignment="Top"/>
+        <TextBox x:Name="DanInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Left"
+Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
+        <TextBox x:Name="MjesecInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Center"
+Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
+        <TextBox x:Name="GodinaInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Right"
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
 
 

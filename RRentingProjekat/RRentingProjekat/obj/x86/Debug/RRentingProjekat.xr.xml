@@ -46,6 +46,7 @@
     <RootPropertyPathName Name="UPrezime" />
     <RootPropertyPathName Name="UIme" />
     <RootPropertyPathName Name="Sifra" />
+    <RootPropertyPathName Name="Email" />
     <RootPropertyPathName Name="Telefon" />
     <RootPropertyPathName Name="Prezime" />
     <RootPropertyPathName Name="Ime" />
@@ -58,7 +59,6 @@
     <RootPropertyPathName Name="BrojKreveta" />
     <RootPropertyPathName Name="CijenaSobe" />
     <RootPropertyPathName Name="SigurnosniID" />
-    <RootPropertyPathName Name="Email" />
     <RootPropertyPathName Name="obavljenZahtjev" />
     <RootPropertyPathName Name="brojSobe" />
   </Roots.PropertyPathNames>

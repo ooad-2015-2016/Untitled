@@ -19,7 +19,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public ICommand Login { get; set; }
         public ICommand Signup { get; set; }
 
-        GostViewModel prethodna;
+       
 
         public RRentingViewModel()
         {
