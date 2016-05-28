@@ -6,8 +6,7 @@
  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  mc:Ignorable="d"
- Loaded="Page_Loaded" Height="400"
- >
+ Loaded="Page_Loaded">
 
     <Page.Resources>
     </Page.Resources>
@@ -24,7 +23,7 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
+            <RowDefinition Height="80" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -56,13 +55,13 @@ TextWrapping="Wrap" Text="Email" VerticalAlignment="Top"/>
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
 
         <TextBlock x:Name="SifraLabel" Grid.Row="6" HorizontalAlignment="Left" Margin="10,10,0,0"
-TextWrapping="Wrap" Text="Sifra" VerticalAlignment="Top"/>
+TextWrapping="Wrap" Text="Šifra" VerticalAlignment="Top"/>
         <TextBox x:Name="SifraInput" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch"
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
 
 
         <Button x:Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch"
-Margin="0,8,10,0" Grid.Row="7" VerticalAlignment="Top" Click="buttonDodaj_Click" Background="DarkRed" Foreground="WhiteSmoke" FontWeight="Medium"/>
+Margin="0,40,10,0" Grid.Row="7" VerticalAlignment="Top" Click="buttonDodaj_Click" Background="DarkRed" Foreground="WhiteSmoke" FontWeight="Medium"/>
         <!--Lista za prikaz svih restorana-->
         <ListView Name="KorisniciIS" Grid.ColumnSpan="2" Grid.Row="8">
             <ListView.ItemTemplate>

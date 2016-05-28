@@ -16,11 +16,7 @@
     </Page.Transitions>
     <Grid Background="WhiteSmoke" Margin="0,0,0,0">
         <StackPanel>
-            <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="93">
-                <TextBlock.Foreground>
-                    <SolidColorBrush Color="DarkRed"/>
-                </TextBlock.Foreground> RRenting
-            </TextBlock>
+            <Image x:Name="image" Source="logo.png" Margin="0,0,0,0"  Height="100"/>
             <TextBlock FontSize="18.667" FontWeight="Bold" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>

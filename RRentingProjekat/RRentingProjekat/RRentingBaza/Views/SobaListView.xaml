@@ -6,46 +6,47 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Page_Loaded" Height="400">
+    Loaded="Page_Loaded" >
 
     <Page.Resources>
         <!--<local:PictureConverter x:Key="thePictureConverter"/> -->
     </Page.Resources>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="WhiteSmoke">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="150" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="60" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
         </Grid.RowDefinitions>
-
-        <TextBlock x:Name="BrojSobeTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0"
+        <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" Grid.Column="1" Height="100"/>
+        
+        <TextBlock x:Name="BrojSobeTextBlock" HorizontalAlignment="Left" Grid.Row="1" Margin="10,10,0,0"
 TextWrapping="Wrap" Text="Broj sobe" VerticalAlignment="Top"/>
-        <TextBox x:Name="BrojSobeInput" Grid.Column="1" HorizontalAlignment="Stretch"
+        <TextBox x:Name="BrojSobeInput" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1"
 Margin="3,3,3,3" TextWrapping="Wrap" Text="" />
 
-        <TextBlock x:Name="CijenaSobeTextBlock" Grid.Row="1" HorizontalAlignment="Left" Margin="10,10,0,0"
+        <TextBlock x:Name="CijenaSobeTextBlock" Grid.Row="2" HorizontalAlignment="Left" Margin="10,10,0,0"
 TextWrapping="Wrap" Text="Cijena sobe" VerticalAlignment="Top"/>
-        <TextBox x:Name="CijenaSobeInput" Grid.Column="1"  Grid.Row="1" HorizontalAlignment="Stretch"
+        <TextBox x:Name="CijenaSobeInput" Grid.Column="1"  Grid.Row="2" HorizontalAlignment="Stretch"
 Margin="3,3,3,3" TextWrapping="Wrap" Text="" />
 
-        <TextBlock x:Name="BrojKrevetaTextBlock" Grid.Row="2" HorizontalAlignment="Left" Margin="10,10,0,0" 
+        <TextBlock x:Name="BrojKrevetaTextBlock" Grid.Row="3" HorizontalAlignment="Left" Margin="10,10,0,0" 
 TextWrapping="Wrap" Text="Broj kreveta" VerticalAlignment="Top"/>
-        <TextBox x:Name="BrojKrevetaInput" Grid.Column="1"  Grid.Row="2" HorizontalAlignment="Stretch" 
+        <TextBox x:Name="BrojKrevetaInput" Grid.Column="1"  Grid.Row="3" HorizontalAlignment="Stretch" 
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
 
-        <TextBlock x:Name="StatusSobeTextBlock" Grid.Row="3" HorizontalAlignment="Left"
+        <TextBlock x:Name="StatusSobeTextBlock" Grid.Row="4" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Status sobe" VerticalAlignment="Top"/>
-        <ListBox x:Name="StatusSobeListBox" Grid.Row="3" Grid.Column="1"
+        <ListBox x:Name="StatusSobeListBox" Grid.Row="4" Grid.Column="1"
 HorizontalAlignment="Stretch" Margin="3,3,3,3" >
             <ListBox.Items>
                 <ListBoxItem Content="Slobodna"/>
@@ -54,21 +55,21 @@ HorizontalAlignment="Stretch" Margin="3,3,3,3" >
             </ListBox.Items>
         </ListBox>
 
-        <TextBlock x:Name="RezervisaniDatumiLabel" Grid.Row="4"  HorizontalAlignment="Left" Margin="10,10,0,0"
+        <TextBlock x:Name="RezervisaniDatumiLabel" Grid.Row="5"  HorizontalAlignment="Left" Margin="10,10,0,0"
 TextWrapping="Wrap" Text="Rezervisani datum (d/m/g)" VerticalAlignment="Top"/>
-        <TextBox x:Name="DanInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Left"
+        <TextBox x:Name="DanInput" PlaceholderText="day" Grid.Column="1"  Grid.Row="5"  BorderThickness="0" HorizontalAlignment="Left"
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
-        <TextBox x:Name="MjesecInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Center"
+        <TextBox x:Name="MjesecInput" PlaceholderText="month" Grid.Column="1"  Grid.Row="5" BorderThickness="0"  HorizontalAlignment="Center"
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
-        <TextBox x:Name="GodinaInput" Grid.Column="1"  Grid.Row="4"  HorizontalAlignment="Right"
+        <TextBox x:Name="GodinaInput" PlaceholderText="year" Grid.Column="1"  Grid.Row="5"  BorderThickness="0" HorizontalAlignment="Right"
 Margin="3,3,3,3" TextWrapping="Wrap" Text=""/>
 
 
         <Button x:Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch"
-Margin="5,5,5,0" Grid.Row="6" VerticalAlignment="Top" Click="buttonDodaj_Click"/>
+Margin="5,5,5,0" Grid.Row="7" VerticalAlignment="Top" Click="buttonDodaj_Click" Background="DarkRed" Foreground="WhiteSmoke"/>
 
         <!--Lista za prikaz svih soba-->
-        <ListView Name="SobeIS" Grid.ColumnSpan="2" Grid.Row="7">
+        <ListView Name="SobeIS" Grid.ColumnSpan="2" Grid.Row="8">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" >

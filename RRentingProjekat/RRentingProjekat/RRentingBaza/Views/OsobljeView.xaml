@@ -9,26 +9,23 @@
     xmlns:triggers="using:RRentingProjekat.RRentingBaza.Helper"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Page_Loaded" Width="318.667">
+    Loaded="Page_Loaded">
 
 
     <Grid Background="WhiteSmoke" Margin="0,0,0,0">
-        
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="127" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
+            <RowDefinition Height="100" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-        <TextBlock FontSize="18.667" FontWeight="Bold"  VerticalAlignment="Center"  HorizontalAlignment="Right" Width="93" Grid.Column="1">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="DarkRed"/>
-            </TextBlock.Foreground>RRenting</TextBlock>
+        <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center"  Grid.Column="1" />
 
 
         <TextBlock x:Name="SobaTextBlock" Grid.Row="2" HorizontalAlignment="Left"
@@ -38,7 +35,7 @@ Margin="10,10,0,10" TextWrapping="Wrap" Text="Broj sobe" Width="107"/>
 
         <TextBlock x:Name="ListaZahtjeva" Grid.Row="1" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Odabir zahtjeva" VerticalAlignment="Top" Height="20" Width="107"/>
-        
+
         <ListBox x:Name="ZahtjeviListBox" Grid.Row="1" Grid.Column="1"
 HorizontalAlignment="Stretch" Margin="3,3,3,3" 
             ItemsSource="{Binding Path=RRenting.Zahtjevi}" 
@@ -46,9 +43,6 @@ HorizontalAlignment="Stretch" Margin="3,3,3,3"
                     ></ListBox>
         <CheckBox x:Name="ObavljenocheckBox" IsChecked="{Binding Obavljeno_}" Content="Obavljeno" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top"/>
         <Button x:Name="Promjenibutton" Content="Spasi promjene" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="WhiteSmoke" Background="DarkRed" Margin="5,30,0,0" Grid.Row="4" Command="{Binding SpasiPromjene}">
-            
         </Button>
-
     </Grid>
-
 </Page>
