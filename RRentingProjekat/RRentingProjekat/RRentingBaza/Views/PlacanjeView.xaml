@@ -10,7 +10,7 @@
     <Grid Background="WhiteSmoke">
         <StackPanel Orientation="Vertical">
             <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" Height="100"/>
-            <TextBox x:Name="txtRfid" PlaceholderText="RFID" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250"></TextBox>
+            <TextBox x:Name="txtRfid" PlaceholderText="RFID" Text="{Binding Path=CreateUplata.RfidKartica,Mode=TwoWay}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250"></TextBox>
             </StackPanel>
     </Grid>
 </Page>

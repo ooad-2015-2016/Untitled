@@ -26,7 +26,7 @@ namespace RRentingProjekat.RRentingBaza.Views
     /// </summary>
     public sealed partial class SignupKorisnik : Page
     {
-        RegistracijaViewModel rvm;
+       // RegistracijaViewModel rvm;
         public SignupKorisnik()
         {
             this.InitializeComponent();
@@ -38,8 +38,8 @@ namespace RRentingProjekat.RRentingBaza.Views
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
             SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
-            rvm = new RegistracijaViewModel();
-            this.DataContext = rvm;
+           // rvm = new RegistracijaViewModel();
+            //this.DataContext = rvm;
         }
 
         private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)

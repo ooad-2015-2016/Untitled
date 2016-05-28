@@ -21,6 +21,8 @@
     <RootPropertyPathName Name="Zahtjevi" />
     <RootPropertyPathName Name="Zahtjev" />
     <RootPropertyPathName Name="brojSobe_" />
+    <RootPropertyPathName Name="CreateUplata" />
+    <RootPropertyPathName Name="RfidKartica" />
     <RootPropertyPathName Name="StatusSobe" />
     <RootPropertyPathName Name="ObracunCijene" />
     <RootPropertyPathName Name="DodajGost" />
@@ -38,8 +40,6 @@
     <RootPropertyPathName Name="Sobe" />
     <RootPropertyPathName Name="Soba" />
     <RootPropertyPathName Name="SignupKorisnika" />
-    <RootPropertyPathName Name="RegistrovaniKorisnik" />
-    <RootPropertyPathName Name="RfidKartica" />
     <RootPropertyPathName Name="UAdresa" />
     <RootPropertyPathName Name="UTelefon" />
     <RootPropertyPathName Name="UEmail" />

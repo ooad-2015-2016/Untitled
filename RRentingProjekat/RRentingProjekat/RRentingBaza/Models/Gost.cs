@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RRentingProjekat.RRentingBaza.Models
 {
-    class Gost : Korisnik, INotifyPropertyChanged
+    class Gost : Korisnik
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -22,20 +22,9 @@ namespace RRentingProjekat.RRentingBaza.Models
         public int ocjena { get; set; }
         public int brojSobe { get; set; }
 
-        public string RfidKartica {
-            get { return rfidKartica; }
-            set
-            {
-                rfidKartica = Regex.Replace(value,"[^0-9a-zA-Z]+", ""); OnNotifyPropertyChanged("RfidKartica");
-            }
-        }
+    
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
-        {
-            
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
-        }
+       
 
         public List<Zahtjev> listaZahtjeva { get; set; }
         //public Gost() { }

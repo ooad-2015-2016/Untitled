@@ -33,11 +33,11 @@ namespace RRentingProjekat
         {
 
            
-            using (var db = new RRentingDbContext())
+           /* using (var db = new RRentingDbContext())
             {
                 db.Database.ApplyMigrations();
                 DefaultPodaci.Initialize(db);
-            }
+            }*/
             
 
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
