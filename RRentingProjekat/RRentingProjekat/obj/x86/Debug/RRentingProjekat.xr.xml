@@ -4,8 +4,8 @@
     <RootPropertyPathName Name="Lokacija" />
     <RootPropertyPathName Name="Izlaz" />
     <RootPropertyPathName Name="SpremiOcjenu" />
-    <RootPropertyPathName Name="ocjene" />
-    <RootPropertyPathName Name="izabranaOcjena" />
+    <RootPropertyPathName Name="Ocjene" />
+    <RootPropertyPathName Name="IzabranaOcjena" />
     <RootPropertyPathName Name="OcijeniRRenting" />
     <RootPropertyPathName Name="Dodaj" />
     <RootPropertyPathName Name="TrenutnaLokacija" />
@@ -120,9 +120,9 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
+      <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="Mode" />
       <RootProperty Name="ElementName" />
-      <RootProperty Name="UpdateSourceTrigger" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="Name" />

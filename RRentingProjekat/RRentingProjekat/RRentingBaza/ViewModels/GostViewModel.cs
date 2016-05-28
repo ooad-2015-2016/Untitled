@@ -9,6 +9,7 @@ using RRentingProjekat.RRentingBaza.Helper;
 using System.Windows.Input;
 using RRentingProjekat.RRentingBaza.Views;
 using Windows.UI.Xaml;
+using System.Collections.ObjectModel;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
@@ -24,36 +25,30 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         public PrijavaViewModel Parent { get; set; }
 
-        //statistika
 
-        public const string MyListPropertyName = "lbxOcjene";
-        //public int izabranaOcjena { get; set; }
+        //statistika   
         private List<int> _myList = new List<int>() { 1, 2, 3, 4, 5 };
 
-        private int izabranaOcjena;
+        private List<int> ocjene;
+        public List<int> Ocjene
+        {
+            get { return ocjene; }
+            set { ocjene = value; OnPropertyChanged("Ocjene"); }
+        }
 
+
+        private int izabranaOcjena;
         public int IzabranaOcjena
         {
             get { return izabranaOcjena; }
-            set { izabranaOcjena = value; OnPropertyChanged("Izabrana ocjena"); }
-        }
-
-        public List<int> ocjene
-        {
-            get { return _myList; }
             set
             {
-                if (_myList == value)
-                {
-                    return;
-                }
-
-                _myList = value;
+                OnPropertyChanged("IzabranaOcjena");
+                izabranaOcjena = value;
             }
         }
 
         private ICommand _spremiOcjenu;
-
         public ICommand SpremiOcjenu
         {
             get
@@ -65,7 +60,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                         param => this.CanSave()
                     );
                 }
-                return _spremiOcjenu; ;
+                OnPropertyChanged("SpremiOcjenu"); return _spremiOcjenu; 
             }
         }
         
@@ -84,7 +79,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
                 if (gost != null)
                 {
-                    gost.dodijeliOcjenu(Convert.ToInt32(izabranaOcjena));
+                    gost.dodijeliOcjenu(Convert.ToInt32(IzabranaOcjena));
                 }
             }
 
@@ -100,7 +95,10 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public GostViewModel(PrijavaViewModel parent)
         {
             NavigationServis = new NavigationService();
-            
+
+            Ocjene = _myList;
+
+
 
             Dodaj = new RelayCommand<object>(dodajZahtjev, mozeLiDodatiZahtjev);
             Izlaz = new RelayCommand<object>(izlaz, mozeLiIzaci);

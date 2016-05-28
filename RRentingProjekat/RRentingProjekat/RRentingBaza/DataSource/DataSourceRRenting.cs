@@ -34,21 +34,7 @@ namespace RRentingProjekat.RRentingBaza.DataSource
 
         }
 
-        internal static List<int> dajOcjeneGostiju()
-        {
-            List<int> ocjene = new List<int>();
-
-            foreach (var k in korisnici)
-            {
-                if (k is Gost)
-                {
-                    ocjene.Add(k.dajOcjenu());
-                   
-                }
-            }
-    
-            return ocjene;
-        }
+       
 
         internal static Gost ProvjeraGosta(string korisnickiMail, string sifra)
         {

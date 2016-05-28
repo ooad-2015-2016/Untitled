@@ -48,7 +48,6 @@ namespace RRentingProjekat.RRentingBaza.Models
         }
         */
        
-        private static int m_Counter2 = 0;
         public Gost(string Ime, string Prezime, string Telefon, string Adresa, string Sifra, string Email, int SID) : base(Ime, Prezime, Telefon, Adresa, Sifra, Email, 0)
         {
             brojTiketa = 0;
@@ -71,7 +70,7 @@ namespace RRentingProjekat.RRentingBaza.Models
             this.ocjena = ocjena;
         }
 
-        public override int dajOcjenu()
+        public int dajOcjenu()
         {
             return ocjena;
         }

@@ -69,6 +69,9 @@ namespace RRentingProjekat.RRentingBaza.Views
 
         }
 
-       
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbxOcjene.SelectedIndex = 4;
+        }
     }
 }
