@@ -45,8 +45,9 @@ namespace RRentingProjekat.RRentingBaza.Views
                 {
                     brojOdraslih = Convert.ToInt32(BrojOdraslihInput.Text),
                     brojDjece = Convert.ToInt32(BrojDjeceInput.Text),
-                    datumDolaska = Convert.ToDateTime(Dolazak.Date),
-                    datumOdlaska = Convert.ToDateTime(Odlazak.Date),
+
+                    datumDolaska = ConvertFromDateTimeOffset(Dolazak.Date),
+                    datumOdlaska = ConvertFromDateTimeOffset(Odlazak.Date),
                     parking = ParkingRB.IsChecked.Value,
                     ljubimac = LjubimacRB.IsChecked.Value,
                     dodatniKrevet = DodatnikrevetRB.IsChecked.Value,
@@ -72,25 +73,34 @@ namespace RRentingProjekat.RRentingBaza.Views
         }
 
         //Event za brisanje rezervacija
-       /* private void Button_Click_Delete(object sender, RoutedEventArgs e)
+        /* private void Button_Click_Delete(object sender, RoutedEventArgs e)
+         {
+             //Dobavljanje objekta iz liste koji je kori[ten da se popuni red u listview
+             DependencyObject dep = (DependencyObject)e.OriginalSource;
+             while ((dep != null) && !(dep is ListViewItem))
+             {
+                 dep = VisualTreeHelper.GetParent(dep);
+             }
+             if (dep == null)
+                 return;
+             using (var db = new RRentingDbContext())
+             {
+                 db.Rezervacije.Remove((Rezervacija)RezervacijeIS.ItemFromContainer(dep));
+                 //Nije jos obrisano dok nije Save
+                 db.SaveChanges();
+                 //Refresh liste restorana
+                 RezervacijeIS.ItemsSource = db.Rezervacije.OrderBy(c => c.cijena).ToList();
+             }
+         }*/
+        static DateTime ConvertFromDateTimeOffset(DateTimeOffset dateTime)
         {
-            //Dobavljanje objekta iz liste koji je kori[ten da se popuni red u listview
-            DependencyObject dep = (DependencyObject)e.OriginalSource;
-            while ((dep != null) && !(dep is ListViewItem))
-            {
-                dep = VisualTreeHelper.GetParent(dep);
-            }
-            if (dep == null)
-                return;
-            using (var db = new RRentingDbContext())
-            {
-                db.Rezervacije.Remove((Rezervacija)RezervacijeIS.ItemFromContainer(dep));
-                //Nije jos obrisano dok nije Save
-                db.SaveChanges();
-                //Refresh liste restorana
-                RezervacijeIS.ItemsSource = db.Rezervacije.OrderBy(c => c.cijena).ToList();
-            }
-        }*/
+            if (dateTime.Offset.Equals(TimeSpan.Zero))
+                return dateTime.UtcDateTime;
+            else if (dateTime.Offset.Equals(TimeZoneInfo.Local.GetUtcOffset(dateTime.DateTime)))
+                return DateTime.SpecifyKind(dateTime.DateTime, DateTimeKind.Local);
+            else
+                return dateTime.DateTime;
+        }
     }
 
 }
