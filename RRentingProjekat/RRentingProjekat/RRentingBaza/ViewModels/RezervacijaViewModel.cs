@@ -24,7 +24,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public Boolean ParkingRB { get; set; }
         public Boolean LjubimacRB { get; set; }
         public Boolean DodatnikrevetRB { get; set; }
-
+        private int izabraniNacin;
         private static int m_Counter2 = 0;
         public float CijenaInput { get; set; }
         public string nacin_str { get; set; }
@@ -33,36 +33,31 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public Rezervacija DodanaRezervacija { get; set; }
         public INavigacija NavigationServis { get; set; }
 
-        private ICommand DodajRezervaciju { get; set; }
+        public ICommand DodajRezervaciju { get; set; }
 
 
         RegistracijaViewModel parent;
 
-        private int izabraniNacin;
-        public int IzabraniNacin
-        {
-            get { return izabraniNacin; }
-            set
-            {
-                OnPropertyChanged("IzabraniNacin");
-                izabraniNacin = value;
-            }
-        }
 
-        Random rnd = new Random();
+
+        Random rnd;
         public RezervacijaViewModel(RegistracijaViewModel rvm)
         {
             NavigationServis = new NavigationService();
 
-            RegistrovaniGost = rvm.RegistrovaniKorisnik;
+            
+            rnd = new Random();
+
+            DodajRezervaciju = new RelayCommand<object>(rezervisi, mozeLiRezervisati);
             this.Id = System.Threading.Interlocked.Increment(ref m_Counter2);
-
-            DodajRezervaciju = new RelayCommand<object>(rezervisi);
-
+            RegistrovaniGost = rvm.RegistrovaniKorisnik;
             this.parent = rvm;
         }
 
-
+        public bool mozeLiRezervisati(object parametar)
+        {
+            return true;
+        }
         private async void rezervisi(object parametar)
         {
             using (var db = new RRentingDbContext())
@@ -95,30 +90,23 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                      {
                          Gost gost;
                          int tiket = rnd.Next(1000);
-
                          using (var rdb = new RRentingDbContext())
                          {
                              gost = rdb.Gosti.Where(x => x.Email ==  parent.RegistrovaniKorisnik.Email && x.Sifra == parent.RegistrovaniKorisnik.Sifra && x.SigurnosniID == 0).FirstOrDefault();
-
                              if (gost != null)
                              {
                                  gost.brojSobe = slobodnaSoba.BrojSobe;
                                  gost.dodijeliTiket(tiket);
-
                              }
                          }
-
                          //update changes
                          using (var rdb = new RRentingDbContext())
                          {
                              rdb.Entry(gost).State = Microsoft.Data.Entity.EntityState.Modified;
-
                              rdb.SaveChanges();
                          }
-
                          nova.izracunajCijenu(Dolazak, Odlazak, slobodnaSoba);
                          
-
      */
 
 
@@ -140,22 +128,27 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                     NavigationServis.Navigate(typeof(Pocetna));
 
 
-                
-                   /* else
-                    {
-                    NavigationServis.Navigate(typeof(Login));
-                    var d = new MessageDialog("U tom periodu nemamo soba koje odgovaraju Vašim zahtjevima.", "Žao nam je");
-                    await d.ShowAsync();
+
+                    /* else
+                     {
+                     NavigationServis.Navigate(typeof(Login));
+                     var d = new MessageDialog("U tom periodu nemamo soba koje odgovaraju Vašim zahtjevima.", "Žao nam je");
+                     await d.ShowAsync();
+                 }
+                 */
                 }
-                */
+
             }
-
-        }
-    
-
         }
 
-        
+
+
+
+
+
+
+
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -164,6 +157,16 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public int IzabraniNacin
+        {
+            get { return izabraniNacin; }
+            set
+            {
+                OnPropertyChanged("IzabraniNacin");
+                izabraniNacin = value;
             }
         }
 

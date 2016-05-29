@@ -28,10 +28,10 @@
     <RootPropertyPathName Name="StatusSobe" />
     <RootPropertyPathName Name="ObracunCijene" />
     <RootPropertyPathName Name="DodajGost" />
+    <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="Odlazak" />
     <RootPropertyPathName Name="Dolazak" />
     <RootPropertyPathName Name="IzabraniNacin" />
-    <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="dodatniKrevet" />
     <RootPropertyPathName Name="parking" />
     <RootPropertyPathName Name="ljubimac" />
@@ -208,6 +208,7 @@
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.PlacanjeView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RecepcionerView" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Name" />
       <RootProperty Name="Date" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />

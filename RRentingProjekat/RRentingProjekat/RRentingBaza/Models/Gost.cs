@@ -18,7 +18,7 @@ namespace RRentingProjekat.RRentingBaza.Models
         public int brojTiketa { get; set; }
         public DateTime datumDolaska { get; set; }
         public DateTime datumOdlaska { get; set; }
-        private string rfidKartica;
+        
         public int ocjena { get; set; }
         public int brojSobe { get; set; }
 

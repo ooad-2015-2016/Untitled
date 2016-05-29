@@ -16,6 +16,8 @@ using RRentingProjekat.RRentingBaza.Models;
 using RRentingProjekat.RRentingBaza.Views;
 using Windows.Storage.Pickers;
 using Windows.Storage;
+using Windows.UI.Core;
+using RRentingProjekat.RRentingBaza.ViewModels;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -31,14 +33,34 @@ namespace RRentingProjekat.RRentingBaza.Views
         public RezervacijaView()
         {
             this.InitializeComponent();
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             
         }
-       
-       
-       
+
+        private void buttonDodaj_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
+        }
+
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (RezervacijaViewModel)e.Parameter;
+        }
     }
 
 }
