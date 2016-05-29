@@ -31,13 +31,13 @@
     <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="Odlazak" />
     <RootPropertyPathName Name="Dolazak" />
+    <RootPropertyPathName Name="Placanje" />
     <RootPropertyPathName Name="IzabraniNacin" />
-    <RootPropertyPathName Name="dodatniKrevet" />
-    <RootPropertyPathName Name="parking" />
-    <RootPropertyPathName Name="ljubimac" />
-    <RootPropertyPathName Name="cijena" />
-    <RootPropertyPathName Name="brojDjece" />
-    <RootPropertyPathName Name="brojOdraslih" />
+    <RootPropertyPathName Name="Krevet" />
+    <RootPropertyPathName Name="Parking" />
+    <RootPropertyPathName Name="Ljubimac" />
+    <RootPropertyPathName Name="BrojDjece" />
+    <RootPropertyPathName Name="BrojOdraslih" />
     <RootPropertyPathName Name="BrojSobe" />
     <RootPropertyPathName Name="Statistika" />
     <RootPropertyPathName Name="Uposlenici" />
@@ -57,8 +57,14 @@
     <RootPropertyPathName Name="Ime" />
     <RootPropertyPathName Name="Signup" />
     <RootPropertyPathName Name="Login" />
+    <RootPropertyPathName Name="cijena" />
+    <RootPropertyPathName Name="dodatniKrevet" />
+    <RootPropertyPathName Name="parking" />
+    <RootPropertyPathName Name="ljubimac" />
     <RootPropertyPathName Name="datumOdlaska" />
     <RootPropertyPathName Name="datumDolaska" />
+    <RootPropertyPathName Name="brojDjece" />
+    <RootPropertyPathName Name="brojOdraslih" />
     <RootPropertyPathName Name="RezervisaniDatumi" />
     <RootPropertyPathName Name="Status" />
     <RootPropertyPathName Name="BrojKreveta" />
@@ -72,7 +78,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Transitions" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Height" />
@@ -95,6 +100,7 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Orientation" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
@@ -176,7 +182,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
-      <RootProperty Name="IsReadOnly" />
       <RootProperty Name="BorderThickness" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -215,9 +220,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
-      <RootProperty Name="Content" />
-    </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SefView" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
@@ -235,13 +237,10 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Pocetna" />
-    <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaListView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SobaListView" />
     <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart">
       <RootProperty Name="HorizontalAlignment" />

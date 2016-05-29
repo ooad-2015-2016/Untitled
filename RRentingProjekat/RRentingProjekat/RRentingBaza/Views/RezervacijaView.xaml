@@ -9,10 +9,10 @@
     xmlns:triggers="using:RRentingProjekat.RRentingBaza.Helper"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Page_Loaded" Width="429.333">
+    Loaded="Page_Loaded" >
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="WhiteSmoke">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="127" />
             <ColumnDefinition />
@@ -36,36 +36,28 @@
         <TextBlock Name="BrojOdraslihTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0"
 TextWrapping="Wrap" Text="Broj Odraslih" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="115"/>
         <TextBox Name="BrojOdraslihInput" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"
-Margin="3,3,3,3" TextWrapping="Wrap" Text="{Binding brojOdraslih, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"  />
+Margin="3,3,3,3" TextWrapping="Wrap" Text="{Binding Path=BrojOdraslih,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  />
+        
         <TextBlock Name="BrojDjeceTextBlock" Grid.Row="2" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Broj Djece" VerticalAlignment="Top" Height="20" Width="107"/>
         <TextBox Name="BrojDjeceInput" Grid.Row="2" Grid.Column="1"
-HorizontalAlignment="Stretch" Margin="3,3,3,3" TextWrapping="Wrap" Text="{Binding brojDjece, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+HorizontalAlignment="Stretch" Margin="3,3,3,3" TextWrapping="Wrap" Text="{Binding Path=BrojDjece,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
 
-        <TextBlock Name="CijenaLabel" Grid.Row="8" HorizontalAlignment="Left" Margin="10,20,0,0"
-TextWrapping="Wrap" Text="Cijena" VerticalAlignment="Top" Height="20" Width="85"/>
-        <TextBox Name="CijenaInput" IsReadOnly="True" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Stretch"
-Margin="3,3,3,3" TextWrapping="Wrap" Text="{Binding cijena, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
-        <TextBlock Name="DatumDolaskaTextBlock" Grid.Row="3" HorizontalAlignment="Left"
-Margin="10,10,0,0" TextWrapping="Wrap" Text="Datum Dolaska" VerticalAlignment="Top" Height="20" Width="107"/>
         <TextBlock Name="DatumOdlaskaTextBlock" Grid.Row="4" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Datum Odlaska" VerticalAlignment="Top" Height="20" Width="107"/>
-        <CheckBox Name="LjubimacRB" IsChecked="{Binding ljubimac, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Ljubimac " Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="5" VerticalAlignment="Top"/>
+        <CheckBox Name="LjubimacRB" IsChecked="{Binding Ljubimac, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Ljubimac " Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="5" VerticalAlignment="Top"/>
         <TextBlock Name="DodatnoTextBlock" Grid.Row="5" HorizontalAlignment="Left"
 Margin="10,10,0,0" TextWrapping="Wrap" Text="Dodatne opcije" VerticalAlignment="Top" Height="20" Width="107"/>
-        <CheckBox Name="ParkingRB" IsChecked="{Binding parking, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Parking" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="6" VerticalAlignment="Top"/>
-        <CheckBox Name="DodatnikrevetRB"  IsChecked="{Binding dodatniKrevet, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Dodatnikrevet" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="7" VerticalAlignment="Top"/>
-       <TextBlock Name="NacinPlacanjaBlock" Grid.Row="9" HorizontalAlignment="Left"
-Margin="10,10,0,0" TextWrapping="Wrap" Text="Nacin placanja" VerticalAlignment="Top" Height="20" Width="107"/>
-        <ListBox Name="NacinPlacanjaListBox" Grid.Row="9" Grid.Column="1"
-HorizontalAlignment="Stretch" Margin="3,3,3,3" SelectedItem="{Binding Path=IzabraniNacin, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
-            <ListBox.Items>
-                <ListBoxItem Content="Gotovinsko"/>
-                <ListBoxItem Content="Karticom"/>
-            </ListBox.Items>
-        </ListBox>
-        <DatePicker Name="Dolazak" Date="{Binding Dolazak, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
-        <DatePicker Name="Odlazak" Date="{Binding Odlazak, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
+        <CheckBox Name="ParkingRB" IsChecked="{Binding Parking, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Parking" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="6" VerticalAlignment="Top"/>
+        <CheckBox Name="DodatnikrevetRB"  IsChecked="{Binding Krevet, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Dodatnikrevet" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="7" VerticalAlignment="Top"/>
+       <TextBlock Name="NacinPlacanjaBlock" Grid.Row="8" HorizontalAlignment="Left"
+Margin="10,10,0,0" TextWrapping="Wrap" Text="Način plaćanja" VerticalAlignment="Top" Height="20" Width="107"/>
+        
+        <ListBox Name="NacinPlacanjaListBox" Grid.Row="8" Grid.Column="1"
+HorizontalAlignment="Stretch" Margin="3,3,3,3" ItemsSource="{Binding Placanje, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" SelectedItem="{Binding Path=IzabraniNacin, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"> </ListBox>
+        
+        <DatePicker Name="Dolazak" Date="{Binding Path=Dolazak, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
+        <DatePicker Name="Odlazak" Date="{Binding Path=Odlazak, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
         <Button Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch" Background="DarkRed" Foreground="White"
 Margin="0,10,10,0" Grid.Row="10" VerticalAlignment="Top" Height="32"  Command="{Binding Path= DodajRezervaciju}" Click="buttonDodaj_Click"/>
 

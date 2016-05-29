@@ -15,8 +15,7 @@ using System.Runtime.CompilerServices;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
-
-    class RegistracijaViewModel
+    class KorisnikViewModel
     {
         private static int m_Counter = 0;
 
@@ -28,20 +27,21 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public string UTelefon { get; set; }
         public string UEmail { get; set; }
         public string UPassword { get; set; }
-       
+
         public INavigacija NavigationServis { get; set; }
         public ICommand SignupKorisnika { get; set; }
-        public RegistracijaViewModel()
+
+        public KorisnikViewModel()
         {
             NavigationServis = new NavigationService();
-            
+            RegistrovaniKorisnik = new Gost();
             UIme = "";
             UPassword = "";
             UPrezime = "";
             UAdresa = "";
             UEmail = "";
             UTelefon = "";
-            
+
             SignupKorisnika = new RelayCommand<object>(signup, mozeLiSeRegistrovati);
             this.Id = System.Threading.Interlocked.Increment(ref m_Counter);
 
@@ -51,8 +51,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             return true;
         }
-      
-        
+
+
         private async void signup(object parametar)
         {
             var UnosPassBox1 = parametar as PasswordBox;
@@ -86,17 +86,16 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
                 else
                 {
-                    var dialog = new MessageDialog("Prijava uspješno završena.Dobrodošli!", "Uspješna prijava");
+                    var dialog = new MessageDialog("Prijava uspješno završena. Dobrodošli!", "Uspješna prijava");
                     await dialog.ShowAsync();
 
-                    RegistrovaniKorisnik = new Gost(UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
-                    db.Gosti.Add(RegistrovaniKorisnik);
+                    Gost novi = new Gost(UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
+                    db.Gosti.Add(novi);
                     db.SaveChanges();
-                    
-                    NavigationServis.Navigate(typeof(RezervacijaView), new RezervacijaViewModel(this));
+                    NavigationServis.Navigate(typeof(RezervacijaListView), new RezervacijaViewModel(this));
                 }
             }
-               
+
 
         }
     }

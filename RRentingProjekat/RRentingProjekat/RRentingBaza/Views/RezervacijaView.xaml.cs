@@ -29,7 +29,7 @@ namespace RRentingProjekat.RRentingBaza.Views
     /// </summary>
     public sealed partial class RezervacijaView : Page
     {
-        Random rnd = new Random();
+       
         public RezervacijaView()
         {
             this.InitializeComponent();

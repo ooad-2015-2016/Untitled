@@ -115,6 +115,7 @@
     <Compile Include="RRentingBaza\Models\Uplata.cs" />
     <Compile Include="RRentingBaza\ViewModels\GostViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\GPSViewModel.cs" />
+    <Compile Include="RRentingBaza\ViewModels\KorisnikViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\OsobljeViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\PlacanjeViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\RecepcionerViewModel.cs" />

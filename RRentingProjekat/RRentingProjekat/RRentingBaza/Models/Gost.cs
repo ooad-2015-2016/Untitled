@@ -22,6 +22,8 @@ namespace RRentingProjekat.RRentingBaza.Models
         public int ocjena { get; set; }
         public int brojSobe { get; set; }
 
+        
+
     
 
        
@@ -63,6 +65,7 @@ namespace RRentingProjekat.RRentingBaza.Models
         {
             return ocjena;
         }
+
         public Gost() {}
     }
 }

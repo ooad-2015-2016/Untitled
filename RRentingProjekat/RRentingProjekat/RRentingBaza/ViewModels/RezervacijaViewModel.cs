@@ -14,44 +14,121 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 {
     class RezervacijaViewModel : INotifyPropertyChanged
     {
-        public Gost RegistrovaniGost { get; set; }
+        
         public int Id { get; set; }
-        public int BrojOdraslihInput { get; set; }
-        public int BrojDjeceInput { get; set; }
 
-        public DateTime Dolazak { get; set; }
-        public DateTime Odlazak { get; set; }
-        public Boolean ParkingRB { get; set; }
-        public Boolean LjubimacRB { get; set; }
-        public Boolean DodatnikrevetRB { get; set; }
-        private int izabraniNacin;
+        
+       
         private static int m_Counter2 = 0;
-        public float CijenaInput { get; set; }
         public string nacin_str { get; set; }
         public NacinPlacanja nacin { get; set; }
 
-        public Rezervacija DodanaRezervacija { get; set; }
         public INavigacija NavigationServis { get; set; }
-
         public ICommand DodajRezervaciju { get; set; }
 
 
-        RegistracijaViewModel parent;
-
-
-
+        public Gost gost { get; set; }
+        public RegistracijaViewModel parent { get; set; }
+        public KorisnikViewModel parent2 { get; set; }
+        Boolean rv = false;
         Random rnd;
+
+        
+
+        private Boolean parking;
+        public Boolean Parking
+        {
+            get { return parking; }
+            set { parking = value;  OnPropertyChanged("Parking"); }
+        }
+
+        private Boolean ljubimac;
+        public Boolean Ljubimac
+        {
+            get { return ljubimac; }
+            set { ljubimac = value; OnPropertyChanged("Ljubimac"); }
+        }
+
+        private Boolean krevet;
+        public Boolean Krevet
+        {
+            get { return krevet; }
+            set { krevet = value; OnPropertyChanged("Krevet"); }
+        }
+
+        private DateTime dolazak;
+        public DateTime Dolazak
+        {
+            get { return dolazak; }
+            set { dolazak = value; OnPropertyChanged("Dolazak"); }
+        }
+
+        private DateTime odlazak;
+        public DateTime Odlazak
+        {
+            get { return odlazak; }
+            set { odlazak = value; OnPropertyChanged("Odlazak"); }
+        }
+
+        private string brojOdraslih;
+        public string BrojOdraslih
+        {
+            get { return brojOdraslih; }
+            set { brojOdraslih = value; OnPropertyChanged("BrojOdraslih"); }
+        }
+
+        private string brojDjece;
+        public string BrojDjece
+        {
+            get { return brojDjece; }
+            set { brojDjece = value; OnPropertyChanged("BrojDjece"); }
+        }
+
+        private List<string> _myList = new List<string>() { "Gotovinsko", "Karticom" };
+        private List<string> placanje;
+        public List<string> Placanje
+        {
+            get { return placanje; }
+            set { placanje = value; OnPropertyChanged("Placanje"); }
+        }
+
+        private string izabraniNacin;
+        public string IzabraniNacin
+        {
+            get { return izabraniNacin; }
+            set
+            {
+                OnPropertyChanged("IzabraniNacin");
+                izabraniNacin = value;
+            }
+        }
+
+
         public RezervacijaViewModel(RegistracijaViewModel rvm)
         {
             NavigationServis = new NavigationService();
-
-            
             rnd = new Random();
+            Placanje = _myList;
 
             DodajRezervaciju = new RelayCommand<object>(rezervisi, mozeLiRezervisati);
             this.Id = System.Threading.Interlocked.Increment(ref m_Counter2);
-            RegistrovaniGost = rvm.RegistrovaniKorisnik;
+
             this.parent = rvm;
+
+            rv = true;
+        }
+
+        public RezervacijaViewModel(KorisnikViewModel kvm)
+        {
+            NavigationServis = new NavigationService();
+            rnd = new Random();
+            Placanje = _myList;
+
+            DodajRezervaciju = new RelayCommand<object>(rezervisi, mozeLiRezervisati);
+            this.Id = System.Threading.Interlocked.Increment(ref m_Counter2);
+
+            this.parent2 = kvm;
+            rv = false;
         }
 
         public bool mozeLiRezervisati(object parametar)
@@ -64,7 +141,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             {
 
                 //validacija
-                if (BrojOdraslihInput == 0)
+                if (Convert.ToInt32(BrojOdraslih) == 0)
                 {
                     var d = new MessageDialog("Unesite broj odraslih", "Neuspješna rezervacija");
                     await d.ShowAsync();
@@ -75,82 +152,73 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                     await d.ShowAsync();
                 }
 
+                //uspjela validacija
                 else
                 {
-                    nacin_str = IzabraniNacin.ToString();
+                    nacin_str = IzabraniNacin;
                     if (nacin_str == "Gotovinsko") nacin = NacinPlacanja.Gotovinsko;
                     else nacin = NacinPlacanja.Karticom;
-                    Dolazak = ConvertFromDateTimeOffset(Dolazak.Date);
-                    Odlazak = ConvertFromDateTimeOffset(Odlazak.Date);
 
-                    Rezervacija nova = new Rezervacija(Convert.ToInt32(BrojOdraslihInput), Convert.ToInt32(BrojDjeceInput), Dolazak, Odlazak, ParkingRB, LjubimacRB, DodatnikrevetRB, nacin);
+
+                    Rezervacija nova = new Rezervacija(Convert.ToInt32(BrojOdraslih), Convert.ToInt32(BrojDjece), Dolazak, Odlazak, Parking, Ljubimac, Krevet, nacin);
                     Soba slobodnaSoba = DataSource.DataSourceRRenting.dajSlobodnuSobu(nova);
 
-                    /* if (slobodnaSoba.CijenaSobe != 0)
-                     {
-                         Gost gost;
-                         int tiket = rnd.Next(1000);
-                         using (var rdb = new RRentingDbContext())
-                         {
-                             gost = rdb.Gosti.Where(x => x.Email ==  parent.RegistrovaniKorisnik.Email && x.Sifra == parent.RegistrovaniKorisnik.Sifra && x.SigurnosniID == 0).FirstOrDefault();
-                             if (gost != null)
-                             {
-                                 gost.brojSobe = slobodnaSoba.BrojSobe;
-                                 gost.dodijeliTiket(tiket);
-                             }
-                         }
-                         //update changes
-                         using (var rdb = new RRentingDbContext())
-                         {
-                             rdb.Entry(gost).State = Microsoft.Data.Entity.EntityState.Modified;
-                             rdb.SaveChanges();
-                         }
-                         nova.izracunajCijenu(Dolazak, Odlazak, slobodnaSoba);
-                         
-     */
+                    if (slobodnaSoba.CijenaSobe != 0)
+                    {
+                        int tiket = rnd.Next(1000);
+                        using (var rdb = new RRentingDbContext())
+                        {
+                            if (rv)
+                            {
+                                gost = db.Gosti.Where(x => x.Email == parent.RegistrovaniKorisnik.Email && x.Sifra == parent.RegistrovaniKorisnik.Sifra && x.SigurnosniID == 0).FirstOrDefault();
+                            }
+                            else
+                            {
+                                gost = gost = db.Gosti.Where(x => x.Email == parent2.RegistrovaniKorisnik.Email && x.Sifra == parent2.RegistrovaniKorisnik.Sifra && x.SigurnosniID == 0).FirstOrDefault();
+                            }
+
+                            if (gost != null)
+                            {
+                                gost.brojSobe = slobodnaSoba.BrojSobe;
+                                gost.dodijeliTiket(tiket);
+
+                                //update changes
+                                using (var rr = new RRentingDbContext())
+                                {
+                                    rr.Entry(gost).State = Microsoft.Data.Entity.EntityState.Modified;
+                                    rr.SaveChanges();
+                                }
+                            }
 
 
-                    db.Rezervacije.Add(nova);
-                    db.SaveChanges();
+                            nova.izracunajCijenu(Dolazak, Odlazak, slobodnaSoba);
 
-                    // var dialog = new MessageDialog("Vaš broj tiketa: " + tiket.ToString(), "Rezervacija uspješna");
-                    //await dialog.ShowAsync();
+                            db.Rezervacije.Add(nova);
+                            db.SaveChanges();
 
-                    BrojDjeceInput = 0;
-                    BrojOdraslihInput = 0;
-                    Dolazak = DateTime.Now;
-                    Odlazak = DateTime.Now;
-                    ParkingRB = false;
-                    LjubimacRB = false;
-                    DodatnikrevetRB = false;
-                    CijenaInput = 0;
-
-                    NavigationServis.Navigate(typeof(Pocetna));
+                            var dialog = new MessageDialog("Vaš broj tiketa: " + tiket.ToString(), "Rezervacija uspješna");
+                            await dialog.ShowAsync();
+                           
+                            // if (!rv) NavigationServis.Navigate(typeof(RecepcionerView), new RecepcionerViewModel(this)); -DODATI
+                            NavigationServis.Navigate(typeof(Pocetna));
+                           
+                        }
+                    }
 
 
 
-                    /* else
-                     {
-                     NavigationServis.Navigate(typeof(Login));
-                     var d = new MessageDialog("U tom periodu nemamo soba koje odgovaraju Vašim zahtjevima.", "Žao nam je");
-                     await d.ShowAsync();
-                 }
-                 */
+                    else
+                    {
+                        NavigationServis.Navigate(typeof(Login));
+                        var d = new MessageDialog("U tom periodu nemamo soba koje odgovaraju Vašim zahtjevima.", "Žao nam je");
+                        await d.ShowAsync();
+                    }
+
+                    }
+
                 }
-
             }
-        }
-
-
-
-
-
-
-
-
-
-
-
+        
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
@@ -158,26 +226,6 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
-        }
-
-        public int IzabraniNacin
-        {
-            get { return izabraniNacin; }
-            set
-            {
-                OnPropertyChanged("IzabraniNacin");
-                izabraniNacin = value;
-            }
-        }
-
-        static DateTime ConvertFromDateTimeOffset(DateTimeOffset dateTime)
-        {
-            if (dateTime.Offset.Equals(TimeSpan.Zero))
-                return dateTime.UtcDateTime;
-            else if (dateTime.Offset.Equals(TimeZoneInfo.Local.GetUtcOffset(dateTime.DateTime)))
-                return DateTime.SpecifyKind(dateTime.DateTime, DateTimeKind.Local);
-            else
-                return dateTime.DateTime;
         }
     }
 }

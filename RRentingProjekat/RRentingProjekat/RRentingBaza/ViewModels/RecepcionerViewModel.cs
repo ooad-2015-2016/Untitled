@@ -14,7 +14,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
     class RecepcionerViewModel
     {
         public ICommand DodajGost { get; set; }
-        public ICommand ObracunCijene { get; set; }
+        //public ICommand ObracunCijene { get; set; }
         public ICommand StatusSobe { get; set; }
         public ICommand IzvrsiUplatu { get; set; }
         public INavigacija NavigationServis { get; set; }
@@ -28,7 +28,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
 
             DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
-            ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
+            //ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
             StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
             IzvrsiUplatu= new RelayCommand<object>(uplata, mozeLiUplata);
 
@@ -39,7 +39,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
 
             DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
-            ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
+            //ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
             StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
             IzvrsiUplatu = new RelayCommand<object>(uplata, mozeLiUplata);
             this._uplata = u;
@@ -52,18 +52,10 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public void dodajGosta(object parametar)
         {
 
-            NavigationServis.Navigate(typeof(KorisnikListView));
+            NavigationServis.Navigate(typeof(KorisnikListView), new KorisnikViewModel());
         }
 
-        public void obracunaj(object parametar)
-        {
-           
-        }
-
-        public void statistika(object parametar)
-        {
-
-        }
+     
 
         public void status(object parametar)
         {
