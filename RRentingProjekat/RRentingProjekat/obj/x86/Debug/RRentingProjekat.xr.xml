@@ -21,8 +21,10 @@
     <RootPropertyPathName Name="Zahtjevi" />
     <RootPropertyPathName Name="Zahtjev" />
     <RootPropertyPathName Name="brojSobe_" />
+    <RootPropertyPathName Name="PotvrdaUplate" />
     <RootPropertyPathName Name="CreateUplata" />
     <RootPropertyPathName Name="RfidKartica" />
+    <RootPropertyPathName Name="IzvrsiUplatu" />
     <RootPropertyPathName Name="StatusSobe" />
     <RootPropertyPathName Name="ObracunCijene" />
     <RootPropertyPathName Name="DodajGost" />

@@ -9,7 +9,7 @@
     xmlns:triggers="using:RRentingProjekat.RRentingBaza.Helper"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Page_Loaded">
+    Loaded="Page_Loaded" Width="429.333">
 
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -66,8 +66,8 @@ HorizontalAlignment="Stretch" Margin="3,3,3,3" >
                 <ListBoxItem Content="Karticom"/>
             </ListBox.Items>
         </ListBox>
-        <CalendarDatePicker x:Name="Dolazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
-        <CalendarDatePicker x:Name="Odlazak" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
+        <DatePicker x:Name="Dolazak" Date="{Binding Dolazak, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
+        <DatePicker x:Name="Odlazak" Date="{Binding Odlazak, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
         
        
 

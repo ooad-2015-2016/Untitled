@@ -16,9 +16,12 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public ICommand DodajGost { get; set; }
         public ICommand ObracunCijene { get; set; }
         public ICommand StatusSobe { get; set; }
+        public ICommand IzvrsiUplatu { get; set; }
         public INavigacija NavigationServis { get; set; }
+        public Uplata _uplata { get; set; }
 
         public PrijavaViewModel Parent { get; set; }
+        public PlacanjeViewModel NewParent { get; set; }
 
         public RecepcionerViewModel(PrijavaViewModel parent)
         {
@@ -27,10 +30,25 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
             ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
             StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
+            IzvrsiUplatu= new RelayCommand<object>(uplata, mozeLiUplata);
 
             this.Parent = parent;
         }
+        public RecepcionerViewModel(Uplata u)
+        {
+            NavigationServis = new NavigationService();
 
+            DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
+            ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
+            StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
+            IzvrsiUplatu = new RelayCommand<object>(uplata, mozeLiUplata);
+            this._uplata = u;
+
+        }
+        private async void uplata(object parametar)
+        {
+            NavigationServis.Navigate(typeof(PlacanjeView), new PlacanjeViewModel());
+        }
         public void dodajGosta(object parametar)
         {
 
@@ -64,6 +82,11 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             return true;
         }
+        public bool mozeLiUplata(object parametar)
+        {
+            return true;
+        }
+
 
 
 

@@ -837,3 +837,4 @@ C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\Multi
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\WinRTXamlToolkit.Controls.DataVisualization.pri.xml
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\WinRTXamlToolkit.pri.xml
 C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Korisnik\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingProjekat.csprojResolveAssemblyReference.cache

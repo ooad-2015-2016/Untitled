@@ -37,5 +37,10 @@ namespace RRentingProjekat.RRentingBaza.Views
             placanjeViewModel = new PlacanjeViewModel();
             this.DataContext = placanjeViewModel;
         }
+
+        private void btnPlacanje_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

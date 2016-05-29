@@ -11,6 +11,8 @@
         <StackPanel Orientation="Vertical">
             <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" Height="100"/>
             <TextBox x:Name="txtRfid" PlaceholderText="RFID" Text="{Binding Path=CreateUplata.RfidKartica,Mode=TwoWay}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250"></TextBox>
-            </StackPanel>
+            <Button Name="btnPlacanje" Margin="0,50,0,0"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Potvrdi Uplatu" Command="{Binding Path= PotvrdaUplate}" Background="DarkRed" FontWeight="Bold" Click="btnPlacanje_Click" >
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>

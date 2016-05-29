@@ -18,6 +18,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public int Id { get; set; }
         public int BrojOdraslihInput { get; set; }
         public int BrojDjeceInput { get; set; }
+        
         public DateTime Dolazak { get; set; }
         public DateTime Odlazak { get; set; }
         public Boolean ParkingRB { get; set; }

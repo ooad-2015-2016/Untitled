@@ -55,5 +55,10 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             DataContext = (RecepcionerViewModel)e.Parameter;
         }
+
+        private void btnUplati_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

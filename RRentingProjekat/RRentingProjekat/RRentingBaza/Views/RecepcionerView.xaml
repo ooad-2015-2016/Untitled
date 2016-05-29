@@ -13,6 +13,7 @@
             <Button Name="btnDodajGosta" Margin="0,50,0,0" Click="btnDodajGosta_Click" HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Dodaj gosta" Width="150" Command="{Binding Path= DodajGost}"  Background="DarkRed" FontWeight="Medium"></Button>
             <Button Name="btnObracunCijene" Margin="0,10,0,0" Click="btnObracunCijene_Click" HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Obračunaj cijenu" Width="150"  Command="{Binding Path= ObracunCijene}"  Background="DarkRed" FontWeight="Medium"></Button>
             <Button Name="btnStatusSobe" Margin="0,10,0,0" Click="btnStatusSobe_Click" HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Promijeni status sobe"  Width="150" Command="{Binding Path= StatusSobe, Mode=TwoWay}"  Background="DarkRed" FontWeight="Medium"></Button>
+            <Button Name="btnUplati" Margin="0,10,0,0"  HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Uplata Klijenta"  Width="150" Command="{Binding Path= IzvrsiUplatu, Mode=TwoWay}"  Background="DarkRed" FontWeight="Medium" Click="btnUplati_Click"></Button>
 
 
 
