@@ -85,7 +85,7 @@ namespace RRentingProjekat
             if (rootFrame.Content == null)
             {
                
-                rootFrame.Navigate(typeof(PlacanjeView), e.Arguments);
+                rootFrame.Navigate(typeof(Pocetna), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
