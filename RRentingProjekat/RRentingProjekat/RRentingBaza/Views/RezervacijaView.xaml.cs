@@ -45,8 +45,8 @@ namespace RRentingProjekat.RRentingBaza.Views
                 {
                     brojOdraslih = Convert.ToInt32(BrojOdraslihInput.Text),
                     brojDjece = Convert.ToInt32(BrojDjeceInput.Text),
-                    datumDolaska = Convert.ToDateTime(Dolazak.Date.Value),
-                    datumOdlaska = Convert.ToDateTime(Odlazak.Date.Value),
+                    datumDolaska = Convert.ToDateTime(Dolazak.Date),
+                    datumOdlaska = Convert.ToDateTime(Odlazak.Date),
                     parking = ParkingRB.IsChecked.Value,
                     ljubimac = LjubimacRB.IsChecked.Value,
                     dodatniKrevet = DodatnikrevetRB.IsChecked.Value,

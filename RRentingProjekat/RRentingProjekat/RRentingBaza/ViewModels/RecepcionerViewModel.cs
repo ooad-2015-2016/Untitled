@@ -45,7 +45,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             this._uplata = u;
 
         }
-        private async void uplata(object parametar)
+        private void uplata(object parametar)
         {
             NavigationServis.Navigate(typeof(PlacanjeView), new PlacanjeViewModel());
         }

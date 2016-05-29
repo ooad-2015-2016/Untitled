@@ -36,7 +36,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             return true;
         }
-        private async void potvrda(object parametar)
+        private void potvrda(object parametar)
         {
             Uplata uplata = CreateUplata;
             if(uplata!=null)
