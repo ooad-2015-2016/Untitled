@@ -28,7 +28,7 @@
             <TextBox Name="txtAdresaS" PlaceholderText="Adresa" Text="{Binding UAdresa,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Width="200" />
             <PasswordBox Name="txtPasswordS" PlaceholderText="Šifra" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Width="200" />
           
-            <Button Name="btnSignup" Margin="0,50,0,0" Click="buttonSignup_Click"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Registrujte se" Command="{Binding Path= SignupKorisnika}" CommandParameter="{Binding ElementName= txtPasswordS}" Background="DarkRed" FontWeight="Bold" >
+            <Button Name="btnSignup" Margin="0,50,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Registrujte se" Command="{Binding Path= SignupKorisnika}" CommandParameter="{Binding ElementName= txtPasswordS}" Background="DarkRed" FontWeight="Bold" >
               </Button>
         </StackPanel>
     </Grid>

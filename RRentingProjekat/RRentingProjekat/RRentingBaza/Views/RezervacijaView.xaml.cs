@@ -37,70 +37,8 @@ namespace RRentingProjekat.RRentingBaza.Views
             
         }
        
-        private void buttonDodaj_Click(object sender, RoutedEventArgs e)
-        {
-            using (var db = new RRentingDbContext())
-            {
-                var contact = new Rezervacija
-                {
-                    brojOdraslih = Convert.ToInt32(BrojOdraslihInput.Text),
-                    brojDjece = Convert.ToInt32(BrojDjeceInput.Text),
-
-                    datumDolaska = ConvertFromDateTimeOffset(Dolazak.Date),
-                    datumOdlaska = ConvertFromDateTimeOffset(Odlazak.Date),
-                    parking = ParkingRB.IsChecked.Value,
-                    ljubimac = LjubimacRB.IsChecked.Value,
-                    dodatniKrevet = DodatnikrevetRB.IsChecked.Value,
-                    cijena = 500,
-                    nacinPlacanja = (NacinPlacanja)Enum.Parse(typeof(NacinPlacanja), NacinPlacanjaListBox.SelectedItem.ToString())
-                };
-
-               
-                //db.Rezervacije.Add(contact);
-                //db.SaveChanges();
-                //reset polja za unos
-                BrojOdraslihInput.Text = string.Empty;
-                BrojDjeceInput.Text = string.Empty;
-                CijenaInput.Text = string.Empty;
-                Dolazak.Date = DateTime.Now;
-                Odlazak.Date = DateTime.Now;
-                ParkingRB.IsChecked = false;
-                LjubimacRB.IsChecked = false;
-                DodatnikrevetRB.IsChecked = false;
-                //refresh liste rezervacija
-                //RezervacijeIS.ItemsSource = db.Rezervacije.OrderBy(c => c.cijena).ToList();
-            }
-        }
-
-        //Event za brisanje rezervacija
-        /* private void Button_Click_Delete(object sender, RoutedEventArgs e)
-         {
-             //Dobavljanje objekta iz liste koji je kori[ten da se popuni red u listview
-             DependencyObject dep = (DependencyObject)e.OriginalSource;
-             while ((dep != null) && !(dep is ListViewItem))
-             {
-                 dep = VisualTreeHelper.GetParent(dep);
-             }
-             if (dep == null)
-                 return;
-             using (var db = new RRentingDbContext())
-             {
-                 db.Rezervacije.Remove((Rezervacija)RezervacijeIS.ItemFromContainer(dep));
-                 //Nije jos obrisano dok nije Save
-                 db.SaveChanges();
-                 //Refresh liste restorana
-                 RezervacijeIS.ItemsSource = db.Rezervacije.OrderBy(c => c.cijena).ToList();
-             }
-         }*/
-        static DateTime ConvertFromDateTimeOffset(DateTimeOffset dateTime)
-        {
-            if (dateTime.Offset.Equals(TimeSpan.Zero))
-                return dateTime.UtcDateTime;
-            else if (dateTime.Offset.Equals(TimeZoneInfo.Local.GetUtcOffset(dateTime.DateTime)))
-                return DateTime.SpecifyKind(dateTime.DateTime, DateTimeKind.Local);
-            else
-                return dateTime.DateTime;
-        }
+       
+       
     }
 
 }

@@ -30,6 +30,7 @@
     <RootPropertyPathName Name="DodajGost" />
     <RootPropertyPathName Name="Odlazak" />
     <RootPropertyPathName Name="Dolazak" />
+    <RootPropertyPathName Name="IzabraniNacin" />
     <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="dodatniKrevet" />
     <RootPropertyPathName Name="parking" />

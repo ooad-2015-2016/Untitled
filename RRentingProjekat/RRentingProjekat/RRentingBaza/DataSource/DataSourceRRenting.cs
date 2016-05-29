@@ -52,7 +52,7 @@ namespace RRentingProjekat.RRentingBaza.DataSource
 
         #endregion
 
-        #region - kreiranje Soba
+        #region Sobe
         private static List<Soba> sobe = new List<Soba>()
         {
             new Soba(1, 1, StatusSobe.Slobodna, 50, 3),

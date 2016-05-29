@@ -51,31 +51,7 @@ namespace RRentingProjekat.RRentingBaza.Views
             }
         }
 
-       
-
-        //asinhrona metoda za provjeru prijave korisnika
-        private void buttonSignup_Click(object sender, RoutedEventArgs e)
-        {
-            var korisnickoIme = txtImeS.Text;
-            var korisnickoPrezime = txtPrezimeS.Text;
-            var korisnickiEmail = txtEmailS.Text;
-            var korisnickiTelefon = txtTelefonS.Text;
-            var korisnickaAdresa = txtAdresaS.Text;
-            var sifra = txtPasswordS.Password;
-
-
-            //var korisnik = DataSourceRRenting.ProvjeraKorisnika(korisnickoIme, sifra);
-            /* if (korisnik != null && korisnik.KorisnikId > 0)
-             {
-                 this.Frame.Navigate(typeof(MainPage), korisnik);
-             }
-             else
-             {
-                 var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
-                 await dialog.ShowAsync();
-             }
-             */
-        }
+      
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             DataContext = (RegistracijaViewModel)e.Parameter;
