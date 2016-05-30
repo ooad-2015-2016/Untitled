@@ -90,8 +90,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                     await dialog.ShowAsync();
 
                     RegistrovaniKorisnik = new Gost(UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
-                    db.Gosti.Add(RegistrovaniKorisnik);
-                    db.SaveChanges();
+                    //db.Gosti.Add(RegistrovaniKorisnik); -> gost se dodaje u bazu nakon sto je rezervacija moguca
+       
                     
                     NavigationServis.Navigate(typeof(RezervacijaView), new RezervacijaViewModel(this));
                 }

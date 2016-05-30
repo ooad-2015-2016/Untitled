@@ -156,7 +156,7 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[50];
+            _typeNameTable = new string[52];
             _typeNameTable[0] = "RRentingProjekat.RRentingBaza.Views.GostView";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -165,50 +165,52 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
             _typeNameTable[5] = "RRentingProjekat.RRentingBaza.Views.OsobljeView";
             _typeNameTable[6] = "RRentingProjekat.RRentingBaza.Views.PlacanjeView";
             _typeNameTable[7] = "RRentingProjekat.RRentingBaza.Views.RecepcionerView";
-            _typeNameTable[8] = "RRentingProjekat.RRentingBaza.Views.RezervacijaView";
-            _typeNameTable[9] = "RRentingProjekat.RRentingBaza.Views.SefView";
-            _typeNameTable[10] = "RRentingProjekat.RRentingBaza.Views.SignupKorisnik";
-            _typeNameTable[11] = "RRentingProjekat.RRentingBaza.Views.KorisnikListView";
-            _typeNameTable[12] = "RRentingProjekat.RRentingBaza.Views.Pocetna";
-            _typeNameTable[13] = "RRentingProjekat.RRentingBaza.Views.RezervacijaListView";
-            _typeNameTable[14] = "RRentingProjekat.RRentingBaza.Views.SobaListView";
-            _typeNameTable[15] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart";
-            _typeNameTable[16] = "Windows.UI.Xaml.Controls.Control";
-            _typeNameTable[17] = "System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>";
-            _typeNameTable[18] = "Object";
-            _typeNameTable[19] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries";
-            _typeNameTable[20] = "System.Collections.ObjectModel.ObservableCollection`1<Object>";
-            _typeNameTable[21] = "System.Collections.ObjectModel.Collection`1<Object>";
-            _typeNameTable[22] = "System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>";
-            _typeNameTable[23] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis";
-            _typeNameTable[24] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.AxisOrientation";
-            _typeNameTable[25] = "System.Enum";
-            _typeNameTable[26] = "System.ValueType";
-            _typeNameTable[27] = "System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>";
-            _typeNameTable[28] = "System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>";
-            _typeNameTable[29] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener";
-            _typeNameTable[30] = "System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>";
-            _typeNameTable[31] = "System.Collections.ObjectModel.ReadOnlyCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>";
-            _typeNameTable[32] = "Windows.UI.Xaml.Style";
-            _typeNameTable[33] = "System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>";
-            _typeNameTable[34] = "Windows.UI.Xaml.ResourceDictionary";
-            _typeNameTable[35] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries";
-            _typeNameTable[36] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries";
-            _typeNameTable[37] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series";
-            _typeNameTable[38] = "String";
-            _typeNameTable[39] = "Boolean";
-            _typeNameTable[40] = "Windows.UI.Xaml.Data.Binding";
-            _typeNameTable[41] = "System.Collections.IEnumerable";
-            _typeNameTable[42] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence";
-            _typeNameTable[43] = "Windows.UI.Xaml.Media.Animation.EasingFunctionBase";
-            _typeNameTable[44] = "TimeSpan";
-            _typeNameTable[45] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost";
-            _typeNameTable[46] = "RRentingProjekat.RRentingBaza.Views.Statistika";
-            _typeNameTable[47] = "RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView";
-            _typeNameTable[48] = "RRentingProjekat.RRentingBaza.Views.ZahtjeviView";
-            _typeNameTable[49] = "RRentingProjekat.RRentingBaza.Views.ZahtjevListView";
+            _typeNameTable[8] = "RRentingProjekat.RRentingBaza.Helper.DateConverter";
+            _typeNameTable[9] = "Object";
+            _typeNameTable[10] = "RRentingProjekat.RRentingBaza.Views.RezervacijaView";
+            _typeNameTable[11] = "RRentingProjekat.RRentingBaza.Views.SefView";
+            _typeNameTable[12] = "RRentingProjekat.RRentingBaza.Views.SignupKorisnik";
+            _typeNameTable[13] = "RRentingProjekat.RRentingBaza.Views.KorisnikListView";
+            _typeNameTable[14] = "RRentingProjekat.RRentingBaza.Views.Pocetna";
+            _typeNameTable[15] = "RRentingProjekat.RRentingBaza.Views.RezervacijaListView";
+            _typeNameTable[16] = "RRentingProjekat.RRentingBaza.Views.SobaListView";
+            _typeNameTable[17] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart";
+            _typeNameTable[18] = "Windows.UI.Xaml.Controls.Control";
+            _typeNameTable[19] = "System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>";
+            _typeNameTable[20] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries";
+            _typeNameTable[21] = "System.Collections.ObjectModel.ObservableCollection`1<Object>";
+            _typeNameTable[22] = "System.Collections.ObjectModel.Collection`1<Object>";
+            _typeNameTable[23] = "System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>";
+            _typeNameTable[24] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis";
+            _typeNameTable[25] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.AxisOrientation";
+            _typeNameTable[26] = "System.Enum";
+            _typeNameTable[27] = "System.ValueType";
+            _typeNameTable[28] = "System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>";
+            _typeNameTable[29] = "System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>";
+            _typeNameTable[30] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener";
+            _typeNameTable[31] = "System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>";
+            _typeNameTable[32] = "System.Collections.ObjectModel.ReadOnlyCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>";
+            _typeNameTable[33] = "Windows.UI.Xaml.Style";
+            _typeNameTable[34] = "System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>";
+            _typeNameTable[35] = "Windows.UI.Xaml.ResourceDictionary";
+            _typeNameTable[36] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries";
+            _typeNameTable[37] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries";
+            _typeNameTable[38] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series";
+            _typeNameTable[39] = "String";
+            _typeNameTable[40] = "Boolean";
+            _typeNameTable[41] = "Windows.UI.Xaml.Data.Binding";
+            _typeNameTable[42] = "System.Collections.IEnumerable";
+            _typeNameTable[43] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence";
+            _typeNameTable[44] = "Windows.UI.Xaml.Media.Animation.EasingFunctionBase";
+            _typeNameTable[45] = "TimeSpan";
+            _typeNameTable[46] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost";
+            _typeNameTable[47] = "RRentingProjekat.RRentingBaza.Views.Statistika";
+            _typeNameTable[48] = "RRentingProjekat.RRentingBaza.Views.UvidSobaView";
+            _typeNameTable[49] = "RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView";
+            _typeNameTable[50] = "RRentingProjekat.RRentingBaza.Views.ZahtjeviView";
+            _typeNameTable[51] = "RRentingProjekat.RRentingBaza.Views.ZahtjevListView";
 
-            _typeTable = new global::System.Type[50];
+            _typeTable = new global::System.Type[52];
             _typeTable[0] = typeof(global::RRentingProjekat.RRentingBaza.Views.GostView);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -217,48 +219,50 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
             _typeTable[5] = typeof(global::RRentingProjekat.RRentingBaza.Views.OsobljeView);
             _typeTable[6] = typeof(global::RRentingProjekat.RRentingBaza.Views.PlacanjeView);
             _typeTable[7] = typeof(global::RRentingProjekat.RRentingBaza.Views.RecepcionerView);
-            _typeTable[8] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaView);
-            _typeTable[9] = typeof(global::RRentingProjekat.RRentingBaza.Views.SefView);
-            _typeTable[10] = typeof(global::RRentingProjekat.RRentingBaza.Views.SignupKorisnik);
-            _typeTable[11] = typeof(global::RRentingProjekat.RRentingBaza.Views.KorisnikListView);
-            _typeTable[12] = typeof(global::RRentingProjekat.RRentingBaza.Views.Pocetna);
-            _typeTable[13] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView);
-            _typeTable[14] = typeof(global::RRentingProjekat.RRentingBaza.Views.SobaListView);
-            _typeTable[15] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart);
-            _typeTable[16] = typeof(global::Windows.UI.Xaml.Controls.Control);
-            _typeTable[17] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>);
-            _typeTable[18] = typeof(global::System.Object);
-            _typeTable[19] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries);
-            _typeTable[20] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.Object>);
-            _typeTable[21] = typeof(global::System.Collections.ObjectModel.Collection<global::System.Object>);
-            _typeTable[22] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>);
-            _typeTable[23] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis);
-            _typeTable[24] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AxisOrientation);
-            _typeTable[25] = typeof(global::System.Enum);
-            _typeTable[26] = typeof(global::System.ValueType);
-            _typeTable[27] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>);
-            _typeTable[28] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>);
-            _typeTable[29] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener);
-            _typeTable[30] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>);
-            _typeTable[31] = typeof(global::System.Collections.ObjectModel.ReadOnlyCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>);
-            _typeTable[32] = typeof(global::Windows.UI.Xaml.Style);
-            _typeTable[33] = typeof(global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.ResourceDictionary>);
-            _typeTable[34] = typeof(global::Windows.UI.Xaml.ResourceDictionary);
-            _typeTable[35] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries);
-            _typeTable[36] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries);
-            _typeTable[37] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series);
-            _typeTable[38] = typeof(global::System.String);
-            _typeTable[39] = typeof(global::System.Boolean);
-            _typeTable[40] = typeof(global::Windows.UI.Xaml.Data.Binding);
-            _typeTable[41] = typeof(global::System.Collections.IEnumerable);
-            _typeTable[42] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence);
-            _typeTable[43] = typeof(global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase);
-            _typeTable[44] = typeof(global::System.TimeSpan);
-            _typeTable[45] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost);
-            _typeTable[46] = typeof(global::RRentingProjekat.RRentingBaza.Views.Statistika);
-            _typeTable[47] = typeof(global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView);
-            _typeTable[48] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView);
-            _typeTable[49] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView);
+            _typeTable[8] = typeof(global::RRentingProjekat.RRentingBaza.Helper.DateConverter);
+            _typeTable[9] = typeof(global::System.Object);
+            _typeTable[10] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaView);
+            _typeTable[11] = typeof(global::RRentingProjekat.RRentingBaza.Views.SefView);
+            _typeTable[12] = typeof(global::RRentingProjekat.RRentingBaza.Views.SignupKorisnik);
+            _typeTable[13] = typeof(global::RRentingProjekat.RRentingBaza.Views.KorisnikListView);
+            _typeTable[14] = typeof(global::RRentingProjekat.RRentingBaza.Views.Pocetna);
+            _typeTable[15] = typeof(global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView);
+            _typeTable[16] = typeof(global::RRentingProjekat.RRentingBaza.Views.SobaListView);
+            _typeTable[17] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart);
+            _typeTable[18] = typeof(global::Windows.UI.Xaml.Controls.Control);
+            _typeTable[19] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>);
+            _typeTable[20] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries);
+            _typeTable[21] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.Object>);
+            _typeTable[22] = typeof(global::System.Collections.ObjectModel.Collection<global::System.Object>);
+            _typeTable[23] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>);
+            _typeTable[24] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis);
+            _typeTable[25] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AxisOrientation);
+            _typeTable[26] = typeof(global::System.Enum);
+            _typeTable[27] = typeof(global::System.ValueType);
+            _typeTable[28] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>);
+            _typeTable[29] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>);
+            _typeTable[30] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener);
+            _typeTable[31] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>);
+            _typeTable[32] = typeof(global::System.Collections.ObjectModel.ReadOnlyCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>);
+            _typeTable[33] = typeof(global::Windows.UI.Xaml.Style);
+            _typeTable[34] = typeof(global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.ResourceDictionary>);
+            _typeTable[35] = typeof(global::Windows.UI.Xaml.ResourceDictionary);
+            _typeTable[36] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries);
+            _typeTable[37] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries);
+            _typeTable[38] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series);
+            _typeTable[39] = typeof(global::System.String);
+            _typeTable[40] = typeof(global::System.Boolean);
+            _typeTable[41] = typeof(global::Windows.UI.Xaml.Data.Binding);
+            _typeTable[42] = typeof(global::System.Collections.IEnumerable);
+            _typeTable[43] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence);
+            _typeTable[44] = typeof(global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase);
+            _typeTable[45] = typeof(global::System.TimeSpan);
+            _typeTable[46] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost);
+            _typeTable[47] = typeof(global::RRentingProjekat.RRentingBaza.Views.Statistika);
+            _typeTable[48] = typeof(global::RRentingProjekat.RRentingBaza.Views.UvidSobaView);
+            _typeTable[49] = typeof(global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView);
+            _typeTable[50] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView);
+            _typeTable[51] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -299,40 +303,36 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
         private object Activate_5_OsobljeView() { return new global::RRentingProjekat.RRentingBaza.Views.OsobljeView(); }
         private object Activate_6_PlacanjeView() { return new global::RRentingProjekat.RRentingBaza.Views.PlacanjeView(); }
         private object Activate_7_RecepcionerView() { return new global::RRentingProjekat.RRentingBaza.Views.RecepcionerView(); }
-        private object Activate_8_RezervacijaView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaView(); }
-        private object Activate_9_SefView() { return new global::RRentingProjekat.RRentingBaza.Views.SefView(); }
-        private object Activate_10_SignupKorisnik() { return new global::RRentingProjekat.RRentingBaza.Views.SignupKorisnik(); }
-        private object Activate_11_KorisnikListView() { return new global::RRentingProjekat.RRentingBaza.Views.KorisnikListView(); }
-        private object Activate_12_Pocetna() { return new global::RRentingProjekat.RRentingBaza.Views.Pocetna(); }
-        private object Activate_13_RezervacijaListView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView(); }
-        private object Activate_14_SobaListView() { return new global::RRentingProjekat.RRentingBaza.Views.SobaListView(); }
-        private object Activate_15_Chart() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart(); }
-        private object Activate_17_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>(); }
-        private object Activate_20_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.Object>(); }
-        private object Activate_21_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.Object>(); }
-        private object Activate_22_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>(); }
-        private object Activate_27_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>(); }
-        private object Activate_28_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>(); }
-        private object Activate_30_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>(); }
-        private object Activate_33_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.ResourceDictionary>(); }
-        private object Activate_35_PieSeries() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries(); }
-        private object Activate_46_Statistika() { return new global::RRentingProjekat.RRentingBaza.Views.Statistika(); }
-        private object Activate_47_UvidUposlenikaView() { return new global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView(); }
-        private object Activate_48_ZahtjeviView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView(); }
-        private object Activate_49_ZahtjevListView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView(); }
-        private void VectorAdd_17_Collection(object instance, object item)
+        private object Activate_8_DateConverter() { return new global::RRentingProjekat.RRentingBaza.Helper.DateConverter(); }
+        private object Activate_10_RezervacijaView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaView(); }
+        private object Activate_11_SefView() { return new global::RRentingProjekat.RRentingBaza.Views.SefView(); }
+        private object Activate_12_SignupKorisnik() { return new global::RRentingProjekat.RRentingBaza.Views.SignupKorisnik(); }
+        private object Activate_13_KorisnikListView() { return new global::RRentingProjekat.RRentingBaza.Views.KorisnikListView(); }
+        private object Activate_14_Pocetna() { return new global::RRentingProjekat.RRentingBaza.Views.Pocetna(); }
+        private object Activate_15_RezervacijaListView() { return new global::RRentingProjekat.RRentingBaza.Views.RezervacijaListView(); }
+        private object Activate_16_SobaListView() { return new global::RRentingProjekat.RRentingBaza.Views.SobaListView(); }
+        private object Activate_17_Chart() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart(); }
+        private object Activate_19_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>(); }
+        private object Activate_21_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.Object>(); }
+        private object Activate_22_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.Object>(); }
+        private object Activate_23_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>(); }
+        private object Activate_28_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>(); }
+        private object Activate_29_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>(); }
+        private object Activate_31_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>(); }
+        private object Activate_34_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.ResourceDictionary>(); }
+        private object Activate_36_PieSeries() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries(); }
+        private object Activate_47_Statistika() { return new global::RRentingProjekat.RRentingBaza.Views.Statistika(); }
+        private object Activate_48_UvidSobaView() { return new global::RRentingProjekat.RRentingBaza.Views.UvidSobaView(); }
+        private object Activate_49_UvidUposlenikaView() { return new global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView(); }
+        private object Activate_50_ZahtjeviView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView(); }
+        private object Activate_51_ZahtjevListView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView(); }
+        private void VectorAdd_19_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>)instance;
             var newItem = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_20_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
-            var newItem = (global::System.Object)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_21_Collection(object instance, object item)
+        private void VectorAdd_21_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
@@ -340,35 +340,41 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
         }
         private void VectorAdd_22_Collection(object instance, object item)
         {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
+            var newItem = (global::System.Object)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_23_Collection(object instance, object item)
+        {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>)instance;
             var newItem = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_27_ObservableCollection(object instance, object item)
+        private void VectorAdd_28_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>)instance;
             var newItem = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_28_Collection(object instance, object item)
+        private void VectorAdd_29_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>)instance;
             var newItem = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_30_ObservableCollection(object instance, object item)
+        private void VectorAdd_31_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>)instance;
             var newItem = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_31_ReadOnlyCollection(object instance, object item)
+        private void VectorAdd_32_ReadOnlyCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>)instance;
             var newItem = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_33_Collection(object instance, object item)
+        private void VectorAdd_34_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.ResourceDictionary>)instance;
             var newItem = (global::Windows.UI.Xaml.ResourceDictionary)item;
@@ -435,58 +441,69 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaView
-                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_RezervacijaView;
+            case 8:   //  RRentingProjekat.RRentingBaza.Helper.DateConverter
+                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_8_DateConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  RRentingProjekat.RRentingBaza.Views.SefView
+            case 9:   //  Object
+                xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 10:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_SefView;
+                userType.Activator = Activate_10_RezervacijaView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  RRentingProjekat.RRentingBaza.Views.SignupKorisnik
+            case 11:   //  RRentingProjekat.RRentingBaza.Views.SefView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_SignupKorisnik;
+                userType.Activator = Activate_11_SefView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  RRentingProjekat.RRentingBaza.Views.KorisnikListView
+            case 12:   //  RRentingProjekat.RRentingBaza.Views.SignupKorisnik
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_KorisnikListView;
+                userType.Activator = Activate_12_SignupKorisnik;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  RRentingProjekat.RRentingBaza.Views.Pocetna
+            case 13:   //  RRentingProjekat.RRentingBaza.Views.KorisnikListView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_Pocetna;
+                userType.Activator = Activate_13_KorisnikListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaListView
+            case 14:   //  RRentingProjekat.RRentingBaza.Views.Pocetna
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_RezervacijaListView;
+                userType.Activator = Activate_14_Pocetna;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  RRentingProjekat.RRentingBaza.Views.SobaListView
+            case 15:   //  RRentingProjekat.RRentingBaza.Views.RezervacijaListView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_SobaListView;
+                userType.Activator = Activate_15_RezervacijaListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart
+            case 16:   //  RRentingProjekat.RRentingBaza.Views.SobaListView
+                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_SobaListView;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_15_Chart;
+                userType.Activator = Activate_17_Chart;
                 userType.SetContentPropertyName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart.Series");
                 userType.AddMemberName("Series");
                 userType.AddMemberName("Axes");
@@ -502,49 +519,45 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 16:   //  Windows.UI.Xaml.Controls.Control
+            case 18:   //  Windows.UI.Xaml.Controls.Control
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>
+            case 19:   //  System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_17_Collection;
+                userType.CollectionAdd = VectorAdd_19_Collection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 18:   //  Object
-                xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 19:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries
+            case 20:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.AddMemberName("LegendItems");
                 xamlType = userType;
                 break;
 
-            case 20:   //  System.Collections.ObjectModel.ObservableCollection`1<Object>
+            case 21:   //  System.Collections.ObjectModel.ObservableCollection`1<Object>
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Object>"));
-                userType.CollectionAdd = VectorAdd_20_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_21_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 21:   //  System.Collections.ObjectModel.Collection`1<Object>
-                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_21_Collection;
-                userType.CollectionAdd = VectorAdd_21_Collection;
-                xamlType = userType;
-                break;
-
-            case 22:   //  System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>
+            case 22:   //  System.Collections.ObjectModel.Collection`1<Object>
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_22_Collection;
                 userType.CollectionAdd = VectorAdd_22_Collection;
                 xamlType = userType;
                 break;
 
-            case 23:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis
+            case 23:   //  System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>
+                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_23_Collection;
+                userType.CollectionAdd = VectorAdd_23_Collection;
+                xamlType = userType;
+                break;
+
+            case 24:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.AddMemberName("Orientation");
                 userType.AddMemberName("RegisteredListeners");
@@ -552,7 +565,7 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 24:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.AxisOrientation
+            case 25:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.AxisOrientation
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AxisOrientation.None);
                 userType.AddEnumValue("X", global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AxisOrientation.X);
@@ -560,72 +573,72 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 25:   //  System.Enum
+            case 26:   //  System.Enum
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 26:   //  System.ValueType
+            case 27:   //  System.ValueType
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 27:   //  System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>
+            case 28:   //  System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>"));
-                userType.CollectionAdd = VectorAdd_27_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_28_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 28:   //  System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>
+            case 29:   //  System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_28_Collection;
-                userType.CollectionAdd = VectorAdd_28_Collection;
+                userType.Activator = Activate_29_Collection;
+                userType.CollectionAdd = VectorAdd_29_Collection;
                 xamlType = userType;
                 break;
 
-            case 29:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener
+            case 30:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 xamlType = userType;
                 break;
 
-            case 30:   //  System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>
+            case 31:   //  System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>"));
-                userType.CollectionAdd = VectorAdd_30_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_31_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 31:   //  System.Collections.ObjectModel.ReadOnlyCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>
+            case 32:   //  System.Collections.ObjectModel.ReadOnlyCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_31_ReadOnlyCollection;
+                userType.CollectionAdd = VectorAdd_32_ReadOnlyCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 32:   //  Windows.UI.Xaml.Style
+            case 33:   //  Windows.UI.Xaml.Style
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 33:   //  System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>
+            case 34:   //  System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_33_Collection;
+                userType.CollectionAdd = VectorAdd_34_Collection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 34:   //  Windows.UI.Xaml.ResourceDictionary
+            case 35:   //  Windows.UI.Xaml.ResourceDictionary
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 35:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries
+            case 36:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries"));
-                userType.Activator = Activate_35_PieSeries;
+                userType.Activator = Activate_36_PieSeries;
                 userType.AddMemberName("Palette");
                 xamlType = userType;
                 break;
 
-            case 36:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries
+            case 37:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series"));
                 userType.AddMemberName("IndependentValuePath");
                 userType.AddMemberName("DependentValuePath");
@@ -642,7 +655,7 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 37:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.Series
+            case 38:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.Series
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.AddMemberName("SeriesHost");
                 userType.AddMemberName("LegendItems");
@@ -650,25 +663,25 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 38:   //  String
+            case 39:   //  String
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 39:   //  Boolean
+            case 40:   //  Boolean
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 40:   //  Windows.UI.Xaml.Data.Binding
+            case 41:   //  Windows.UI.Xaml.Data.Binding
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 41:   //  System.Collections.IEnumerable
+            case 42:   //  System.Collections.IEnumerable
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 42:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence
+            case 43:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Simultaneous", global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence.Simultaneous);
                 userType.AddEnumValue("FirstToLast", global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence.FirstToLast);
@@ -676,46 +689,53 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 43:   //  Windows.UI.Xaml.Media.Animation.EasingFunctionBase
+            case 44:   //  Windows.UI.Xaml.Media.Animation.EasingFunctionBase
                 xamlType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 44:   //  TimeSpan
+            case 45:   //  TimeSpan
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 45:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost
+            case 46:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 46:   //  RRentingProjekat.RRentingBaza.Views.Statistika
+            case 47:   //  RRentingProjekat.RRentingBaza.Views.Statistika
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_46_Statistika;
+                userType.Activator = Activate_47_Statistika;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 47:   //  RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView
+            case 48:   //  RRentingProjekat.RRentingBaza.Views.UvidSobaView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_47_UvidUposlenikaView;
+                userType.Activator = Activate_48_UvidSobaView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 48:   //  RRentingProjekat.RRentingBaza.Views.ZahtjeviView
+            case 49:   //  RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_48_ZahtjeviView;
+                userType.Activator = Activate_49_UvidUposlenikaView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 49:   //  RRentingProjekat.RRentingBaza.Views.ZahtjevListView
+            case 50:   //  RRentingProjekat.RRentingBaza.Views.ZahtjeviView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_49_ZahtjevListView;
+                userType.Activator = Activate_50_ZahtjeviView;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 51:   //  RRentingProjekat.RRentingBaza.Views.ZahtjevListView
+                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_51_ZahtjevListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

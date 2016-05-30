@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="WhiteSmoke" Margin="0,0,0,0">
+    <Grid Background="White" Margin="0,0,0,0">
 
         <StackPanel>
             <Image x:Name="image2"  Margin="0,0,0,0" Source="natpis.png" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="100"/>

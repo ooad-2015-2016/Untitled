@@ -1147,3 +1147,8 @@ C:\Users\Ljevo\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\Multiple
 C:\Users\Ljevo\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\WinRTXamlToolkit.Controls.DataVisualization.pri.xml
 C:\Users\Ljevo\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\WinRTXamlToolkit.pri.xml
 C:\Users\Ljevo\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidSobaView.g.i.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidSobaView.g.cs
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidSobaView.xaml
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\UvidSobaView.xbf
+C:\Users\XMAN\Desktop\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\RRentingBaza\Views\UvidSobaView.xbf

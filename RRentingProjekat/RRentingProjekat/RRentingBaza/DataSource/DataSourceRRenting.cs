@@ -13,12 +13,13 @@ namespace RRentingProjekat.RRentingBaza.DataSource
         private static List<Korisnik> korisnici = new List<Korisnik>()
         {
             new Sef("AdminIme", "AdminPrezime", "033/555-555", "AdresaHotela", "AdminPass", "admin@gmail.com", 01),
-            new Osoblje("Osoblje1Ime", "Osoblje1Prezime", "033/111-555", "AdresaOsoblje1", "Osoblje1Pass", "osoblje1@gmail.com", 02),
+            new Osoblje("Ana", "Simone", "033/111-555", "California Beach 12" , "APass", "ana@gmail.com", 02),
+            new Osoblje("Michael", "Winehouse", "033/111-555", "LA Street 2", "MPass", "michael@gmail.com", 02),
             new Recepcioner("RecepIme", "RecepPrezime", "033/333-555", "AdresaRecep", "RecepPass", "recep@gmail.com", 03)
 
         };
 
-        internal static IList<Korisnik> DajSveKorisnike()
+        internal static List<Korisnik> DajSveKorisnike()
         {
             return korisnici;
         }
@@ -59,18 +60,18 @@ namespace RRentingProjekat.RRentingBaza.DataSource
              new Soba(2, 2, StatusSobe.Rezervisana, 100, 4),
               new Soba(3, 3, StatusSobe.Slobodna, 30, 2),
                new Soba(4, 4, StatusSobe.Zauzeta, 150, 5),
-             new Soba(5, 5, StatusSobe.Slobodna, 50, 3),
-            new Soba(6, 6, StatusSobe.Zauzeta, 150, 5),
-             new Soba(7, 7, StatusSobe.Rezervisana, 50,3),
-             new Soba(8, 8, StatusSobe.Slobodna, 150, 5),
-             new Soba(9, 9, StatusSobe.Zauzeta, 150, 5),
-             new Soba(10, 10, StatusSobe.Slobodna, 150, 5)
+                 new Soba(5, 5, StatusSobe.Slobodna, 50, 3),
+                new Soba(6, 6, StatusSobe.Zauzeta, 150, 5),
+                 new Soba(7, 4, StatusSobe.Rezervisana, 50,3),
+                 new Soba(8, 3, StatusSobe.Slobodna, 350, 5),
+                 new Soba(9, 5, StatusSobe.Zauzeta, 400, 4),
+                 new Soba(10, 6, StatusSobe.Slobodna, 450, 5)
 
 
 
         };
 
-        internal static IList<Soba> DajSveSobe()
+        internal static List<Soba> DajSveSobe()
         {
             return sobe;
         }

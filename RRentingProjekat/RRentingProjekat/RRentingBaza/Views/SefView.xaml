@@ -8,33 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="WhiteSmoke" Margin="0,0,0,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="130" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="80" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="80" />
-            <RowDefinition Height="80" />
+        <StackPanel>
+            <Image x:Name="image2"  Margin="0,0,0,0" Source="natpis.png" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="80"/>
+            <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" Grid.Column="1" Height="100"/>
+
+            <Button Name="btnSobe" Margin="0,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"  Content="Sobe" Foreground="WhiteSmoke" Command="{Binding Path= Sobe}" Background="DarkRed" FontWeight="Medium" Width="150"></Button>
             
-        </Grid.RowDefinitions>
-        <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" Grid.Column="1" Height="100"/>
-        <ListBox HorizontalAlignment="Left" Margin="30,0,0,0"
-                    ItemsSource="{Binding Path=RRenting.Sobe}" 
-                    DisplayMemberPath="BrojSobe" SelectedItem="{Binding Path=Soba.BrojSobe}"
-                    Grid.Row="2"></ListBox>
-        <Button Name="btnSoba" Margin="30,0,0,0"  Grid.Row="2" Grid.Column="1" Click="btnSoba_Click"  Foreground="WhiteSmoke" Content="Prikaži sobu" Command="{Binding Path= Soba1}" Background="DarkRed" FontWeight="Medium" >
-        </Button>
+            <Button Name="btnUposlenici" Margin="0,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"  Content="Zaposleni" Foreground="WhiteSmoke" Command="{Binding Path= Uposlenici}" Background="DarkRed" FontWeight="Medium" Width="150"></Button>
+            <Button Name="btnStatistika" Margin="0,10,0,0"  Width="150" VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="WhiteSmoke" Click="btnStatistika_Click" Content="Statistika" Command="{Binding Path= Statistika}" Background="DarkRed" FontWeight="Medium"></Button>
 
-        <TextBlock Name="labelDoNabavke" Grid.Row="4" Text="Do nabavke:"  Margin="10,0,10,0" FontWeight="Medium"/>
-        <TextBlock Name="labelNabavka" Grid.Row="4" Grid.Column="1"  Margin="10,0,10,0"/>
-
-        <Button Name="btnUposlenici" Margin="30,0,0,0" Grid.Row="6" Grid.Column="1" Content="Zaposleni" Foreground="WhiteSmoke" Command="{Binding Path= Uposlenici}" Background="DarkRed" FontWeight="Medium" ></Button>
-        <Button Name="btnStatistika" Margin="30,0,0,0"  Grid.Row="5" Grid.Column="1" Foreground="WhiteSmoke" Click="btnStatistika_Click" Content="Statistika" Command="{Binding Path= Statistika}" Background="DarkRed" FontWeight="Medium"></Button>
-
+        </StackPanel>
     </Grid>
 </Page>

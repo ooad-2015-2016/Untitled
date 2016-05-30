@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +13,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using RRentingProjekat.RRentingBaza.ViewModels;
+using RRentingProjekat.RRentingBaza.DataSource;
+using Windows.UI.Core;
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace RRentingProjekat.RRentingBaza.Views
@@ -21,29 +23,29 @@ namespace RRentingProjekat.RRentingBaza.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SefView : Page
+    public sealed partial class UvidSobaView : Page
     {
-        public SefView()
+        public UvidSobaView()
         {
             this.InitializeComponent();
 
-            NavigationCacheMode = NavigationCacheMode.Required;
+            //staviti da se vidi back
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
         }
 
-       
-       
-        private void btnStatistika_Click(object sender, RoutedEventArgs e)
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Statistika));
-
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
         }
-
-       
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            DataContext = (SefViewModel)e.Parameter;
+            DataContext = (SefUvidSobeViewModel)e.Parameter;
         }
-
-       
     }
 }

@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Lokacija" />
     <RootPropertyPathName Name="Izlaz" />
@@ -38,12 +41,9 @@
     <RootPropertyPathName Name="Ljubimac" />
     <RootPropertyPathName Name="BrojDjece" />
     <RootPropertyPathName Name="BrojOdraslih" />
-    <RootPropertyPathName Name="BrojSobe" />
     <RootPropertyPathName Name="Statistika" />
     <RootPropertyPathName Name="Uposlenici" />
-    <RootPropertyPathName Name="Soba1" />
     <RootPropertyPathName Name="Sobe" />
-    <RootPropertyPathName Name="Soba" />
     <RootPropertyPathName Name="SignupKorisnika" />
     <RootPropertyPathName Name="UAdresa" />
     <RootPropertyPathName Name="UTelefon" />
@@ -69,6 +69,9 @@
     <RootPropertyPathName Name="Status" />
     <RootPropertyPathName Name="BrojKreveta" />
     <RootPropertyPathName Name="CijenaSobe" />
+    <RootPropertyPathName Name="BrojSobe" />
+    <RootPropertyPathName Name="SobeOpis" />
+    <RootPropertyPathName Name="OsobljeOpis" />
     <RootPropertyPathName Name="obavljenZahtjev" />
     <RootPropertyPathName Name="brojSobe" />
   </Roots.PropertyPathNames>
@@ -78,8 +81,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
-      <RootProperty Name="Transitions" />
       <RootProperty Name="Resources" />
+      <RootProperty Name="Transitions" />
       <RootProperty Name="Height" />
       <RootEvent Name="Loaded" />
     </RootType>
@@ -184,6 +187,8 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="IsReadOnly" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
@@ -213,6 +218,7 @@
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.PlacanjeView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RecepcionerView" />
+    <RootType FullName="RRentingProjekat.RRentingBaza.Helper.DateConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Name" />
       <RootProperty Name="Date" />
@@ -221,6 +227,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.SefView" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
@@ -238,7 +245,6 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Pocetna" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaListView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
       <RootProperty Name="Content" />
@@ -258,6 +264,13 @@
       <RootProperty Name="IsSelectionEnabled" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Statistika" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
+      <RootMethod Name="GetVerticalScrollMode" />
+      <RootMethod Name="SetVerticalScrollMode" />
+    </RootType>
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.UvidSobaView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="HorizontalAlignment" />

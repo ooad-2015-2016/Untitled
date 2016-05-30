@@ -119,6 +119,7 @@
     <Compile Include="RRentingBaza\ViewModels\OsobljeViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\PlacanjeViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\RecepcionerViewModel.cs" />
+    <Compile Include="RRentingBaza\ViewModels\SefUvidSobeViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\SefUvidUposlenikaViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\SefViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\StatistikaViewModel.cs" />
@@ -184,6 +185,9 @@
     </Compile>
     <Compile Include="RRentingBaza\Views\Statistika.xaml.cs">
       <DependentUpon>Statistika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RRentingBaza\Views\UvidSobaView.xaml.cs">
+      <DependentUpon>UvidSobaView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\UvidUposlenikaView.xaml.cs">
       <DependentUpon>UvidUposlenikaView.xaml</DependentUpon>
@@ -270,6 +274,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RRentingBaza\Views\Statistika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RRentingBaza\Views\UvidSobaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

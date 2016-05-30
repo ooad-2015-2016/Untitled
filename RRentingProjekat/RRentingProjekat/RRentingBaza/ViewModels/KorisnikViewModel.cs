@@ -34,7 +34,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public KorisnikViewModel()
         {
             NavigationServis = new NavigationService();
-            RegistrovaniKorisnik = new Gost();
+
             UIme = "";
             UPassword = "";
             UPrezime = "";
@@ -89,9 +89,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                     var dialog = new MessageDialog("Prijava uspješno završena. Dobrodošli!", "Uspješna prijava");
                     await dialog.ShowAsync();
 
-                    Gost novi = new Gost(UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
-                    db.Gosti.Add(novi);
-                    db.SaveChanges();
+                    RegistrovaniKorisnik = new Gost(UIme, UPrezime, UTelefon, UAdresa, UPassword, UEmail, 0);
+                   
                     NavigationServis.Navigate(typeof(RezervacijaListView), new RezervacijaViewModel(this));
                 }
             }
