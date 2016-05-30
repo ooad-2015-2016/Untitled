@@ -8,6 +8,7 @@
     xmlns:models="using:RRentingProjekat.RRentingBaza.Models"
     xmlns:triggers="using:RRentingProjekat.RRentingBaza.Helper"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:converter="using:KompShopMVVM.KompShop.Helper"
     mc:Ignorable="d"
     Loaded="Page_Loaded">
 
@@ -58,8 +59,8 @@ Margin="10,10,0,0" TextWrapping="Wrap" Text="Način plaćanja" VerticalAlignment
         <ListBox Name="NacinPlacanjaListBox" Grid.Row="8" Grid.Column="1"
 HorizontalAlignment="Stretch" Margin="3,3,3,3" ItemsSource="{Binding Placanje, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" SelectedItem="{Binding Path=IzabraniNacin, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ListBox>
 
-        <DatePicker Name="Dolazak" Date="{Binding Path=Dolazak, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
-        <DatePicker Name="Odlazak" Date="{Binding Path=Odlazak, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
+        <DatePicker Name="Dolazak" Date="{Binding Path=Dolazak, Mode=TwoWay, Converter={StaticResource theDateConverter}}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="3" VerticalAlignment="Top" Height="38" />
+        <DatePicker Name="Odlazak" Date="{Binding Path=Odlazak, Mode=TwoWay, Converter={StaticResource theDateConverter}}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
         <Button Name="buttonDodaj" Content="Rezerviši" HorizontalAlignment="Stretch" Background="DarkRed" Foreground="White"
 Margin="10,5,10,0" Grid.Row="10" VerticalAlignment="Top" Height="32"  Command="{Binding Path= DodajRezervaciju}" />
 

@@ -32,13 +32,11 @@ namespace RRentingProjekat
         public App()
         {
 
-           
             using (var db = new RRentingDbContext())
             {
                 db.Database.ApplyMigrations();
                 DefaultPodaci.Initialize(db);
             }
-            
 
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |

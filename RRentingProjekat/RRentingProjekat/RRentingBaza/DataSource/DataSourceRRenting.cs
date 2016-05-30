@@ -58,7 +58,15 @@ namespace RRentingProjekat.RRentingBaza.DataSource
             new Soba(1, 1, StatusSobe.Slobodna, 50, 3),
              new Soba(2, 2, StatusSobe.Rezervisana, 100, 4),
               new Soba(3, 3, StatusSobe.Slobodna, 30, 2),
-               new Soba(4, 4, StatusSobe.Zauzeta, 150, 5)
+               new Soba(4, 4, StatusSobe.Zauzeta, 150, 5),
+             new Soba(5, 5, StatusSobe.Slobodna, 50, 3),
+            new Soba(6, 6, StatusSobe.Zauzeta, 150, 5),
+             new Soba(7, 7, StatusSobe.Rezervisana, 50,3),
+             new Soba(8, 8, StatusSobe.Slobodna, 150, 5),
+             new Soba(9, 9, StatusSobe.Zauzeta, 150, 5),
+             new Soba(10, 10, StatusSobe.Slobodna, 150, 5)
+
+
 
         };
 

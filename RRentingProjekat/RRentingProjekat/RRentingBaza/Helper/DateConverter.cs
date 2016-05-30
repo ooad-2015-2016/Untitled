@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Data;
 
-namespace RRentingProjekat.RRentingBaza.Helper
+namespace KompShopMVVM.KompShop.Helper
 {
     class DateConverter : IValueConverter
     {

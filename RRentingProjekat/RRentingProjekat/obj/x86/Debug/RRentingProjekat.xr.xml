@@ -133,6 +133,7 @@
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="Mode" />
       <RootProperty Name="ElementName" />
+      <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="Name" />
@@ -237,6 +238,7 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Pocetna" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RezervacijaListView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
       <RootProperty Name="Content" />
