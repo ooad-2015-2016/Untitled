@@ -73,15 +73,15 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         private void SaveObject()
         {
 
-            using (var db = new RRentingDbContext())
-            {
-                gost = db.Gosti.Where(x => x.Email == Parent.PrijavljeniGost.Email && x.Sifra == Parent.PrijavljeniGost.Sifra && x.SigurnosniID == 0).FirstOrDefault();
+       //     using (var db = new RRentingDbContext())
+         //   {
+           //     gost = db.Gosti.Where(x => x.Email == Parent.PrijavljeniGost.Email && x.Sifra == Parent.PrijavljeniGost.Sifra && x.SigurnosniID == 0).FirstOrDefault();
 
                 if (gost != null)
                 {
                     gost.dodijeliOcjenu(Convert.ToInt32(IzabranaOcjena));
                 }
-            }
+            //}
 
             //update changes
             using (var rdb = new RRentingDbContext())
@@ -95,22 +95,31 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public GostViewModel(PrijavaViewModel parent)
         {
             NavigationServis = new NavigationService();
+            this.Parent = parent;
 
-            Ocjene = _myList;
+            using (var db = new RRentingDbContext())
+            {
+                gost = db.Gosti.Where(x => x.Email == Parent.PrijavljeniGost.Email && x.Sifra == Parent.PrijavljeniGost.Sifra && x.SigurnosniID == 0).FirstOrDefault();
 
+                if (gost != null)
+                {
+                    Ocjene = _myList;
 
+                    Dodaj = new RelayCommand<object>(dodajZahtjev, mozeLiDodatiZahtjev);
+                    Izlaz = new RelayCommand<object>(izlaz, mozeLiIzaci);
 
-            Dodaj = new RelayCommand<object>(dodajZahtjev, mozeLiDodatiZahtjev);
-            Izlaz = new RelayCommand<object>(izlaz, mozeLiIzaci);
-           
-            this.Parent = parent;          
+                    
+                }
+            }
+
+               
             
         }
 
         private void dodajZahtjev(object parametar)
         {
             
-            NavigationServis.Navigate(typeof(ZahtjeviView), new ZahtjevViewModel(this));
+            NavigationServis.Navigate(typeof(ZahtjeviView), new ZahtjevViewModel(this, this.Parent));
         }
 
        

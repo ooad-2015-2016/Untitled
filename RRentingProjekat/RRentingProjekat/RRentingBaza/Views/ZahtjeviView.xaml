@@ -13,11 +13,11 @@
     <Grid Background="WhiteSmoke" Margin="0,0,0,0">
         <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" Height="100"/>
         <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="141,157,0,0" VerticalAlignment="Top" Width="100" BorderBrush="DarkRed"/>
-        <CheckBox x:Name="checkBox1" BorderBrush="DarkRed" Content="Pospremanje sobe" HorizontalAlignment="Left" Margin="102,78,0,0" VerticalAlignment="Top" FontSize="20" IsChecked="True"/>
-        <CheckBox x:Name="checkBox2" BorderBrush="DarkRed" Content="Promjena posteljine" HorizontalAlignment="Left" Margin="102,115,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <CheckBox x:Name="checkBox3" BorderBrush="DarkRed" Content="Bacanje otpada" HorizontalAlignment="Left" Margin="102,152,0,0" VerticalAlignment="Top" FontSize="20" Width="179"/>
-        <CheckBox x:Name="checkBox4" BorderBrush="DarkRed" Content="Servis" HorizontalAlignment="Left" Margin="102,185,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="DodajZahtjev" BorderBrush="DarkRed" Foreground="WhiteSmoke" Content="Dodaj Zahtjeve" Margin="0,180,0,0" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center" Background="DarkRed" FontWeight="Medium"></Button>
+        <CheckBox x:Name="checkBox1" IsChecked="{Binding Zahtjev1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" BorderBrush="DarkRed" Content="Pospremanje sobe" HorizontalAlignment="Left" Margin="102,78,0,0" VerticalAlignment="Top" FontSize="20" />
+        <CheckBox x:Name="checkBox2" IsChecked="{Binding Zahtjev2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" BorderBrush="DarkRed" Content="Promjena posteljine" HorizontalAlignment="Left" Margin="102,115,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <CheckBox x:Name="checkBox3" IsChecked="{Binding Zahtjev3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" BorderBrush="DarkRed" Content="Bacanje otpada" HorizontalAlignment="Left" Margin="102,152,0,0" VerticalAlignment="Top" FontSize="20" Width="179"/>
+        <CheckBox x:Name="checkBox4" IsChecked="{Binding Zahtjev4, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" BorderBrush="DarkRed" Content="Servis" HorizontalAlignment="Left" Margin="102,185,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="DodajZahtjev" BorderBrush="DarkRed" Foreground="WhiteSmoke" Content="Dodaj Zahtjeve" Command="{Binding Path= DodajZahtjev}" Margin="0,180,0,0" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center" Background="DarkRed" FontWeight="Medium"></Button>
         
     </Grid>
 </Page>
