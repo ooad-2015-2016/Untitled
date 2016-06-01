@@ -10,6 +10,8 @@ using RRentingProjekat.RRentingBaza.Helper;
 using RRentingProjekat.RRentingBaza.Views;
 using System.ComponentModel;
 using Windows.UI.Popups;
+using Windows.UI.Xaml.Controls;
+using System.Collections.ObjectModel;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
@@ -21,6 +23,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public Soba Soba_ { get; set; }
         public int brojSobe_ { get; set; }
         public ICommand SpasiPromjene { get; set; }
+        public ICommand PrikaziZahtjeve { get; set; }
 
         private List<String> listaSoba;
         public List<String> ListaSoba
@@ -37,19 +40,19 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         }
 
         private int brojSobe;
-
+        /*
         private List<String> listaZahtjevaSobe;
         public List<String> ListaZahtjevaSobe
         {
             get { return listaZahtjevaSobe; }
             set { OnPropertyChanged("ListaZahtjevaSobe"); listaZahtjevaSobe = value;  }
         }
-
+        */
         private String izabraniZahtjevSobe;
         public String IzabraniZahtjevSobe
         {
             get { return izabraniZahtjevSobe; }
-            set { izabraniZahtjevSobe = value; OnPropertyChanged("IzabraniZahtjevSobe"); }
+            set { OnPropertyChanged("IzabraniZahtjevSobe");  izabraniZahtjevSobe = value;  }
         }
 
         private Boolean obavljeno;
@@ -60,9 +63,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         }
 
         Zahtjev IzvrsenZahtjev;
-
-
-
+        public ObservableCollection<String> MyItemsSource { get; set;  }
 
 
         public OsobljeViewModel(PrijavaViewModel parent)
@@ -70,6 +71,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
             this.Parent = parent;
             ListaSoba = new List<String>();
+            MyItemsSource = new ObservableCollection<String>();
 
             using (var db = new RRentingDbContext())
             {
@@ -79,29 +81,49 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                     if (z.obavljenZahtjev == false && !ListaSoba.Contains(z.brojSobe.ToString()))
                      ListaSoba.Add(z.brojSobe.ToString());
                 }
-
-                IzabranaSoba = ListaSoba.FirstOrDefault();
-                if (IzabranaSoba != null)
-                    {
-                    brojSobe = Convert.ToInt32(IzabranaSoba);
-                        ListaZahtjevaSobe = new List<string>();
-                        foreach (Zahtjev z in db.Zahtjevi)
-                        {
-                            if (z.obavljenZahtjev == false && z.brojSobe == brojSobe)
-                                ListaZahtjevaSobe.Add(z.nazivZahtjeva);
-                        }
-                    }
             }
-            
+
+            PrikaziZahtjeve = new RelayCommand<object>(prikazListeZahtjeva);
             SpasiPromjene = new RelayCommand<object>(spasiPromjene, mozeLiUpdateovati);
         }
+
+        private async void prikazListeZahtjeva(object parametar)
+        {
+            if (IzabranaSoba != null)
+            {
+               
+                brojSobe = Convert.ToInt32(IzabranaSoba);
+                var dialg = new MessageDialog("Izabrali ste sobu: " + brojSobe, "Obavijest");
+                await dialg.ShowAsync();
+
+                MyItemsSource.Clear();
+                using (var db = new RRentingDbContext())
+                {
+                    foreach (Zahtjev z in db.Zahtjevi)
+                    {
+                        if (z.obavljenZahtjev == false && z.brojSobe == brojSobe)
+                            MyItemsSource.Add(z.nazivZahtjeva);
+                      
+                    }
+                }
+
+                
+                MyItemsSource.CollectionChanged += MyItemsSource_CollectionChanged;
+
+            }
+            else
+            {
+                var dialg = new MessageDialog("Niste izabrali broj sobe!","Obavijest");
+                await dialg.ShowAsync();
+            }
+        }
+
 
 
 
         private async void spasiPromjene(object parametar)
         {
-            var dialg = new MessageDialog("Soba " + IzabranaSoba + ".", "Obavijest");
-            await dialg.ShowAsync();
+       
             if (Obavljeno)
             {
                 using (var db = new RRentingDbContext())
@@ -121,6 +143,9 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                     var dialog = new MessageDialog("Obaviili ste zahtjev: "+ izabraniZahtjevSobe + " za sobu broj: " + IzabranaSoba + ".", "Obavijest");
                     await dialog.ShowAsync();
 
+                    MyItemsSource.Clear();
+                    MyItemsSource.CollectionChanged += MyItemsSource_CollectionChanged;
+
                 }
             }
             else
@@ -134,25 +159,17 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             return true;
         }
 
+        void MyItemsSource_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            OnPropertyChanged("MyItemsSource");
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-                using (var db = new RRentingDbContext())
-                {
-                    if (IzabranaSoba != null)
-                    {
-                        brojSobe = Convert.ToInt32(IzabranaSoba);
-                        ListaZahtjevaSobe = new List<string>();
-                        foreach (Zahtjev z in db.Zahtjevi)
-                        {
-                            if (z.obavljenZahtjev == false && z.brojSobe == brojSobe)
-                                ListaZahtjevaSobe.Add(z.nazivZahtjeva);
-                        }
-                    }
-                }
             }
         }
 

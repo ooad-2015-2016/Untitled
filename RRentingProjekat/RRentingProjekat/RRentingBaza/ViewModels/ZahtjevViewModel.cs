@@ -125,11 +125,12 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                     foreach (Zahtjev z in listaZahtjeva)
                     {
                         db.Zahtjevi.Add(z);
+                        db.SaveChanges();
                     }
-                    db.SaveChanges();
+                    
 
 
-                    var dialog = new MessageDialog("Zahtjevi su uspješno poslani za sobu" + gost.brojSobe + "!\nŽelimo Vam ugodan boravak!", "Poslani zahtjevi");
+                    var dialog = new MessageDialog("Zahtjevi su uspješno poslani za sobu: " + gost.brojSobe + "!\nŽelimo Vam ugodan boravak!", "Poslani zahtjevi");
                     await dialog.ShowAsync();
 
                     //ovo dole nesto nece 
