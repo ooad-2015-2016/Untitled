@@ -22,25 +22,27 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public int brojSobe_ { get; set; }
         public ICommand SpasiPromjene { get; set; }
 
-        private List<int> listaSoba;
-        public List<int> ListaSoba
+        private List<String> listaSoba;
+        public List<String> ListaSoba
         {
             get { return listaSoba; }
-            set { listaSoba = value; OnPropertyChanged("ListaSoba"); }
+            set { OnPropertyChanged("ListaSoba");  listaSoba = value;  }
         }
 
-        private int izabranaSoba;
-        public int IzabranaSoba
+        private String izabranaSoba;
+        public String IzabranaSoba
         {
             get { return izabranaSoba; }
-            set { izabranaSoba = value; OnPropertyChanged("IzabranaSoba"); }
+            set { OnPropertyChanged("IzabranaSoba"); izabranaSoba = value;  }
         }
+
+        private int brojSobe;
 
         private List<String> listaZahtjevaSobe;
         public List<String> ListaZahtjevaSobe
         {
             get { return listaZahtjevaSobe; }
-            set { listaZahtjevaSobe = value; OnPropertyChanged("ListaZahtjevaSobe"); }
+            set { OnPropertyChanged("ListaZahtjevaSobe"); listaZahtjevaSobe = value;  }
         }
 
         private String izabraniZahtjevSobe;
@@ -67,44 +69,56 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             NavigationServis = new NavigationService();
             this.Parent = parent;
+            ListaSoba = new List<String>();
 
             using (var db = new RRentingDbContext())
             {
             
-                foreach (Zahtjev z in db.Zahtjevi.Where(z=>z.obavljenZahtjev == false))
+                foreach (Zahtjev z in db.Zahtjevi)
                 {
-                    ListaSoba.Add(z.brojSobe);
+                    if (z.obavljenZahtjev == false && !ListaSoba.Contains(z.brojSobe.ToString()))
+                     ListaSoba.Add(z.brojSobe.ToString());
                 }
-                IzabranaSoba = ListaSoba.LastOrDefault();
 
-                ListaZahtjevaSobe = new List<string>();
-                foreach(Zahtjev z in db.Zahtjevi.Where( x=> x.obavljenZahtjev == false && x.brojSobe == IzabranaSoba))
-                {
-                    ListaZahtjevaSobe.Add(z.nazivZahtjeva);
-                }
-                IzabraniZahtjevSobe = ListaZahtjevaSobe.FirstOrDefault();
-
-                IzvrsenZahtjev = db.Zahtjevi.Where(x => x.obavljenZahtjev == false && x.brojSobe == IzabranaSoba).FirstOrDefault();
-
-
+                IzabranaSoba = ListaSoba.FirstOrDefault();
+                if (IzabranaSoba != null)
+                    {
+                    brojSobe = Convert.ToInt32(IzabranaSoba);
+                        ListaZahtjevaSobe = new List<string>();
+                        foreach (Zahtjev z in db.Zahtjevi)
+                        {
+                            if (z.obavljenZahtjev == false && z.brojSobe == brojSobe)
+                                ListaZahtjevaSobe.Add(z.nazivZahtjeva);
+                        }
+                    }
             }
+            
             SpasiPromjene = new RelayCommand<object>(spasiPromjene, mozeLiUpdateovati);
         }
 
+
+
         private async void spasiPromjene(object parametar)
         {
+            var dialg = new MessageDialog("Soba " + IzabranaSoba + ".", "Obavijest");
+            await dialg.ShowAsync();
             if (Obavljeno)
             {
                 using (var db = new RRentingDbContext())
                 {
+                    brojSobe = Convert.ToInt32(IzabranaSoba);
+                    IzvrsenZahtjev = db.Zahtjevi.Where(x => x.obavljenZahtjev == false && x.brojSobe == brojSobe && x.nazivZahtjeva == IzabraniZahtjevSobe).FirstOrDefault();
 
+                    // prvo uklanjam zahtjev iz baze 
                     db.Zahtjevi.Remove(IzvrsenZahtjev);
-                    IzvrsenZahtjev.obavljenZahtjev = true;
-                    db.Zahtjevi.Add(IzvrsenZahtjev);
-
                     db.SaveChanges();
 
-                    var dialog = new MessageDialog("Izmjene su spašene!", "Obavijest");
+                    //zatim vracam taj zahtjev u bazu uz oznaku da je izvrsen
+                    IzvrsenZahtjev.obavljenZahtjev = true;
+                    db.Zahtjevi.Add(IzvrsenZahtjev);
+                    db.SaveChanges();
+
+                    var dialog = new MessageDialog("Obaviili ste zahtjev: "+ izabraniZahtjevSobe + " za sobu broj: " + IzabranaSoba + ".", "Obavijest");
                     await dialog.ShowAsync();
 
                 }
@@ -126,6 +140,19 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                using (var db = new RRentingDbContext())
+                {
+                    if (IzabranaSoba != null)
+                    {
+                        brojSobe = Convert.ToInt32(IzabranaSoba);
+                        ListaZahtjevaSobe = new List<string>();
+                        foreach (Zahtjev z in db.Zahtjevi)
+                        {
+                            if (z.obavljenZahtjev == false && z.brojSobe == brojSobe)
+                                ListaZahtjevaSobe.Add(z.nazivZahtjeva);
+                        }
+                    }
+                }
             }
         }
 
