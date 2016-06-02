@@ -17,13 +17,13 @@
     <RootPropertyPathName Name="UnosID" />
     <RootPropertyPathName Name="LoginGost" />
     <RootPropertyPathName Name="UnosMail" />
-    <RootPropertyPathName Name="nazivZahtjeva" />
+    <RootPropertyPathName Name="PrikaziZahtjeve" />
+    <RootPropertyPathName Name="ListaSoba" />
+    <RootPropertyPathName Name="IzabranaSoba" />
     <RootPropertyPathName Name="SpasiPromjene" />
-    <RootPropertyPathName Name="Obavljeno_" />
-    <RootPropertyPathName Name="RRenting" />
-    <RootPropertyPathName Name="Zahtjevi" />
-    <RootPropertyPathName Name="Zahtjev" />
-    <RootPropertyPathName Name="brojSobe_" />
+    <RootPropertyPathName Name="Obavljeno" />
+    <RootPropertyPathName Name="MyItemsSource" />
+    <RootPropertyPathName Name="IzabraniZahtjevSobe" />
     <RootPropertyPathName Name="PotvrdaUplate" />
     <RootPropertyPathName Name="CreateUplata" />
     <RootPropertyPathName Name="RfidKartica" />
@@ -72,8 +72,14 @@
     <RootPropertyPathName Name="BrojSobe" />
     <RootPropertyPathName Name="SobeOpis" />
     <RootPropertyPathName Name="OsobljeOpis" />
+    <RootPropertyPathName Name="DodajZahtjev" />
+    <RootPropertyPathName Name="Zahtjev4" />
+    <RootPropertyPathName Name="Zahtjev3" />
+    <RootPropertyPathName Name="Zahtjev2" />
+    <RootPropertyPathName Name="Zahtjev1" />
     <RootPropertyPathName Name="obavljenZahtjev" />
     <RootPropertyPathName Name="brojSobe" />
+    <RootPropertyPathName Name="nazivZahtjeva" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -98,6 +104,8 @@
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
@@ -111,6 +119,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -127,6 +136,7 @@
       <RootProperty Name="CommandParameter" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Height" />
+      <RootProperty Name="FontStyle" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Template" />
       <RootEvent Name="Click" />
@@ -146,7 +156,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderThickness" />
       <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.GostView" />
@@ -169,6 +180,7 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="FontStyle" />
       <RootProperty Name="Name" />
       <RootProperty Name="SelectionHighlightColor" />
     </RootType>
@@ -186,9 +198,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="IsReadOnly" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Height" />
-      <RootProperty Name="IsReadOnly" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
@@ -207,14 +219,20 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="IsChecked" />
-      <RootProperty Name="FontSize" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="FontStyle" />
+      <RootProperty Name="FontSize" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.Login" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Text" />
+    </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.OsobljeView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.PlacanjeView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.RecepcionerView" />
