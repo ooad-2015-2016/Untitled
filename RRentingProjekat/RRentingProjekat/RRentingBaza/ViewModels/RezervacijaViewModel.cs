@@ -102,6 +102,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                 izabraniNacin = value;
             }
         }
+        public Uplata uplata { get; set; }
 
         //ukoliko gost prelazi na rezervaciju iz signup
         public RezervacijaViewModel(RegistracijaViewModel rvm)
@@ -134,7 +135,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
             DodajRezervaciju = new RelayCommand<object>(rezervisi, mozeLiRezervisati);
             this.Id = System.Threading.Interlocked.Increment(ref m_Counter2);
-
+            this.uplata = kvm.uplata;
+            
             this.parent2 = kvm;
             rv = false;
         }
@@ -170,7 +172,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
                     Rezervacija nova = new Rezervacija(Convert.ToInt32(BrojOdraslih), Convert.ToInt32(BrojDjece), Dolazak, Odlazak, Parking, Ljubimac, Krevet, nacin);
                     Soba slobodnaSoba = DataSource.DataSourceRRenting.dajSlobodnuSobu(nova);
-
+                    if (this.uplata.RfidKartica != null) { nova.placeno = true; }
                     if (slobodnaSoba.CijenaSobe != 0)
                     {
                         int tiket = rnd.Next(1000);
