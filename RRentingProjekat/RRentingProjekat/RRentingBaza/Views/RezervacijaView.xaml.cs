@@ -61,6 +61,12 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             DataContext = (RezervacijaViewModel)e.Parameter;
         }
+
+        private void buttonCijena_Click(object sender, RoutedEventArgs e)
+        {
+            int cijena= Odlazak.Date.Year + Odlazak.Date.Month + Odlazak.Date.Day - (Dolazak.Date.Year + Dolazak.Date.Month + Dolazak.Date.Day) * Convert.ToInt32(BrojDjeceInput.Text)/2 * Convert.ToInt32(BrojOdraslihInput.Text) ;
+            textBoxCijena.Text = cijena + "KM";
+        }
     }
 
 }

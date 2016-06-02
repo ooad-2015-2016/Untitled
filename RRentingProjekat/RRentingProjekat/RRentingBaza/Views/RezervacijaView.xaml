@@ -67,6 +67,9 @@ HorizontalAlignment="Stretch" Margin="3,3,3,3" ItemsSource="{Binding Placanje, U
         <DatePicker Name="Odlazak" Date="{Binding Path=Odlazak, Mode=TwoWay, Converter={StaticResource theDateConverter}}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,3,3,3" Grid.Row="4" VerticalAlignment="Top" Height="38" />
         <Button Name="buttonDodaj" Content="Dodaj" HorizontalAlignment="Stretch" Background="DarkRed" Foreground="White"
 Margin="0,10,10,0" Grid.Row="10" VerticalAlignment="Top" Height="32"  Command="{Binding Path= DodajRezervaciju}" Click="buttonDodaj_Click"/>
+        <Button Name="buttonCijena" Content="Obračunaj Cijenu" HorizontalAlignment="Stretch" Background="DarkRed" Foreground="White"
+Margin="0,10,10,0" Grid.Row="10" VerticalAlignment="Top" Height="32"  Grid.Column="1" Click="buttonCijena_Click" />
+        <TextBox x:Name="textBoxCijena" Grid.Column="1" HorizontalAlignment="Left" Margin="3,47,0,0" Grid.Row="10" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" IsReadOnly="True"/>
 
 
 
