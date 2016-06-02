@@ -27,6 +27,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public string UTelefon { get; set; }
         public string UEmail { get; set; }
         public string UPassword { get; set; }
+        public Uplata uplata { get; set; }
 
         public INavigacija NavigationServis { get; set; }
         public ICommand SignupKorisnika { get; set; }
@@ -41,10 +42,25 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             UAdresa = "";
             UEmail = "";
             UTelefon = "";
-
+            uplata = new Uplata();
             SignupKorisnika = new RelayCommand<object>(signup, mozeLiSeRegistrovati);
             this.Id = System.Threading.Interlocked.Increment(ref m_Counter);
 
+
+        }
+        public KorisnikViewModel(Uplata u)
+        {
+            NavigationServis = new NavigationService();
+            uplata = u;
+            UIme = "";
+            UPassword = "";
+            UPrezime = "";
+            UAdresa = "";
+            UEmail = "";
+            UTelefon = "";
+
+            SignupKorisnika = new RelayCommand<object>(signup, mozeLiSeRegistrovati);
+            this.Id = System.Threading.Interlocked.Increment(ref m_Counter);
 
         }
         public bool mozeLiSeRegistrovati(object parametar)
@@ -96,6 +112,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             }
 
 
+
         }
+
     }
 }

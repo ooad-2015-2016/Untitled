@@ -39,8 +39,12 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         private void potvrda(object parametar)
         {
             Uplata uplata = CreateUplata;
-            if(uplata!=null)
-            NavigationServis.Navigate(typeof(RecepcionerView), new RecepcionerViewModel(uplata));
+            if (uplata != null) {
+
+                NNavigationServis.Navigate(typeof(KorisnikListView), new KorisnikViewModel(CreateUplata));
+
+            }
+            
         }
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
