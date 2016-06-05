@@ -58,4 +58,24 @@ Kako je omogućena prijava u sistem sa različitim privilegijama, šef objekta i
 5.	**Sistem za autorizaciju kartica** – sistem koji je izvan domena našeg sistema, ali koji komunicira sa našom aplikacijom za realizaciju transakcija plaćanja putem kreditnih kartica.  
 
 
+#### Update; Dovršene funkcionalnosti:
+1.   Naša baza je SqlLite, dakle u projektu koristimo lokalnu bazu
+2.  Za eksterni uređaj odabrali smo serial Rfid. 
+Kod se nalazi u Rfid.cs i poziva se u PlacanjeViewModel-u i PlacanjeView. 
+https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/PlacanjeView.xaml
+https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/PlacanjeView.xaml.cs
+3.  Za eksterni servis korišten je asp.net MVC eksterni servis.
+https://github.com/ooad-2015-2016/Untitled/tree/master/RRentingProjekat/IISExpress
+4.  Podaci se validiraju prilikom registracije i rezervacije.
+https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/ViewModels/RegistracijaViewModel.cs
+https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/ViewModels/RezervacijaViewModel.cs
+5.  Što se tiče mobilne funkcionalnosti, implementiran je GPS kojeg poziva GostView.
+https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/GostView.xaml.cs
+https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/GPSView.xaml
+6.  Za web servis koristimo vremensku prognozu koja je implementirana u klasi WeatherProxy.cs, te u view-u VremenskaPrognoza.view-u.
+Pristupa joj se u pogledu GostView.
+https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/VremenskaPrognoza.xaml
+https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Models/Prognoza.cs
+7.  Za igricu je napravljen exe file.
 
+#### THE END.
