@@ -28,8 +28,6 @@
     <RootPropertyPathName Name="CreateUplata" />
     <RootPropertyPathName Name="RfidKartica" />
     <RootPropertyPathName Name="IzvrsiUplatu" />
-    <RootPropertyPathName Name="StatusSobe" />
-    <RootPropertyPathName Name="ObracunCijene" />
     <RootPropertyPathName Name="DodajGost" />
     <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="Odlazak" />
