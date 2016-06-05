@@ -8,15 +8,16 @@ using System.Windows.Input;
 using Windows.UI.Xaml;
 using RRentingProjekat.RRentingBaza.Helper;
 using RRentingProjekat.RRentingBaza.Views;
+using Windows.UI.Popups;
 
 namespace RRentingProjekat.RRentingBaza.ViewModels
 {
     class RecepcionerViewModel
     {
         public ICommand DodajGost { get; set; }
-        //public ICommand ObracunCijene { get; set; }
-        public ICommand StatusSobe { get; set; }
         public ICommand IzvrsiUplatu { get; set; }
+        public ICommand AzurirajSobe { get; set; }
+
         public INavigacija NavigationServis { get; set; }
         public Uplata _uplata { get; set; }
         public Rezervacija posljednjeDodani { get; set; }
@@ -30,9 +31,8 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
 
             DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
-            //ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
-            StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
             IzvrsiUplatu= new RelayCommand<object>(uplata, mozeLiUplata);
+            AzurirajSobe = new RelayCommand<object>(sobe, moze);
 
             this.Parent = parent;
         }
@@ -41,9 +41,9 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
 
             DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
-            //ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
-            StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
             IzvrsiUplatu = new RelayCommand<object>(uplata, mozeLiUplata);
+            AzurirajSobe = new RelayCommand<object>(sobe, moze);
+
             this._uplata = u;
             if (posljednjeDodani != null) { if (_uplata != null) { posljednjeDodani.placeno = true; } }
             else { }
@@ -54,14 +54,50 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis = new NavigationService();
 
             DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
-            //ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
-            StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
             IzvrsiUplatu = new RelayCommand<object>(uplata, mozeLiUplata);
             this.posljednjeDodani = rvm;
             if (posljednjeDodani != null) { if (_uplata != null) { posljednjeDodani.placeno = true; } }
             else { }
+            AzurirajSobe = new RelayCommand<object>(sobe, moze);
 
         }
+
+        private async void sobe(object parametar)
+        {
+
+            using (var db = new RRentingDbContext())
+            {
+                foreach (var g in db.Gosti)
+                {
+                    if ((g.datumOdlaska.Day + g.datumOdlaska.Year + g.datumOdlaska.Month) <= (DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day))
+                    {
+
+                        foreach (Soba s in DataSource.DataSourceRRenting.DajSveSobe())
+                        {
+                            if (g.brojSobe == s.BrojSobe)
+                            {
+                                s.Status = StatusSobe.Slobodna;
+                                var dialog = new MessageDialog("Ažurirali ste status rezervisani soba u slobodne.");
+                                await dialog.ShowAsync();
+                                break;
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        var d = new MessageDialog("Podaci su već ažurirani.");
+                        await d.ShowAsync();
+                        break;
+                    }
+
+                }
+            }
+        }
+        
+         
+
+
         private void uplata(object parametar)
         {
             NavigationServis.Navigate(typeof(PlacanjeView), new PlacanjeViewModel());
@@ -72,11 +108,10 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             NavigationServis.Navigate(typeof(KorisnikListView), new KorisnikViewModel());
         }
 
-     
 
-        public void status(object parametar)
+        public bool moze(object parametar)
         {
-
+            return true;
         }
 
         public bool mozeLiDodati(object parametar)
@@ -87,10 +122,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         {
             return true;
         }
-        public bool mozeLiStatus(object parametar)
-        {
-            return true;
-        }
+       
         public bool mozeLiUplata(object parametar)
         {
             return true;

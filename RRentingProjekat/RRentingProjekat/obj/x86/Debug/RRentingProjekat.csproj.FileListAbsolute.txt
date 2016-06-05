@@ -1314,7 +1314,6 @@ C:\Users\Lejla\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\System.X
 C:\Users\Lejla\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\System.Xml.XmlSerializer.dll
 C:\Users\Lejla\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\WinRTXamlToolkit.Controls.DataVisualization.dll
 C:\Users\Lejla\Untitled\RRentingProjekat\RRentingProjekat\bin\x86\Debug\WinRTXamlToolkit.dll
-C:\Users\Lejla\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingProjekat.csprojResolveAssemblyReference.cache
 C:\Users\Lejla\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\App.g.i.cs
 C:\Users\Lejla\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\App.g.cs
 C:\Users\Lejla\Untitled\RRentingProjekat\RRentingProjekat\obj\x86\Debug\RRentingBaza\Views\GostView.g.i.cs

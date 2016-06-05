@@ -27,6 +27,7 @@
     <RootPropertyPathName Name="PotvrdaUplate" />
     <RootPropertyPathName Name="CreateUplata" />
     <RootPropertyPathName Name="RfidKartica" />
+    <RootPropertyPathName Name="AzurirajSobe" />
     <RootPropertyPathName Name="IzvrsiUplatu" />
     <RootPropertyPathName Name="DodajGost" />
     <RootPropertyPathName Name="DodajRezervaciju" />
