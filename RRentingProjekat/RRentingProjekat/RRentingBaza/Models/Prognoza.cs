@@ -14,17 +14,14 @@ namespace RRentingProjekat.RRentingBaza.Models
     {
         public async static Task<RootObject> GetWeather(double lat, double lon)
         {
-            // ovdje se obavlja poziv upucen web servisu
+            
             var http = new HttpClient();
             var response = await http.GetAsync("http://api.openweathermap.org/data/2.5/weather?lat=43.86&lon=18.41&appid=68b3e153ace869e304bdc2087ec0f6f5");
             var result = await response.Content.ReadAsStringAsync();
-            //konverzija JSon objecta
             var serializer = new DataContractJsonSerializer(typeof(RootObject));
-
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var data = (RootObject)serializer.ReadObject(ms);
-
-            return data;
+            var mems = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            var pod = (RootObject)serializer.ReadObject(mems);
+            return pod;
         }
     }
 
