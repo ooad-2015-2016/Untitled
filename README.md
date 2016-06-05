@@ -1,3 +1,5 @@
+![Untitled](https://raw.githubusercontent.com/ooad-2015-2016/Untitled/master/logo.png)
+
 # Untitled
 ## RRenting
 #### Članovi tima: 
@@ -77,5 +79,9 @@ Pristupa joj se u pogledu GostView.
 https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/VremenskaPrognoza.xaml
 https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Models/Prognoza.cs
 7.  Za igricu je napravljen exe file.
+
+
+![Untitled](https://raw.githubusercontent.com/ooad-2015-2016/Untitled/master/rezervacija.png)
+
 
 #### THE END.
