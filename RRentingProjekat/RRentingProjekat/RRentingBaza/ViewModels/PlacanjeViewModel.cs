@@ -41,7 +41,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             Uplata uplata = CreateUplata;
             if (uplata != null) {
 
-                NavigationServis.Navigate(typeof(KorisnikListView), new KorisnikViewModel(CreateUplata));
+                NavigationServis.Navigate(typeof(RecepcionerView), new RecepcionerViewModel(CreateUplata));
 
             }
             

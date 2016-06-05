@@ -19,12 +19,14 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
         public ICommand IzvrsiUplatu { get; set; }
         public INavigacija NavigationServis { get; set; }
         public Uplata _uplata { get; set; }
-
+        public Rezervacija posljednjeDodani { get; set; }
         public PrijavaViewModel Parent { get; set; }
         public PlacanjeViewModel NewParent { get; set; }
 
         public RecepcionerViewModel(PrijavaViewModel parent)
         {
+            posljednjeDodani = new Rezervacija();
+            _uplata = new Uplata();
             NavigationServis = new NavigationService();
 
             DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
@@ -43,6 +45,21 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
             StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
             IzvrsiUplatu = new RelayCommand<object>(uplata, mozeLiUplata);
             this._uplata = u;
+            if (posljednjeDodani != null) { if (_uplata != null) { posljednjeDodani.placeno = true; } }
+            else { }
+
+        }
+        public RecepcionerViewModel(Rezervacija rvm)
+        {
+            NavigationServis = new NavigationService();
+
+            DodajGost = new RelayCommand<object>(dodajGosta, mozeLiDodati);
+            //ObracunCijene = new RelayCommand<object>(obracunaj, mozeLiObracunati);
+            StatusSobe = new RelayCommand<object>(status, mozeLiStatus);
+            IzvrsiUplatu = new RelayCommand<object>(uplata, mozeLiUplata);
+            this.posljednjeDodani = rvm;
+            if (posljednjeDodani != null) { if (_uplata != null) { posljednjeDodani.placeno = true; } }
+            else { }
 
         }
         private void uplata(object parametar)
