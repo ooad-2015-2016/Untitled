@@ -4,22 +4,30 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace RRentingProjekat.RRentingBaza.Models
 {
-   
-       class Korisnik
+    [DataContract]
+    class Korisnik
         {
-            
-            public string fourSqaureId { get; set; }
-            public string Ime { get; set; }
-            public string Prezime { get; set; }
-            public string Telefon { get; set; }
-            public string Adresa { get; set; }
-            public string Sifra { get; set; }
-            public string Email { get; set; }
-            
-            public int SigurnosniID { get; set; }
+        [DataMember]
+        public string fourSqaureId { get; set; }
+        [DataMember]
+        public string Ime { get; set; }
+        [DataMember]
+        public string Prezime { get; set; }
+        [DataMember]
+        public string Telefon { get; set; }
+        [DataMember]
+        public string Adresa { get; set; }
+        [DataMember]
+        public string Sifra { get; set; }
+        [DataMember]
+        public string Email { get; set; }
+        [DataMember]
+        public int SigurnosniID { get; set; }
             
 
         public Korisnik() { }
