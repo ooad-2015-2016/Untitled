@@ -64,7 +64,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
         private async void sobe(object parametar)
         {
-
+            Boolean find = false;
             using (var db = new RRentingDbContext())
             {
                 foreach (var g in db.Gosti)
@@ -77,24 +77,27 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                             if (g.brojSobe == s.BrojSobe)
                             {
                                 s.Status = StatusSobe.Slobodna;
-                                var dialog = new MessageDialog("Ažurirali ste status rezervisani soba u slobodne.");
+                                find = true;
+                                var dialog = new MessageDialog("Ažurirali ste status rezervisanih soba u slobodne.");
                                 await dialog.ShowAsync();
                                 break;
                             }
+
+                            if (find) break;
                         }
 
                     }
-                    else
-                    {
-                        var d = new MessageDialog("Podaci su već ažurirani.");
-                        await d.ShowAsync();
-                        break;
-                    }
-
                 }
             }
+            if (!find)
+            {
+                var d = new MessageDialog("Podaci su već ažurirani.");
+                await d.ShowAsync();
+
+            }
+
+
         }
-        
          
 
 

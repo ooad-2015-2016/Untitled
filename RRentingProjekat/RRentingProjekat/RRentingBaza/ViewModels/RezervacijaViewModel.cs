@@ -172,7 +172,7 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
                     Rezervacija nova = new Rezervacija(Convert.ToInt32(BrojOdraslih), Convert.ToInt32(BrojDjece), Dolazak, Odlazak, Parking, Ljubimac, Krevet, nacin);
                     Soba slobodnaSoba = DataSource.DataSourceRRenting.dajSlobodnuSobu(nova);
-                    //if (this.uplata.RfidKartica != null) { nova.placeno = true; }
+                    
                     if (slobodnaSoba.CijenaSobe != 0)
                     {
                         int tiket = rnd.Next(1000);
