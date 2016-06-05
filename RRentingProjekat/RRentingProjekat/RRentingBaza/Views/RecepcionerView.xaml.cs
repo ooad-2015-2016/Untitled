@@ -36,21 +36,6 @@ namespace RRentingProjekat.RRentingBaza.Views
 
         }
 
-        private void obracunCijene_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnObracunCijene_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnStatusSobe_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             DataContext = (RecepcionerViewModel)e.Parameter;

@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="RRentingProjekat.RRentingBaza.Views.VremenskaPrognoza"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RRentingProjekat.RRentingBaza.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded" >
+
+    <StackPanel Background="WhiteSmoke">
+        <Image x:Name="image" Source="logo.png" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" Height="100"/>
+        <TextBlock Name="ResultTextBlock" Margin="0,150,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Medium" Foreground="#FF470101" />
+        <Image Name="ResultImage"  Width ="100" Height="100"/>
+        <Button Content="Osvježi" Margin="0,150,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click" Foreground="WhiteSmoke" Background="DarkRed" FontWeight="Medium" />
+    </StackPanel>
+</Page>

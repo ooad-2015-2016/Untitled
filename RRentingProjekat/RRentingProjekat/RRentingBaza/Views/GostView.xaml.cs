@@ -73,5 +73,10 @@ namespace RRentingProjekat.RRentingBaza.Views
         {
             lbxOcjene.SelectedIndex = 4;
         }
+
+        private void prognoza_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(VremenskaPrognoza));
+        }
     }
 }

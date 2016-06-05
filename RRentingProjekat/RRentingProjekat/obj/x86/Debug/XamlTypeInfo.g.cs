@@ -156,7 +156,7 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[52];
+            _typeNameTable = new string[53];
             _typeNameTable[0] = "RRentingProjekat.RRentingBaza.Views.GostView";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -207,10 +207,11 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
             _typeNameTable[47] = "RRentingProjekat.RRentingBaza.Views.Statistika";
             _typeNameTable[48] = "RRentingProjekat.RRentingBaza.Views.UvidSobaView";
             _typeNameTable[49] = "RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView";
-            _typeNameTable[50] = "RRentingProjekat.RRentingBaza.Views.ZahtjeviView";
-            _typeNameTable[51] = "RRentingProjekat.RRentingBaza.Views.ZahtjevListView";
+            _typeNameTable[50] = "RRentingProjekat.RRentingBaza.Views.VremenskaPrognoza";
+            _typeNameTable[51] = "RRentingProjekat.RRentingBaza.Views.ZahtjeviView";
+            _typeNameTable[52] = "RRentingProjekat.RRentingBaza.Views.ZahtjevListView";
 
-            _typeTable = new global::System.Type[52];
+            _typeTable = new global::System.Type[53];
             _typeTable[0] = typeof(global::RRentingProjekat.RRentingBaza.Views.GostView);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -261,8 +262,9 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
             _typeTable[47] = typeof(global::RRentingProjekat.RRentingBaza.Views.Statistika);
             _typeTable[48] = typeof(global::RRentingProjekat.RRentingBaza.Views.UvidSobaView);
             _typeTable[49] = typeof(global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView);
-            _typeTable[50] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView);
-            _typeTable[51] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView);
+            _typeTable[50] = typeof(global::RRentingProjekat.RRentingBaza.Views.VremenskaPrognoza);
+            _typeTable[51] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView);
+            _typeTable[52] = typeof(global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -324,8 +326,9 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
         private object Activate_47_Statistika() { return new global::RRentingProjekat.RRentingBaza.Views.Statistika(); }
         private object Activate_48_UvidSobaView() { return new global::RRentingProjekat.RRentingBaza.Views.UvidSobaView(); }
         private object Activate_49_UvidUposlenikaView() { return new global::RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView(); }
-        private object Activate_50_ZahtjeviView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView(); }
-        private object Activate_51_ZahtjevListView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView(); }
+        private object Activate_50_VremenskaPrognoza() { return new global::RRentingProjekat.RRentingBaza.Views.VremenskaPrognoza(); }
+        private object Activate_51_ZahtjeviView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjeviView(); }
+        private object Activate_52_ZahtjevListView() { return new global::RRentingProjekat.RRentingBaza.Views.ZahtjevListView(); }
         private void VectorAdd_19_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>)instance;
@@ -726,16 +729,23 @@ namespace RRentingProjekat.RRentingProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 50:   //  RRentingProjekat.RRentingBaza.Views.ZahtjeviView
+            case 50:   //  RRentingProjekat.RRentingBaza.Views.VremenskaPrognoza
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_50_ZahtjeviView;
+                userType.Activator = Activate_50_VremenskaPrognoza;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 51:   //  RRentingProjekat.RRentingBaza.Views.ZahtjevListView
+            case 51:   //  RRentingProjekat.RRentingBaza.Views.ZahtjeviView
                 userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_51_ZahtjevListView;
+                userType.Activator = Activate_51_ZahtjeviView;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 52:   //  RRentingProjekat.RRentingBaza.Views.ZahtjevListView
+                userType = new global::RRentingProjekat.RRentingProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_52_ZahtjevListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

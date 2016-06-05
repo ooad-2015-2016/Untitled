@@ -22,6 +22,5 @@ namespace RRentingProjekat.RRentingBaza.Models
 
         public int BrojDanaDoNabavke { get; set; }
         public List<Osoblje> uposlenici { get; set; }
-        //JOS JEDAN KONSTRUKTOR
     }
 }

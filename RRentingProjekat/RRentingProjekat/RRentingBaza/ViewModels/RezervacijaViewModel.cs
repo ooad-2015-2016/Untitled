@@ -215,13 +215,15 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
 
                                 nova.izracunajCijenu(Dolazak, Odlazak, slobodnaSoba);
 
+                                slobodnaSoba.Status = StatusSobe.Rezervisana;
+
                                 db.Rezervacije.Add(nova);
                                 db.SaveChanges();
 
                                 var dialog = new MessageDialog("Vaš broj tiketa: " + tiket.ToString(), "Rezervacija uspješna");
                                 await dialog.ShowAsync();
 
-                                // if (!rv) NavigationServis.Navigate(typeof(RecepcionerView), new RecepcionerViewModel(this)); -DODATI
+                                
                                 if (rv == false) {
                                     NavigationServis.Navigate(typeof(RecepcionerView), new RecepcionerViewModel(nova));
                                 }

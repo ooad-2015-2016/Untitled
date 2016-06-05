@@ -4,6 +4,7 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Prognoza" />
     <RootPropertyPathName Name="Lokacija" />
     <RootPropertyPathName Name="Izlaz" />
     <RootPropertyPathName Name="SpremiOcjenu" />
@@ -27,9 +28,8 @@
     <RootPropertyPathName Name="PotvrdaUplate" />
     <RootPropertyPathName Name="CreateUplata" />
     <RootPropertyPathName Name="RfidKartica" />
+    <RootPropertyPathName Name="AzurirajSobe" />
     <RootPropertyPathName Name="IzvrsiUplatu" />
-    <RootPropertyPathName Name="StatusSobe" />
-    <RootPropertyPathName Name="ObracunCijene" />
     <RootPropertyPathName Name="DodajGost" />
     <RootPropertyPathName Name="DodajRezervaciju" />
     <RootPropertyPathName Name="Odlazak" />
@@ -112,6 +112,7 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
@@ -120,6 +121,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -290,6 +292,7 @@
     </RootType>
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.UvidSobaView" />
     <RootType FullName="RRentingProjekat.RRentingBaza.Views.UvidUposlenikaView" />
+    <RootType FullName="RRentingProjekat.RRentingBaza.Views.VremenskaPrognoza" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />

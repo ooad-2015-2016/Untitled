@@ -112,6 +112,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RRentingBaza\DataSource\DataSourceRRenting.cs" />
     <Compile Include="RRentingBaza\Helper\Rfid.cs" />
+    <Compile Include="RRentingBaza\Models\Prognoza.cs" />
     <Compile Include="RRentingBaza\Models\Uplata.cs" />
     <Compile Include="RRentingBaza\ViewModels\GostViewModel.cs" />
     <Compile Include="RRentingBaza\ViewModels\GPSViewModel.cs" />
@@ -191,6 +192,9 @@
     </Compile>
     <Compile Include="RRentingBaza\Views\UvidUposlenikaView.xaml.cs">
       <DependentUpon>UvidUposlenikaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RRentingBaza\Views\VremenskaPrognoza.xaml.cs">
+      <DependentUpon>VremenskaPrognoza.xaml</DependentUpon>
     </Compile>
     <Compile Include="RRentingBaza\Views\ZahtjeviView.xaml.cs">
       <DependentUpon>ZahtjeviView.xaml</DependentUpon>
@@ -284,6 +288,10 @@
     <Page Include="RRentingBaza\Views\UvidUposlenikaView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RRentingBaza\Views\VremenskaPrognoza.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RRentingBaza\Views\ZahtjeviView.xaml">
       <SubType>Designer</SubType>

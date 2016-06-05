@@ -26,6 +26,7 @@
                 <Button x:Name="LogOut" Content="Log Out" HorizontalAlignment="Center" Margin="0,20,0,0" Foreground="WhiteSmoke" VerticalAlignment="Center" Command="{Binding Path=Izlaz}" Width="234" FontSize="20"  Background="DarkRed" FontWeight="Medium"></Button>
 
             <Button x:Name="gps" Content="Lokacija..." Click="gps_Click" Margin="0,20,50,0"  Width="100" Foreground="WhiteSmoke" Command="{Binding Path=Lokacija}" FontSize="15"  Background="Black" FontWeight="Normal" VerticalAlignment="Bottom" HorizontalAlignment="Right"></Button>
+            <Button x:Name="prognoza" Content="Vrijeme"  Margin="0,20,50,0"  Width="100" Foreground="WhiteSmoke" Command="{Binding Path=Prognoza}" FontSize="15"  Background="Black" FontWeight="Normal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="prognoza_Click"></Button>
 
 
         </StackPanel>
