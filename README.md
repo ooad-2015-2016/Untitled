@@ -61,7 +61,7 @@ Kako je omogućena prijava u sistem sa različitim privilegijama, šef objekta i
 
 
 #### Update; Dovršene funkcionalnosti:
-1.   Naša baza je SqlLite, dakle u projektu koristimo lokalnu bazu
+1.   Naša baza je SqlLite; dakle u projektu koristimo lokalnu bazu
 2.  Za eksterni uređaj odabrali smo serial Rfid. 
 Kod se nalazi u Rfid.cs i poziva se u PlacanjeViewModel-u i PlacanjeView. 
 https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/PlacanjeView.xaml
@@ -74,7 +74,7 @@ https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRenting
 5.  Što se tiče mobilne funkcionalnosti, implementiran je GPS kojeg poziva GostView.
 https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/GostView.xaml.cs
 https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/GPSView.xaml
-6.  Za web servis koristimo vremensku prognozu koja je implementirana u klasi WeatherProxy.cs, te u view-u VremenskaPrognoza.view-u.
+6.  Za web servis koristimo vremensku prognozu koja je implementirana u klasi Prognoza.cs, te u view-u VremenskaPrognoza.view-u.
 Pristupa joj se u pogledu GostView.
 https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Views/VremenskaPrognoza.xaml
 https://github.com/ooad-2015-2016/Untitled/blob/master/RRentingProjekat/RRentingProjekat/RRentingBaza/Models/Prognoza.cs
