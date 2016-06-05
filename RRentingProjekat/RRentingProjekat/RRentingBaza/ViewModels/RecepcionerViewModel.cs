@@ -83,10 +83,10 @@ namespace RRentingProjekat.RRentingBaza.ViewModels
                                 break;
                             }
 
-                            if (find) break;
                         }
 
                     }
+                    if (find) break;
                 }
             }
             if (!find)
